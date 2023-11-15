@@ -1,6 +1,6 @@
 import { request } from "../components/lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore/post'
+const baseUrl = 'http://localhost:3030/jsonstore/post-list'
 
 
 export const getAll = async () => {

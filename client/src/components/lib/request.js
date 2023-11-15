@@ -7,5 +7,5 @@ export const request = async (method, url, data)=>{
 	// 	throw new Error(' ...')
 	// }
 	const result = await response.json();
-	return request;
+	return result;
 };

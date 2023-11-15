@@ -73,6 +73,12 @@ const Header = () => {
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
+							<li className={(url === "/post-list" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/post-list">
+								PostList
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
 							<form className="form-inline">
 								<button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
 									<i className="fa fa-search" aria-hidden="true"></i>
