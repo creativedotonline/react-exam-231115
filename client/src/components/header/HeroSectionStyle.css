@@ -1,0 +1,184 @@
+.hero_area {
+    background: url(../../assets/images/hero-bg.webp);
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+/* slider section */
+.slider_section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    padding: 90px 0 0 0;
+}
+
+.slider_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.slider_section #customCarousel1 {
+    width: 100%;
+    position: unset;
+}
+
+.slider_section .detail-box {
+    color: #00204a;
+}
+
+.slider_section .detail-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.slider_section .detail-box p {
+    color: #fefefe;
+    font-size: 14px;
+}
+
+.slider_section .detail-box .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -5px;
+    margin-top: 25px;
+}
+
+.slider_section .detail-box .btn-box a {
+    margin: 5px;
+    text-align: center;
+    width: 165px;
+}
+
+.slider_section .detail-box .btn-box .btn1 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00bbf0;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+}
+
+.slider_section .detail-box .btn-box .btn1:hover {
+    background-color: #007fa4;
+}
+
+.slider_section .detail-box .btn-box .btn2 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+}
+
+.slider_section .detail-box .btn-box .btn2:hover {
+    background-color: black;
+}
+
+.slider_section .img-box {
+    margin: 45px 0;
+}
+
+.slider_section .img-box img {
+    width: auto;
+    -webkit-animation: upDown 5s infinite;
+    animation: upDown 5s infinite;
+}
+
+@-webkit-keyframes upDown {
+    0% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+    }
+
+    50% {
+        -webkit-transform: translateY(45px);
+        transform: translateY(45px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+    }
+}
+
+@keyframes upDown {
+    0% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+    }
+
+    50% {
+        -webkit-transform: translateY(45px);
+        transform: translateY(45px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+    }
+}
+
+.slider_section .carousel-indicators {
+    position: absolute;
+    margin: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.slider_section .carousel-indicators li {
+    background-color: var(--bg-lg4-color-2);
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    opacity: 1;
+}
+
+.slider_section .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color-2);
+}
+
+.slider_section .detail-box {
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--bg-g5-color-1) 70%, var(--bg-g5-color-2) 100%);
+    box-shadow: 0 16px 28px rgba(50, 25, 80, .3);
+    color: var(--font-color-default-dark);
+}
+
+.slider_section .detail-box .heading {
+    /* filter: drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 1px #fff) drop-shadow(-1px 0 0 #fff) drop-shadow(1px 0 1px #fff) drop-shadow(0 1px 1px rgba(60, 14, 115, .3)); */
+    background: linear-gradient(to right, #531072 0, #bb00b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+.carousel.slide {
+    max-height: 550px;
+    overflow: hidden;
+}

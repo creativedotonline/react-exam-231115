@@ -1,0 +1,83 @@
+import { useEffect, useState } from "react";
+import { Link, useLocation } from 'react-router-dom';
+import "./HeaderStyle.css"
+// import "./units/dataUnits.js"
+
+const Header = () => {
+	const location = useLocation(); // once ready it returns the 'window.location' object
+	const [url, setUrl] = useState(null);
+	useEffect(() => {
+		setUrl(location.pathname);
+	}, [location]);
+
+	// Sticky Menu Area
+	useEffect(() => {
+		window.addEventListener('scroll', isSticky);
+		return () => {
+			window.removeEventListener('scroll', isSticky);
+		};
+	});
+
+	/* Method that will fix header after a specific scrollable */
+	const isSticky = (e) => {
+		const header = document.querySelector('.header_section');
+		const scrollTop = window.scrollY;
+		scrollTop >= 150 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+	};
+
+	return (
+		<header className="header_section d-none d-xl-block header">
+			<div className="container-fluid">
+				<nav className="navbar navbar-expand-lg custom_nav-container ">
+					<Link to="/" className="navbar-brand">
+						<span>
+							<img src="/src/assets/images/logo-en.png" alt="" className="logo" />
+						</span>
+					</Link>
+					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span className=""> </span>
+					</button>
+
+					<div className="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul className="navbar-nav  ">
+							<li className={(url === "/" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
+							</li>
+							<li className={(url === "/UserList" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/UserList">
+									User List
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
+							<li className={(url === "/Post" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/Post">
+									Posts
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
+							<li className={(url === "/CharacterList" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/CharacterList">
+									Character List
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
+							<li className={(url === "/PageRegister" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/PageRegister">
+									<i className="fa fa-user-plus" aria-hidden="true"></i>
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
+							<form className="form-inline">
+								<button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+									<i className="fa fa-search" aria-hidden="true"></i>
+								</button>
+							</form>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+	);
+};
+
+export default Header;

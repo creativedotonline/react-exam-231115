@@ -1,0 +1,104 @@
+.page-heading {
+	overflow: hidden;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+	padding: 90px 0 20px 0;
+}
+
+.page-heading .row {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.page-heading .detail-box h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	color: #ffffff;
+}
+
+.page-heading .detail-box p {
+	color: #fefefe;
+	font-size: 14px;
+}
+
+
+.page-heading .img-box {
+	margin: 0;
+	max-height: 150px;
+	width: auto;
+}
+
+.page-heading .img-box img {
+	width: auto;
+	margin-top: -252px;
+	display: block;
+	-webkit-animation: upDown 5s infinite;
+	animation: upDown 5s infinite;
+}
+
+.page-heading .img-box img.p-absolute:last-child {
+	top: 0;
+}
+
+@-webkit-keyframes upDown {
+	0% {
+		-webkit-transform: translateY(-45px);
+		transform: translateY(-45px);
+	}
+
+	50% {
+		-webkit-transform: translateY(45px);
+		transform: translateY(45px);
+	}
+
+	100% {
+		-webkit-transform: translateY(-45px);
+		transform: translateY(-45px);
+	}
+}
+
+@keyframes upDown {
+	0% {
+		-webkit-transform: translateY(-45px);
+		transform: translateY(-45px);
+	}
+
+	50% {
+		-webkit-transform: translateY(45px);
+		transform: translateY(45px);
+	}
+
+	100% {
+		-webkit-transform: translateY(-45px);
+		transform: translateY(-45px);
+	}
+}
+
+
+.page-heading .detail-box {
+	padding: 15px 15px 15px 25px ;
+	border-radius: 5px;
+	background: linear-gradient(to bottom, var(--bg-g5-color-1) 70%, var(--bg-g5-color-2) 100%);
+	box-shadow: 0 16px 28px rgba(50, 25, 80, .3);
+	color: var(--font-color-default-dark);
+}
+
+.page-heading .detail-box .heading {
+	/* filter: drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 1px #fff) drop-shadow(-1px 0 0 #fff) drop-shadow(1px 0 1px #fff) drop-shadow(0 1px 1px rgba(60, 14, 115, .3)); */
+	background: linear-gradient(to right, #531072 0, #bb00b9 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin: 0;
+}
