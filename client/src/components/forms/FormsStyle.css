@@ -89,7 +89,8 @@
 
 input,
 .input-wrapper input,
-.filter select {
+.filter select,
+textarea {
 	width: 100%;
 	font-weight: 400;
 	line-height: 1.5;
@@ -100,6 +101,9 @@ input,
 	padding: 6px 20px;
 	background-color: #f7f7f7;
 	border-radius: 0;
+}
+textarea {
+	height: auto;
 }
 
 .filter select {

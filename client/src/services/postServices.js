@@ -1,7 +1,7 @@
 const baseUrl = 'http://localhost:3030/jsonstore'
 
 export const create = async (postData) =>{
-	const response = await fetch('${baseUrl}/posts',{
+	const response = await fetch(`${baseUrl}/posts`,{
 		method:'POST',
 		headers:{
 			'content-type':'application/json'
