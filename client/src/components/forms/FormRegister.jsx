@@ -81,9 +81,7 @@ export default function ControlledForm({
 
     return (
         <>
-            <h1>Register Form</h1>
-
-            <form ref={formRef} onSubmit={submitHandler}>
+		<form ref={formRef} onSubmit={submitHandler}>
 				<div className="form-group">
                     <label htmlFor="firstName">First name</label>
                     <div className="input-wrapper">

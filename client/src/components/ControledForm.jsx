@@ -36,8 +36,7 @@ export default function ControlledForm() {
 		console.log(ageValue);
 	}
 	return (
-		<section className="controlledForm_section layout_padding">
-			<h1>Controlled Form</h1>
+		<section className="controlledForm_section">
 			<form>
 				<div className="form-group">
 					<label htmlFor="username" >Username</label>

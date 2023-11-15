@@ -16,7 +16,7 @@ import CharacterDetails from "./components/CharacterDetails"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
-import PageRegister from './components/forms/PageRegister'
+import PageRegister from './components/register/PageRegister'
 
 function App() {
 const [count, setCount] = useState(0)
@@ -32,7 +32,6 @@ const [count, setCount] = useState(0)
 		<Route path="/CharacterList" element={<PageCharacterList />} />
 		<Route path="/CharacterList/:id" element={<CharacterDetails />} /> 
 		<Route path="*" element={<NotFound />} />
-		<Route path="/Register" element={<PageRegister />} />
 		<Route path='/PageRegister' element={<PageRegister />} />
 	</Routes>
 	<Footer />
