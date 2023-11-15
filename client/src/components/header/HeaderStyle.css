@@ -58,8 +58,7 @@
 	background: url(../../assets/images/purple-decor-left.png) no-repeat left bottom,url(../../assets/images/purple-decor-right.png) no-repeat right bottom #3c1444;
 	width: 100%;
 	min-width: 100%;
-	z-index: 9;
-	position: fixed;	
+	z-index: 9;	
 	top:0;
 }
 
@@ -81,7 +80,10 @@
 
 .navbar-brand span img {
 	max-height: 100px;
-	margin-bottom: -38px;
+	position: absolute;
+    z-index: 99;
+	top: 5px;
+    bottom: -28px;
 }
 
 .custom_nav-container {
@@ -95,7 +97,7 @@
 
 .custom_nav-container .nav_search-btn,
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-	padding: 5px 20px;
+	padding: 20px;
 	color: var(--primary-color-5);
 	text-align: center;
 	text-transform: uppercase;
@@ -112,9 +114,6 @@
 	text-shadow: 0 1px 5px rgb(255, 73, 185);
 }
 
-.custom_nav-container .navbar-nav .nav-item.active .nav-link {
-	font-weight: 600;
-}
 
 .custom_nav-container .nav_search-btn {
 	width: 35px;

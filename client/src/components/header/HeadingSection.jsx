@@ -1,4 +1,3 @@
-import Header from "./Header";
 import "./HeadingSectionStyle.css"
 import "./HeroSectionStyle.css"
 
@@ -9,7 +8,6 @@ const HeadingSection = () => {
           <div className="bg_img_box">
           </div>
         </div>
-		<Header />
         <section className="page-heading ">
 		<div className="wrapper">
             <div className="row">

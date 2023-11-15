@@ -1,15 +1,14 @@
-import Button from "../molecules/Button";
 import "./PostStyle.css"
-import { Link } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import * as postService from "../../services/postServices"
 
-const SinglePost = ({
-	id,
-	name,
-	hair_color,
-	skin_color,
-	eye_color,
-	birth_year,
-}) => {
+export default function PostList() {
+	const [post, setPost] = useState([]);
+	useEffect(()=>{
+		postService.getAll()
+			.then(result => setPost(result))
+	},[]);
+	console.log(post);
 	return(
 		<>
 		<div className="single-post-grid" id={id} >
@@ -36,5 +35,3 @@ const SinglePost = ({
 		</>
 	);
 }
-
-export default SinglePost;

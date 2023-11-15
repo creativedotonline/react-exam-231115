@@ -1,14 +1,20 @@
-import {create} from "../../services/postServices"
+import * as postService from "../../services/postServices"
+import {useNavigate} from "react-router-dom"
 
 export default function PostCreate(){
+	const navigate = useNavigate();
 	const createPostSubmitHandler = async (e) =>{
 		e.preventDefault();
 		
 		const postData = Object.fromEntries(new FormData(e.currentTarget));
-		console.log(postData);
-		const result = await create(postData);
-		console.log(result);
-
+		
+		try{
+			await postService.create(postData);
+			navigate('/post');
+		} catch(err){
+			// Error notification
+			console.log(err);
+		}
 	}
 	return(
 		<section id="create-page" className="auth">
