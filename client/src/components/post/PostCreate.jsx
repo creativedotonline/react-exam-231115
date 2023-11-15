@@ -10,7 +10,7 @@ export default function PostCreate(){
 		
 		try{
 			await postService.create(postData);
-			navigate('/post');
+			navigate('/post-list');
 		} catch(err){
 			// Error notification
 			console.log(err);

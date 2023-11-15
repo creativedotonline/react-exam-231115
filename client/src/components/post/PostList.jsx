@@ -2,6 +2,8 @@ import "./PostStyle.css"
 import {Link } from "react-router-dom"
 import {useEffect, useState} from 'react';
 import * as postService from "../../services/postServices"
+import PostListItem from "./post-list-item/PostListItem";
+import HeadingSection from "../header/HeadingSection"
 
 export default function PostList() {
 	const [post, setPost] = useState([]);
@@ -13,21 +15,19 @@ export default function PostList() {
 	console.log(post);
 	return(
 		<>
-		<div className="single-post-grid" id=''>
-			<div className="single-post-grid-image">
-				<Link to='/'>
-					<img className="single-post-grid-img-top" to="https://placehold.co/600x400" />
-				</Link>
-			</div>
-			<div className="single-post-grid-body">
-				<div className="single-post-grid-title">
-					<h3>Name</h3>
-				</div>
-				<div className="single-post-grid-text">	
-					dssdvsdxfv c
-				</div>
-				<Link as={Link} to='/' className="btn btn-pink-gradient">Read More</Link>
-			</div>
+		<HeadingSection />
+		<div className="wrapper">
+			<main className="main">
+				<section className="post-list">
+					<div className="container">
+						{post.map(post=>(
+							<PostListItem key={post._id} {...post} />
+							//<PostListItem key={post._id} title={post.title} category={post.category} imageUrl={post.imageUrl} />
+						))}
+						{post.length===0 && <h3 className="no-articles">No articles yet</h3>}
+					</div>
+				</section>
+			</main>
 		</div>
 		</>
 	);

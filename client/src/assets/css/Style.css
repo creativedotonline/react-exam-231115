@@ -361,7 +361,7 @@ section .container {
 
 .post-list .container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 10px;
 	gap: 10px 20px;
 	row-gap: 20px;

@@ -41,6 +41,11 @@
 	transition: all .4s ease-in-out;
 }
 
+.single-post-grid-image{
+	height: 200px;
+    overflow: hidden;
+}
+
 .post-list .single-post-grid:hover img{
 	transform: scale(1.1);
 	transition: all .4s ease-in-out;
