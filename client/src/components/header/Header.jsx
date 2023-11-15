@@ -43,26 +43,32 @@ const Header = () => {
 							<li className={(url === "/" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
 							</li>
-							<li className={(url === "/UserList" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/UserList">
+							<li className={(url === "/user-list" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/user-list">
 									User List
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							<li className={(url === "/Post" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/Post">
+							<li className={(url === "/post" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/post">
 									Posts
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							<li className={(url === "/CharacterList" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/CharacterList">
+							<li className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/post-create">
+									Create Posts
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
+							<li className={(url === "/character-list" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/character-list">
 									Character List
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							<li className={(url === "/PageRegister" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/PageRegister">
+							<li className={(url === "/register" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/register">
 									<i className="fa fa-user-plus" aria-hidden="true"></i>
 									<span className="sr-only">(current)</span>
 								</Link>

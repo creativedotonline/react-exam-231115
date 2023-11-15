@@ -20,7 +20,7 @@ const PagePost = () => {
 	return (
 		<>
 		<HeadingSection />
-			<div className="wrapper">
+		<div className="wrapper">
 				<main className="main">
 					<section className="post-list">
 						<div className="container">
@@ -30,7 +30,7 @@ const PagePost = () => {
 						</div>
 					</section>
 				</main>
-			</div>
+		</div>
 		</>
 	);
 }
