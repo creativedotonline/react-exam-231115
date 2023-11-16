@@ -38,7 +38,7 @@ function App() {
 		<Route path="*" element={<NotFound />} />
 		<Route path='/register' element={<PageRegister />} />
 		<Route path='post-list' element={<PostList />}/>
-		
+		<Route path='post-list/:postId' element={<PostDetails />} />
 	</Routes>
 	<Footer />
 	</>

@@ -7,6 +7,11 @@ export const getAll = async () => {
 	return Object.values(result);
 };
 
+export const getOne = async ()=>{
+	const result = await request('GET',`${baseUrl}/${postId}`);
+	return result;
+};
+
 export const create = async (postData) => {
 	const response = await fetch(baseUrl,{
 		method:'POST',
