@@ -25,7 +25,7 @@ export default function PostListItem({
 				<div className="single-post-grid-text">	
 					{summary}
 				</div>
-				<Link className="btn btn-green-gradient">Read More</Link>
+				<Link className="btn btn-green-gradient" to={`/list-post/${_id}`} >Read More</Link>
 			</div>
 		</div>
 		</>
