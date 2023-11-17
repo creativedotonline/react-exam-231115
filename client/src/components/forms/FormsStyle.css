@@ -95,18 +95,26 @@ textarea {
 	font-weight: 400;
 	line-height: 1.5;
 	border: 1px solid #d5dee6;
-	border-left: none;
 	outline: none;
 	height: 50px;
 	padding: 6px 20px;
 	background-color: #f7f7f7;
+	border-radius: 25px;
+}
+
+.search-form input,
+.search-form .input-wrapper input,
+.search-form .filter select,
+.search-form .extarea {
+	border-left: none;
 	border-radius: 0;
 }
+
 textarea {
 	height: auto;
 }
 
-.filter select {
+.search-form .filter select {
 	width: 100%;
 	font-weight: 400;
 	line-height: 1.5;

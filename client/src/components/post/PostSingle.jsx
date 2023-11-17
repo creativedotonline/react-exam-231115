@@ -19,9 +19,11 @@ const PostSingle = () => {
 			<div className="wrapper">
 				<main className="main">
 					<section className="single-post">
-						<h1>{post.name}</h1>
-						<p>{post.height}</p>
-						{/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. {post.height}</p> */}
+						<div className="container">
+							<h1>{post.name}</h1>
+							<p>{post.height}</p>
+							{/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. {post.height}</p> */}
+						</div>
 					</section>
 				</main>
 			</div>
