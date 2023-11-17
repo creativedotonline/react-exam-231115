@@ -12,7 +12,7 @@ export default function PostListItem({
 		<>
 		<div className="single-post-grid" id={_id} >
 			<div className="single-post-grid-image">
-				<Link to={`/post/${_id}`}>
+				<Link to={`/post-list/${_id}`}>
 					<img className="single-post-grid-img-top" src={imageUrl} />
 				</Link>
 			</div>
@@ -25,7 +25,7 @@ export default function PostListItem({
 				<div className="single-post-grid-text">	
 					{summary}
 				</div>
-				<Link className="btn btn-green-gradient" to={`/list-post/${_id}`} >Read More</Link>
+				<Link className="btn btn-green-gradient" to={`/post-list/${_id}`} >Read More</Link>
 			</div>
 		</div>
 		</>

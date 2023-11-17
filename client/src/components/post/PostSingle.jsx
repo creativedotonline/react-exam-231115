@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import HeadingSection from "../header/HeadingSection";
 
-const postDetails = () => {
+const PostSingle = () => {
 	const {id} = useParams();
 	const location = useLocation;
 	const [post, setPost] = useState({});
@@ -29,4 +29,4 @@ const postDetails = () => {
 	);
 } 
 
-export default postDetails;
+export default PostSingle;

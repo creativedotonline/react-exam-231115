@@ -1,10 +1,18 @@
 {
-	"f66fdbb6-7879-4a31-9451-73b99fe96b5e":{
-		"title": "First Post Title",
-		"category": "Fashion Arena",
-		"userLevel": "1",
-		"imageUrl": "https://development.ladypopular.com/img/ladypopular3/pink/lady/l3/l3.png?ver=2",
-		"summary": "Customize your own supermodel and guide her through the glamorous world of fashion! Completely free and easy to play, in the Lady Popular world is full of mini-games, malls, pets, boyfriends, and duels!",
-		"_id": "f66fdbb6-7879-4a31-9451-73b99fe96b5e"
-	}
+    "11bac40b-9c5f-4822-bca6-38ae131f19eb": {
+        "title": "Apartment",
+        "category": "Apartment",
+        "userLevel": "12",
+        "imageUrl": "https://static.xs-software.com/ladypopular/lp4_dev/img/apartment/table/table-126-3.png",
+        "summary": "The apartment is the place to display and use your inventory items, aranged in a different rooms.",
+        "_id": "11bac40b-9c5f-4822-bca6-38ae131f19eb"
+    },
+    "8dcdb907-8a98-4473-a46e-b40268becb20": {
+        "title": "My Fiance",
+        "category": "Boyfriend",
+        "userLevel": "2",
+        "imageUrl": "https://static-ladypopular.com/ladypopular/v4/img/model/boyfriend/presetimage/boyfriend-1.png",
+        "summary": "You can have a boyfriend who can become a fiance at the time. To have successful relationship you have to give him a regular kisses, phone calls, bring him to a beauty salon, and get him clothes in the wardrobe.",
+        "_id": "8dcdb907-8a98-4473-a46e-b40268becb20"
+    }
 }

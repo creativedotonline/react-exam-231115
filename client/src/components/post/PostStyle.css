@@ -44,6 +44,15 @@
 .single-post-grid-image{
 	height: 200px;
     overflow: hidden;
+	text-align: center;
+}
+
+.single-post-heading{
+	text-align: center;
+}
+
+.single-post-heading h1{
+	color: var(--additional-color-6);
 }
 
 .post-list .single-post-grid:hover img{
