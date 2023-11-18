@@ -42,7 +42,6 @@ export default function PostDetails() {
 							</div>
 
 							<p>{post.summery}</p>
-							{/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. {post.height}</p> */}
 							<div>
 								<div className="container">
 									<div className="row">								
