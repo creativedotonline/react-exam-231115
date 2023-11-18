@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import * as postService from "../../services/postServices"
-import PostListItem from "./post-list-item/PostListItem";
-import HeadingSection from "../header/HeadingSection"
-import "./PostStyle.css"
+import * as postService from "../../../services/postServices"
+import PostListItem from "../post-list-item/PostListItem";
+import HeadingSection from "../../header/HeadingSection"
+import "../PostStyle.css"
 
 export default function PostList() {
 	const [post, setPost] = useState([]);

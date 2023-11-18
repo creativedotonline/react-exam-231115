@@ -5,7 +5,7 @@ import UserList from "./users/UserList";
 import Whyus from "./Whyus"
 import ClientSection from "./ClientSection"
 import ControlledForm from "./ControledForm";
-import PostList from "./post/PostList"
+import PostList from "./post/post-list/PostList"
 
 export default function PageHome() {
     return(

@@ -18,7 +18,7 @@ import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
 import PageRegister from './components/register/PageRegister'
 import PagePostCreate from "./components/post/PagePostCreate"
-import PostList from "./components/post/PostList"
+import PostList from "./components/post/post-list/PostList"
 import PostDetails from "./components/post/post-details/PostDetails"
 
 
