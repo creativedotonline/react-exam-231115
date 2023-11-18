@@ -3,10 +3,22 @@
 //import * as postServices from "../../../services/postServices"
 
 export default function PostCreate() {
-
+	const createPostSubmitHandler=(e)=>{
+		e.preventDefault();
+		// const{
+		// 	title,
+		// 	category,
+		// 	userlevel,
+		// 	imageUrl,
+		// 	summary
+		// } = Object.fromEntries(new FormData(e.currentTarget));
+		const postData = Object.fromEntries(new FormData(e.currentTarget));
+		console.log(postData);
+		
+	}
 	return (
 		<section id="create-page" className="auth">
-			<form id="create">
+			<form id="create" onSubmit={createPostSubmitHandler}>
 				<div className="container">
 					<label htmlFor="leg-title">Post title:</label>
 					<input type="text" id="title" name="title" placeholder="Enter game title..." />
