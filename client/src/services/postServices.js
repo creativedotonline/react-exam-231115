@@ -8,6 +8,10 @@ export const getAll = async ()=>{
 	return Object.values(result);
 }
 
+export const getOne = async (postId) =>{
+	const result = await request.get(`${baseUrl}/${postId}`);
+	return result;
+}
 export const create = async (postData) => {
 	const result = await request.post(baseUrl,postData);
 	

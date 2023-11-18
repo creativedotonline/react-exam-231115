@@ -11,6 +11,7 @@ export default function PostDetails() {
 	useEffect(() => {
 		postServices.getOne(postId)
 			.then(setPost);
+			// then navigate to 404 if not page
 	}, [postId]);
 
 	const addCommentHandler = async (e) => {
@@ -42,7 +43,7 @@ export default function PostDetails() {
 
 							<p>{post.summery}</p>
 							{/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. {post.height}</p> */}
-							<section>
+							<div>
 								<div className="container">
 									<div className="row">								
 									<div className="details-comments col-md-6">
@@ -62,17 +63,17 @@ export default function PostDetails() {
 										<a href="#" className="button btn btn-green-gradient">Edit</a>
 										<a href="#" className="button btn btn-pink-gradient">Delete</a>
 									</div> */}
-									<article className="create-comment col-md-6">
+									<div className="create-comment col-md-6">
 										<label>Add new comment:</label>
 										<form className="form" onSubmit={addCommentHandler}>
 											<input type="text" name="username" placeholder="username" />
 											<textarea name="comment" placeholder="Comment......"></textarea>
 											<input className="btn submit btn-green-gradient" type="submit" value="Add Comment" />
 										</form>
-									</article>
+									</div>
 									</div>
 								</div>
-							</section>
+							</div>
 						</div>
 					</section>
 				</main>
