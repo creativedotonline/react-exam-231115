@@ -14,5 +14,21 @@
         "imageUrl": "https://static-ladypopular.com/ladypopular/v4/img/model/boyfriend/presetimage/boyfriend-1.png",
         "summary": "You can have a boyfriend who can become a fiance at the time. To have successful relationship you have to give him a regular kisses, phone calls, bring him to a beauty salon, and get him clothes in the wardrobe.",
         "_id": "8dcdb907-8a98-4473-a46e-b40268becb20"
+    },
+    "36194ba4-f7eb-4948-8af8-6d0d703fa4ec": {
+        "title": "The car",
+        "category": "Car",
+        "userLevel": "",
+        "imageUrl": "https://static.xs-software.com/ladypopular/lp4_dev/img/model/car/body/body-8-11.png?v=1664350001",
+        "summary": "You can have a boyfriend who can become a fiance at the time. To have successful relationship you have to give him a regular kisses, phone calls, bring him to a beauty salon, and get him clothes in the wardrobe.",
+        "_id": "36194ba4-f7eb-4948-8af8-6d0d703fa4ec"
+    },
+    "d63fa86d-35ee-4f38-9632-26544e1a0f6f": {
+        "title": "Ladies and clothes",
+        "category": "Clothes",
+        "userLevel": "1",
+        "imageUrl": "https://static-ladypopular.com/ladypopular/gate/img/ladypopular3/pink/lady/l3/l3.png?ver=2",
+        "summary": "You have wonderful wordrobe to collect and you super fashion clothes and accessories.",
+        "_id": "d63fa86d-35ee-4f38-9632-26544e1a0f6f"
     }
 }
