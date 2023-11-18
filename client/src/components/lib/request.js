@@ -11,15 +11,18 @@ const buildOptions=(data)=>{
 	return options;
 }
 
-export const request = async (method, url, data)=>{
+const request = async (method, url, data)=>{
 	const response = await fetch(url,{
 		...buildOptions(data),
-		method,
-		
+		method,		
 	});
 	const result = await response.json();
 
 	return result;
 }
 
-export
+export const get = request.bind(null,'GET');
+export const post = request.bind(null,'POST');
+export const put = request.bind(null,'PUT');
+export const del = request.bind(null,'DELETE');
+export const patch = request.bind(null,'PATCH');
