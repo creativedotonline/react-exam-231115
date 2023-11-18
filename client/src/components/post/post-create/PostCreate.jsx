@@ -1,9 +1,10 @@
 
-//import { useNavigate } from "react-router-dom";
-//import * as postServices from "../../../services/postServices"
+import { useNavigate } from "react-router-dom";
+import * as postServices from '../../../services/postServices'
 
 export default function PostCreate() {
-	const createPostSubmitHandler=(e)=>{
+	const navigate = useNavigate();
+	const createPostSubmitHandler = async (e) => {
 		e.preventDefault();
 		// const{
 		// 	title,
@@ -13,8 +14,17 @@ export default function PostCreate() {
 		// 	summary
 		// } = Object.fromEntries(new FormData(e.currentTarget));
 		const postData = Object.fromEntries(new FormData(e.currentTarget));
-		console.log(postData);
+
+		try{
+			await postServices.create(postData);
+
+			navigate('/post-list');
+		} catch(err){
+			// some err notification
+			console.log(err);
+		}
 		
+
 	}
 	return (
 		<section id="create-page" className="auth">
