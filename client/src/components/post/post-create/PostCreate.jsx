@@ -1,32 +1,12 @@
-import { useNavigate } from "react-router-dom"
 
-import * as postServices from "../../services/postServices"
+//import { useNavigate } from "react-router-dom";
+//import * as postServices from "../../../services/postServices"
 
 export default function PostCreate() {
-	const navigate = useNavigate();
-	const createPostSubmitHandler = async (e) => {
-		e.preventDefault();
-		// const {
-		// 	title, 
-		// 	category,
-		// 	userLevel,
-		// 	imageUrl,
-		// 	summary,
-		// 	_id
-		// }= Object.fromEntries(new FormData(e.currentTarget));
-		const postData = Object.fromEntries(new FormData(e.currentTarget));
-		try {
-			await postServices.create(postData);
-			navigate('/post-list');
-		} catch (err) {
-			// error notification
-			console.log(err);
-		}
 
-	}
 	return (
 		<section id="create-page" className="auth">
-			<form id="create" onSubmit={createPostSubmitHandler}>
+			<form id="create">
 				<div className="container">
 					<label htmlFor="leg-title">Post title:</label>
 					<input type="text" id="title" name="title" placeholder="Enter game title..." />

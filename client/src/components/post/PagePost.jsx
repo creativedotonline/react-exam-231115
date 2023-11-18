@@ -1,10 +1,9 @@
 import HeadingSection from "../header/HeadingSection";
 import "./PostStyle.css"
 import PostGridItem from "./PostGridItem"
+import { useState, useEffect } from "react";
 
 const base_url='https://swapi.dev/api';
-
-import { useState, useEffect } from "react";
 
 const PagePost = () => {
 	const [post, setPosts] = useState([]);	

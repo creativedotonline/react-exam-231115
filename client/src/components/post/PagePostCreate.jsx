@@ -1,4 +1,4 @@
-import PostCreate from "./PostCreate"
+import PostCreate from "./post-create/PostCreate"
 import HeadingSection from "../header/HeadingSection"
 
 

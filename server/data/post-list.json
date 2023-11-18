@@ -1,0 +1,18 @@
+{
+    "11bac40b-9c5f-4822-bca6-38ae131f19eb": {
+        "title": "Apartment",
+        "category": "Apartment",
+        "userLevel": "12",
+        "imageUrl": "https://static.xs-software.com/ladypopular/lp4_dev/img/apartment/table/table-126-3.png",
+        "summary": "The apartment is the place to display and use your inventory items, aranged in a different rooms.",
+        "_id": "11bac40b-9c5f-4822-bca6-38ae131f19eb"
+    },
+    "8dcdb907-8a98-4473-a46e-b40268becb20": {
+        "title": "My Fiance",
+        "category": "Boyfriend",
+        "userLevel": "2",
+        "imageUrl": "https://static-ladypopular.com/ladypopular/v4/img/model/boyfriend/presetimage/boyfriend-1.png",
+        "summary": "You can have a boyfriend who can become a fiance at the time. To have successful relationship you have to give him a regular kisses, phone calls, bring him to a beauty salon, and get him clothes in the wardrobe.",
+        "_id": "8dcdb907-8a98-4473-a46e-b40268becb20"
+    }
+}
