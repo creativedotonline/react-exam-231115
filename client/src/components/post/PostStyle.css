@@ -41,10 +41,17 @@
 	transition: all .4s ease-in-out;
 }
 
-.single-post-grid-image{
+.post-list .single-post-grid-image{
 	height: 200px;
     overflow: hidden;
 	text-align: center;
+}
+
+section.single-post .single-post-grid-image{
+	height: 333px;
+    width: 400px;
+	overflow: hidden;
+    margin: 0 auto;
 }
 
 .single-post-heading{

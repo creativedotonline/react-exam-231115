@@ -18,7 +18,7 @@ import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
 import PageRegister from './components/register/PageRegister'
 import PagePostCreate from "./components/post/PagePostCreate"
-import PostList from "./components/post/post-list/PostList"
+import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
 
 
@@ -38,7 +38,7 @@ function App() {
 		<Route path="/character-List/:id" element={<CharacterDetails />} /> 
 		<Route path="*" element={<NotFound />} />
 		<Route path='/register' element={<PageRegister />} />
-		<Route path='post-list' element={<PostList />}/>
+		<Route path='post-list' element={<PagePostList />}/>
 		<Route path='post-list/:postId' element={<PostDetails />} />
 	</Routes>
 	<Footer />
