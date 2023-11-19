@@ -54,7 +54,7 @@ export default function PostDetails() {
 									<ul>
 										{comments.map(({ username, text }) => (
 											<li key={postId} className="comment">
-												<p>{username}: {text}</p>
+												<p><span className="username">{username}</span>: {text}</p>
 											</li>
 										))}
 									</ul>
