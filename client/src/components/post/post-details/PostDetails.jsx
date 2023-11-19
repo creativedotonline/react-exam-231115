@@ -56,7 +56,14 @@ export default function PostDetails() {
 									<ul>
 										{comments.map(({ _id, username, text }) => (
 											<li key={_id} className="comment">
-												<p><span className="username">{username}</span>: {text}</p>
+												<div className="user-bio">
+													<span className="user-img">
+														<img className="single-post-grid-img-top" src="https://static.xs-software.com/ladypopular/lp4_dev/img/layout/filter-lady.png?v=1664350001" alt={post.title} />
+													</span>
+												<span className="username">{username}</span>
+													
+													</div>
+												<p>{text}</p>
 											</li>
 										))}
 									</ul>
