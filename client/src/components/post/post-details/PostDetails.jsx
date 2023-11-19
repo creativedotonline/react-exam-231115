@@ -50,9 +50,9 @@ export default function PostDetails() {
 					<section className="single-post-comments">
 						<div className="container">
 							<div className="row">
-							<h2>Comments:</h2>
+							
 								<div className="details-comments col-md-6">
-									
+								<h3>Comments:</h3>
 									<ul>
 										{comments.map(({ _id, username, text }) => (
 											<li key={_id} className="comment">
@@ -78,7 +78,7 @@ export default function PostDetails() {
 								<a href="#" className="button btn btn-pink-gradient">Delete</a>
 							</div> */}
 								<div className="create-comment col-md-6">
-									<label>Add new comment:</label>
+									<h3>Add new comment:</h3>
 									<form className="form" onSubmit={addCommentHandler}>
 										<input type="text" name="username" placeholder="username" />
 										<textarea name="comment" placeholder="Comment......"></textarea>
