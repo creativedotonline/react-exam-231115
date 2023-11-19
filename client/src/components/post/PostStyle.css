@@ -71,7 +71,16 @@ section.single-post .single-post-grid-image{
 	padding: 0;
 }
 
+.wrapper .single-post{
+	margin-bottom: 3%;
+}
+
 .single-post .title{
 	color: var(--primary-color-2);
 	text-align: left;
+}
+
+.single-post-comments{
+	background: var(--input-style-1-bg);
+	padding: 3% 0;
 }

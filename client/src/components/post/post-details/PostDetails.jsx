@@ -6,17 +6,20 @@ import * as commentService from "../../../services/commentService"
 
 export default function PostDetails() {
 	const [post, setPost] = useState({});
+	const [comments, setComments] = useState([]);
 	const { postId } = useParams();
 
 	useEffect(() => {
 		postServices.getOne(postId)
 			.then(setPost);
-			// then navigate to 404 if not page
+		// then navigate to 404 if not page
+		commentService.getAll()
+			.then(setComments);
 	}, [postId]);
 
 	const addCommentHandler = async (e) => {
 		e.preventDefault();
-		
+
 		const formData = new FormData(e.currentTarget);
 
 		const newComment = await commentService.create(
@@ -40,37 +43,38 @@ export default function PostDetails() {
 								<span className="post-category col-md-6 col-right-border">{post.category}</span>
 								<span className="post-user-evel col-md-6">Level: {post.userLevel}</span>
 							</div>
-
-							<p>{post.summery}</p>
-							<div>
-								<div className="container">
-									<div className="row">								
-									<div className="details-comments col-md-6">
-										<h2>Comments:</h2>
-										<ul>
-											<li className="comment">
-												<p>Content: I rate this one quite highly.</p>
+							<p>{post.summary}</p>
+						</div>
+					</section>
+					<section className="single-post-comments">
+						<div className="container">
+							<div className="row">
+								<div className="details-comments col-md-6">
+									<h2>Comments:</h2>
+									<ul>
+										{comments.map(({ username, text }) => (
+											<li key={postId} className="comment">
+												<p>{username}: {text}</p>
 											</li>
-											<li className="comment">
-												<p>Content: The best thing.</p>
-											</li>
-										</ul>
+										))}
+									</ul>
+									{comments.length === 0 && (
 										<p className="no-comment">No comments.</p>
-									</div>
+									)}
 
-									{/* <div className="buttons">
-										<a href="#" className="button btn btn-green-gradient">Edit</a>
-										<a href="#" className="button btn btn-pink-gradient">Delete</a>
-									</div> */}
-									<div className="create-comment col-md-6">
-										<label>Add new comment:</label>
-										<form className="form" onSubmit={addCommentHandler}>
-											<input type="text" name="username" placeholder="username" />
-											<textarea name="comment" placeholder="Comment......"></textarea>
-											<input className="btn submit btn-green-gradient" type="submit" value="Add Comment" />
-										</form>
-									</div>
-									</div>
+								</div>
+
+								{/* <div className="buttons">
+								<a href="#" className="button btn btn-green-gradient">Edit</a>
+								<a href="#" className="button btn btn-pink-gradient">Delete</a>
+							</div> */}
+								<div className="create-comment col-md-6">
+									<label>Add new comment:</label>
+									<form className="form" onSubmit={addCommentHandler}>
+										<input type="text" name="username" placeholder="username" />
+										<textarea name="comment" placeholder="Comment......"></textarea>
+										<input className="btn submit btn-green-gradient" type="submit" value="Add Comment" />
+									</form>
 								</div>
 							</div>
 						</div>
