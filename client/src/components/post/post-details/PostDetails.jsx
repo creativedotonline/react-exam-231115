@@ -52,8 +52,8 @@ export default function PostDetails() {
 								<div className="details-comments col-md-6">
 									<h2>Comments:</h2>
 									<ul>
-										{comments.map(({ username, text }) => (
-											<li key={postId} className="comment">
+										{comments.map(({ _id,username, text }) => (
+											<li key={_id} className="comment">
 												<p><span className="username">{username}</span>: {text}</p>
 											</li>
 										))}
