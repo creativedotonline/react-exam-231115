@@ -27,6 +27,7 @@ export default function PostDetails() {
 			formData.get("username"),
 			formData.get("comment"),
 		);
+		setComments(state => [...state, newComment])
 		console.log(newComment);
 	}
 	return (
@@ -49,10 +50,11 @@ export default function PostDetails() {
 					<section className="single-post-comments">
 						<div className="container">
 							<div className="row">
+							<h2>Comments:</h2>
 								<div className="details-comments col-md-6">
-									<h2>Comments:</h2>
+									
 									<ul>
-										{comments.map(({ _id,username, text }) => (
+										{comments.map(({ _id, username, text }) => (
 											<li key={_id} className="comment">
 												<p><span className="username">{username}</span>: {text}</p>
 											</li>
