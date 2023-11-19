@@ -6,7 +6,7 @@ import "../molecules/ButtonStyle.css"
 const Search = () => {
     return (
         <div className="form-search-wrapper">
-        <form className="search-form form-wrapper">
+        <form className="search-form form-wrapper horizontal-over-btn">
             <h2>
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user"
                     className="svg-inline--fa fa-user SearchBar_icon__cXpTg" role="img" xmlns="http://www.w3.org/2000/svg"

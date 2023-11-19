@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
 				<div className="row width-half text-align-center row-underline">
 					<div className="subscribe col col-6 col-md-4 ">					
-						<form action="#" className="form-wrapper">
+						<form action="#" className="form-wrapper horizontal-over-btn">
 							<div className="input-container">
 								<div className="input-wrapper">
 									<span><i className="fa-regular fa-envelope-open"></i></span>

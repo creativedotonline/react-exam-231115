@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import * as postServices from "../../../services/postServices"
 import * as commentService from "../../../services/commentService"
@@ -13,7 +13,7 @@ export default function PostDetails() {
 		postServices.getOne(postId)
 			.then(setPost);
 		// then navigate to 404 if not page
-		commentService.getAll()
+		commentService.getAllPerPost(postId)
 			.then(setComments);
 	}, [postId]);
 
@@ -75,7 +75,7 @@ export default function PostDetails() {
 									<form className="form" onSubmit={addCommentHandler}>
 										<input type="text" name="username" placeholder="username" />
 										<textarea name="comment" placeholder="Comment......"></textarea>
-										<input className="btn submit btn-green-gradient" type="submit" value="Add Comment" />
+										<button className="btn close-btn btn-green-gradient"><i className="fa-solid fa-xmark"></i>Submit</button>
 									</form>
 								</div>
 							</div>
