@@ -80,6 +80,19 @@ section.single-post .single-post-grid-image{
 	text-align: left;
 }
 
+.single-post .post-category{
+	color: var(--primary-color-3);
+}
+.single-post  .post-user-evel {
+	padding: 1px 6px;
+    border-radius: 3px;
+    font-size: .9em;
+    background: var(--primary-color-3);
+    margin: 0 0 0 5px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 .single-post-comments{
 	background: var(--input-style-1-bg);
 	padding: 3% 0;
@@ -105,7 +118,7 @@ section.single-post .single-post-grid-image{
 }
 
 .details-comments .username{
-	padding: 2px 6px;
+	padding: 1px 6px;
     border-radius: 3px;
 	font-size: .9em;
     background: var(--primary-color-3);

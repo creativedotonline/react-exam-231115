@@ -41,7 +41,7 @@ export default function PostDetails() {
 							</div>
 							<div className="single-post-heading">
 								<h1>{post.title}</h1>
-								<span className="post-category col-md-6 col-right-border">{post.category}</span>
+								<span className="post-category col-md-6">{post.category}</span>
 								<span className="post-user-evel col-md-6">Level: {post.userLevel}</span>
 							</div>
 							<p>{post.summary}</p>
