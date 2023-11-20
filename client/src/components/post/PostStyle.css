@@ -114,7 +114,7 @@ section.single-post .single-post-grid-image{
 .create-comment form input{
 	background: none;
 	margin-bottom: 1%;
-	border:1px solid var(--primary-color-3);
+	border:1px solid rgba(193, 180, 221,1);
 }
 
 .details-comments .username{

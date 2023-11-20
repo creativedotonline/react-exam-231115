@@ -28,7 +28,7 @@ function App() {
 	return (
 	<>   
 	<Header />
-	<Routes>
+	<Routes>		
 		<Route className="home-page" path="/" element={<PageHome />} />
 		<Route path="/user-list" element={<PageUserList />} />
 		<Route path="/post" element={<PagePost />} />
