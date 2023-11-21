@@ -6,7 +6,9 @@ import './assets/css/font-awesome.min.css'
 import './assets/css/responsive.css'
 import './assets/css/style.css'
 
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+
 import PageHome from './components/PageHome'
 import PageUserList from './components/users/PageUserList'
 import PagePost from './components/post/PagePost'
@@ -24,27 +26,30 @@ import PostDetails from "./components/post/post-details/PostDetails"
 
 
 function App() {
-// const [count, setCount] = useState(0)
+	const [auth, setAuth] = useState({});
+	const loginSubmitHandler = (values) => {
+		console.log(values)
+	};
 
 	return (
-	<>   
-	<Header />
-	<Routes>		
-		<Route className="home-page" path="/" element={<PageHome />} />
-		<Route path="/user-list" element={<PageUserList />} />
-		<Route path="/post" element={<PagePost />} />
-		<Route path="/post/:id" element={<PostSingle />} />
-		<Route path='/post-create' element={<PagePostCreate />} />
-		<Route path="/character-list" element={<PageCharacterList />} />
-		<Route path="/character-List/:id" element={<CharacterDetails />} /> 
-		<Route path="*" element={<NotFound />} />
-		<Route path='/register' element={<Register />} />
-		<Route path='/login' element={<Login />} />
-		<Route path='post-list' element={<PagePostList />}/>
-		<Route path='post-list/:postId' element={<PostDetails />} />
-	</Routes>
-	<Footer />
-	</>
+		<>
+			<Header />
+			<Routes>
+				<Route className="home-page" path="/" element={<PageHome />} />
+				<Route path="/user-list" element={<PageUserList />} />
+				<Route path="/post" element={<PagePost />} />
+				<Route path="/post/:id" element={<PostSingle />} />
+				<Route path='/post-create' element={<PagePostCreate />} />
+				<Route path="/character-list" element={<PageCharacterList />} />
+				<Route path="/character-List/:id" element={<CharacterDetails />} />
+				<Route path="*" element={<NotFound />} />
+				<Route path='/register' element={<Register />} />
+				<Route path='/login' element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+				<Route path='post-list' element={<PagePostList />} />
+				<Route path='post-list/:postId' element={<PostDetails />} />
+			</Routes>
+			<Footer />
+		</>
 	)
 }
 
