@@ -104,8 +104,9 @@ section.single-post .single-post-grid-image{
 
 .details-comments li{
 	padding: 3%;
+	display: inline-block;
 	margin-bottom: 20px;
-    border-radius: 25px;
+    border-radius: 15px;
     background: var(--thumb-bg1);
 }
 
@@ -144,6 +145,7 @@ section.single-post .single-post-grid-image{
 	display: inline-block;
 	overflow: hidden;
 	vertical-align: middle;
+	position: relative;
 }
 
 .details-comments .user-img img{
@@ -152,7 +154,7 @@ section.single-post .single-post-grid-image{
 }
 
 .details-comments .user-bio{
-	margin-top: -20px;
+	margin: -20px 0 0 -15px
 	/* flex-direction: row-reverse;
     justify-content: flex-end;
     display: flex; */

@@ -26,6 +26,7 @@ export default function PostDetails() {
 			postId,
 			formData.get("username"),
 			formData.get("comment"),
+			formData.get("userimage"),
 		);
 		setComments(state => [...state, newComment])
 		console.log(newComment);
@@ -54,11 +55,12 @@ export default function PostDetails() {
 								<div className="details-comments col-md-6">
 								<h3>Comments:</h3>
 									<ul>
-										{comments.map(({ _id, username, text }) => (
+										{comments.map(({ _id, username, text,userImg }) => (
 											<li key={_id} className="comment">
 												<div className="user-bio">
 													<span className="user-img">
-														<img className="single-post-grid-img-top" src="https://static.xs-software.com/ladypopular/lp4_dev/img/layout/filter-lady.png?v=1664350001" alt={post.title} />
+														
+														<img className="single-post-grid-img-top" src={userImg} alt={post.title} />
 													</span>
 												<span className="username">{username}</span>
 													
@@ -81,6 +83,7 @@ export default function PostDetails() {
 									<h3>Add new comment:</h3>
 									<form className="form" onSubmit={addCommentHandler}>
 										<input type="text" name="username" placeholder="username" />
+										<input type="text" name="userimage" placeholder="userimage" />
 										<textarea name="comment" placeholder="Comment......"></textarea>
 										<button className="btn close-btn btn-green-gradient"><i className="fa-solid fa-xmark"></i>Submit</button>
 									</form>
