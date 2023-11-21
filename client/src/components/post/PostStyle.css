@@ -48,7 +48,7 @@
 }
 
 section.single-post .single-post-grid-image{
-	height: 333px;
+	max-height: 333px;
     width: 400px;
 	overflow: hidden;
     margin: 0 auto;
@@ -102,7 +102,7 @@ section.single-post .single-post-grid-image{
 	padding: 0;
 }
 
-.details-comments li{
+.details-comments li p{
 	padding: 3%;
 	display: inline-block;
 	margin-bottom: 20px;
@@ -145,7 +145,7 @@ section.single-post .single-post-grid-image{
 	display: inline-block;
 	overflow: hidden;
 	vertical-align: middle;
-	position: relative;
+	
 }
 
 .details-comments .user-img img{
@@ -154,8 +154,6 @@ section.single-post .single-post-grid-image{
 }
 
 .details-comments .user-bio{
-	margin: -20px 0 0 -15px
-	/* flex-direction: row-reverse;
-    justify-content: flex-end;
-    display: flex; */
+	margin: 0 0 -15px;
+	position: relative;
 }
