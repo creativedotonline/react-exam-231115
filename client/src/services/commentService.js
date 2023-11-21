@@ -10,7 +10,7 @@ export const getAllPerPost = async (postId) => {
 	//const result = await request.get(`${baseUrl}?${query}`);
 	// return Object.values(result);
 	return Object.values(result).filter(comment => comment.postId === postId);
-	// TO DO: temo solution until migration to collection services
+	// TO DO: temp solution until migration to collection services
 }
 
 export const create = async (postId, username, text, userImg) => {
