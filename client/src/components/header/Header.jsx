@@ -66,10 +66,16 @@ const Header = () => {
 									Character List
 									<span className="sr-only">(current)</span>
 								</Link>
-							</li>
+							</li>							
 							<li className={(url === "/register" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/register">
 									<i className="fa fa-user-plus" aria-hidden="true"></i>
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
+							<li className={(url === "/login" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/login">
+									<i className="fa fa-user" aria-hidden="true"></i>
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>

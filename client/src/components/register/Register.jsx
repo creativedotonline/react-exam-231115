@@ -1,6 +1,6 @@
 
 import HeadingSection from "../header/HeadingSection";
-import ControlledForm from "../ControledForm";
+import Login from "../login/Login";
 import FormRegister from "../forms/FormRegister"
 
 export default function Register (){
@@ -18,7 +18,7 @@ export default function Register (){
 						</div>
 						<div className="col-md-6 ">
 							<h3>You are already part of the ladies club</h3>
-							<ControlledForm />
+							<Login />
 						</div>
 					</div>
 				</div>

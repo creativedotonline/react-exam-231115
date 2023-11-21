@@ -16,7 +16,8 @@ import CharacterDetails from "./components/CharacterDetails"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
-import PageRegister from './components/register/PageRegister'
+import Register from './components/register/Register'
+import Login from './components/login/Login'
 import PagePostCreate from "./components/post/PagePostCreate"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
@@ -37,7 +38,8 @@ function App() {
 		<Route path="/character-list" element={<PageCharacterList />} />
 		<Route path="/character-List/:id" element={<CharacterDetails />} /> 
 		<Route path="*" element={<NotFound />} />
-		<Route path='/register' element={<PageRegister />} />
+		<Route path='/register' element={<Register />} />
+		<Route path='/login' element={<Login />} />
 		<Route path='post-list' element={<PagePostList />}/>
 		<Route path='post-list/:postId' element={<PostDetails />} />
 	</Routes>
