@@ -1,8 +1,8 @@
 
 import Login from "./login/Login";
-import FormRegister from "./forms/FormRegister"
+import Register from "./register/Register"
 
-export default function Register (){
+export default function Account (){
 	return(
 	<>
 	<div className="wrapper register-page">
@@ -16,7 +16,7 @@ export default function Register (){
 						</div>
 						<div className="col-md-6 ">
 						<h3>Become part of ladies world</h3>
-							<FormRegister />
+							<Register />
 						</div>
 					</div>
 				</div>

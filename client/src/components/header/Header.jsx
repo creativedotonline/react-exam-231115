@@ -104,7 +104,7 @@ const Header = () => {
 								<li id="guest" className={(url === "/account" ? " active nav-item" : "nav-item")}>
 									<Link className="nav-link" to="/account">
 										<i className="fa fa-user-plus" aria-hidden="true"></i>
-										<span className="sr-only">(current)</span>
+										<span className="sr-only">(current)</span> Login
 									</Link>
 								</li>
 							)}
