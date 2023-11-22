@@ -11,7 +11,6 @@ export default function Login({
 	});
 	return (
 		<>
-			<HeadingSection />
 			<div className="wrapper register-page">
 				<main className="main">
 					<section className="controlledForm_section">
