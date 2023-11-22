@@ -13,11 +13,7 @@ export default function Login() {
 	});
 	return (
 		<>
-			<div className="wrapper register-page">
-				<main className="main">
-					<section className="controlledForm_section">
-						<div className="container ">
-							<form className="width-half" id="login" onSubmit={onSubmit}>
+							<form id="login" onSubmit={onSubmit}>
 								<div className="form-row">
 									<div className="form-group">
 										<label htmlFor="username" >Username</label>
@@ -54,10 +50,6 @@ export default function Login() {
 								</div>
 								<p>Would you like to become part of Ladypopuler Club? Please visit here.</p>
 							</form>
-						</div>
-					</section>
-				</main>
-			</div>
 		</>
 	);
 }

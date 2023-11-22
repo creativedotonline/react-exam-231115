@@ -23,7 +23,7 @@ import CharacterDetails from "./components/CharacterDetails"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
-import Register from './components/register/Register'
+import Account from './components/PageAccount'
 import Login from './components/login/Login'
 import PagePostCreate from "./components/post/PagePostCreate"
 import PagePostList from "./components/post/PagePostList"
@@ -45,14 +45,19 @@ function App() {
 		setAuth(result);
 		navigate(Path.Home);
 	};
-
+	const values = {
+		loginSubmitHandler,
+		username: auth.username,
+		email: auth.email,
+		isAuthenticated: !!auth.username,
+	};
 	return (
 		
 		<>
-		<AuthContext.Provider value={{loginSubmitHandler}}>
+		<AuthContext.Provider value={values}>
 			<Header />
 			<Routes>
-				<Route className="home-page" path="/" element={<PageHome />} />
+				<Route className="home-page" path={Path.Home} element={<PageHome />} />
 				<Route path="/user-list" element={<PageUserList />} />
 				<Route path="/post" element={<PagePost />} />
 				<Route path="/post/:id" element={<PostSingle />} />
@@ -60,9 +65,9 @@ function App() {
 				<Route path="/character-list" element={<PageCharacterList />} />
 				<Route path="/character-List/:id" element={<CharacterDetails />} />
 				<Route path="*" element={<NotFound />} />
-				<Route path='/register' element={<Register />} />
+				<Route path='/account' element={<Account />} />
 				<Route path='/login' element={<Login />} />
-				<Route path='post-list' element={<PagePostList />} />
+				<Route path={Path.PostsList} element={<PagePostList />} />
 				<Route path='post-list/:postId' element={<PostDetails />} />
 			</Routes>
 			<Footer />

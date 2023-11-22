@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "./HeaderStyle.css"
+import AuthContext from "../../contexts/authContext";
 // import "./units/dataUnits.js"
+
 
 const Header = () => {
 	const location = useLocation(); // once ready it returns the 'window.location' object
@@ -25,6 +27,10 @@ const Header = () => {
 		scrollTop >= 150 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
 	};
 
+	const {
+		isAutenticated,
+		username,
+	}= useContext(AuthContext);
 	return (
 		<header className="header_section d-none d-xl-block header">
 			<div className="container-fluid">
@@ -55,30 +61,42 @@ const Header = () => {
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							<li className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/post-create">
-									Create Posts
-									<span className="sr-only">(current)</span>
-								</Link>
-							</li>
+							
 							<li className={(url === "/character-list" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/character-list">
 									Character List
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>							
-							<li className={(url === "/register" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/register">
+							<li className={(url === "/account" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/account">
 									<i className="fa fa-user-plus" aria-hidden="true"></i>
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							<li className={(url === "/login" ? " active nav-item" : "nav-item")}>
+							{/* <li className={(url === "/login" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/login">
 									<i className="fa fa-user" aria-hidden="true"></i>
 									<span className="sr-only">(current)</span>
 								</Link>
+							</li> */}
+							{isAutenticated && (
+								<>
+								<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/post-create">
+									Create Posts
+									<span className="sr-only">(current)</span>
+								</Link>
 							</li>
+								<li id="user-logout" className={(url === "/logout" ? " active nav-item" : "nav-item")}>
+									<Link className="nav-link" to="/logout">
+										<i className="fa fa-user" aria-hidden="true"></i>
+										<span className="sr-only">(current)</span>
+									</Link>
+								</li>
+								</>
+							)}
+							
 							<li className={(url === "/post-list" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/post-list">
 								PostList
