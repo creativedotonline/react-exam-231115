@@ -1,13 +1,15 @@
-import HeadingSection from "../header/HeadingSection"
+import { useContext } from 'react';
 import useForm from '../hooks/useForm'
-
-export default function Login({
-	loginSubmitHandler,
-
-}) {
+import AuthContext from '../../contexts/althContext';
+const LoginFormKey={
+	Email:'email',
+	Password:'password',
+}
+export default function Login() {
+	const {loginSubmitHandler}= useContext(AuthContext);
 	const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
-		email: '',
-		password: '',
+		[LoginFormKey.Email]: '',
+		[LoginFormKey.Password]: '',
 	});
 	return (
 		<>

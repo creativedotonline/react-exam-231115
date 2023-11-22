@@ -9,6 +9,7 @@ import './assets/css/style.css'
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 
+
 import PageHome from './components/PageHome'
 import PageUserList from './components/users/PageUserList'
 import PagePost from './components/post/PagePost'
@@ -23,6 +24,7 @@ import Login from './components/login/Login'
 import PagePostCreate from "./components/post/PagePostCreate"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
+import AuthContext from './contexts/althContext'
 
 
 function App() {
@@ -32,7 +34,9 @@ function App() {
 	};
 
 	return (
+		
 		<>
+		<AuthContext.Provider value={{loginSubmitHandler}}>
 			<Header />
 			<Routes>
 				<Route className="home-page" path="/" element={<PageHome />} />
@@ -44,11 +48,12 @@ function App() {
 				<Route path="/character-List/:id" element={<CharacterDetails />} />
 				<Route path="*" element={<NotFound />} />
 				<Route path='/register' element={<Register />} />
-				<Route path='/login' element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+				<Route path='/login' element={<Login />} />
 				<Route path='post-list' element={<PagePostList />} />
 				<Route path='post-list/:postId' element={<PostDetails />} />
 			</Routes>
 			<Footer />
+			</AuthContext.Provider>
 		</>
 	)
 }
