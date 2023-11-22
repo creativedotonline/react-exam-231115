@@ -67,42 +67,47 @@ const Header = () => {
 									Character List
 									<span className="sr-only">(current)</span>
 								</Link>
-							</li>							
-							<li className={(url === "/account" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/account">
-									<i className="fa fa-user-plus" aria-hidden="true"></i>
+							</li>
+							<li className={(url === "/post-list" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/post-list">
+								PostList
 									<span className="sr-only">(current)</span>
 								</Link>
-							</li>
+							</li>							
+							
 							{/* <li className={(url === "/login" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/login">
 									<i className="fa fa-user" aria-hidden="true"></i>
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li> */}
-							{isAutenticated && (
-								<>
-								<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/post-create">
-									Create Posts
-									<span className="sr-only">(current)</span>
-								</Link>
+							
+							{!isAutenticated && (
+								<li id="user" className="nav-item">
+									<ul>
+										<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
+											<Link className="nav-link" to="/post-create">
+													Create Posts
+												<span className="sr-only">(current)</span>
+											</Link>
+										</li>
+										<li id="user-logout" className={(url === "/logout" ? " active nav-item" : "nav-item")}>
+										<Link className="nav-link" to="/logout">Logout
+											<i className="fa fa-user" aria-hidden="true"></i>
+											<span className="sr-only">(current)</span><span className="border-right">{username}</span>
+										</Link>
+									</li>
+								</ul>
 							</li>
-								<li id="user-logout" className={(url === "/logout" ? " active nav-item" : "nav-item")}>
-									<Link className="nav-link" to="/logout">
-										<i className="fa fa-user" aria-hidden="true"></i>
+							)}
+							{isAutenticated &&(
+								<li id="guest" className={(url === "/account" ? " active nav-item" : "nav-item")}>
+									<Link className="nav-link" to="/account">
+										<i className="fa fa-user-plus" aria-hidden="true"></i>
 										<span className="sr-only">(current)</span>
 									</Link>
 								</li>
-								</>
 							)}
-							
-							<li className={(url === "/post-list" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/post-list">
-								PostList
-									<span className="sr-only">(current)</span>
-								</Link>
-							</li>
 							<form className="form-inline">
 								<button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
 									<i className="fa fa-search" aria-hidden="true"></i>
