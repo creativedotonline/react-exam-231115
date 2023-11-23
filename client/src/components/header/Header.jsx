@@ -92,8 +92,8 @@ const Header = () => {
 											</Link>
 										</li>
 										<li id="user-logout" className={(url === "/logout" ? " active nav-item" : "nav-item")}>
-										<Link className="nav-link" to="/logout">Logout
-											<i className="fa fa-user" aria-hidden="true"></i>
+										<Link className="nav-link" to="/logout">
+											<i className="fa fa-user" aria-hidden="true"></i> Logout
 											<span className="sr-only">(current)</span><span className="border-right">{username}</span>
 										</Link>
 									</li>

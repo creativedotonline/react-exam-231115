@@ -5,17 +5,25 @@ import Register from "./register/Register"
 export default function Account (){
 	return(
 	<>
-	<div className="wrapper register-page">
+	<div className="wrapper account-page">
 		<main className="main">
 			<section>
-				<div className="container">
+				<div className="container login-register-form">
 					<div className="row">
 						<div className="col-md-6 col-right-border">
-							<h3>You are already part of the ladies club</h3>
-							<Login />							
+							<div className="title">
+							<h3>You are a Lady!</h3>
+							<span>Please, login here.</span>
+							</div>
+							<div className="content-body">
+							<Login />				
+							</div>			
 						</div>
 						<div className="col-md-6 ">
-						<h3>Become part of ladies world</h3>
+						<div className="title">
+						<h3>Become a Lady!</h3>
+						<span>Resgister here.</span>
+						</div>
 							<Register />
 						</div>
 					</div>
