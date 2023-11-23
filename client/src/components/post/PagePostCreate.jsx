@@ -1,22 +1,23 @@
 import PostCreate from "./post-create/PostCreate"
-import HeadingSection from "../header/HeadingSection"
-
+import AminBg from "../AnimBg";
 
 export default function PagePostCreate(){
 	
 	return(
 		<>
-		<HeadingSection />
 		<div className="wrapper">
 			<main className="main">
-				<section className="post-list">
+				<section>
 					<div className="container">
+					<div className="content-title">
 					<h1>Create Post</h1>
+					</div>
 						<PostCreate />
 					</div>
 				</section>
 			</main>
 		</div>
+		<AminBg />
 		</>
 	);
 }

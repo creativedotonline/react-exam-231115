@@ -2,8 +2,8 @@
 .header_section {
 	max-width: 1170px;
 	margin: 0 auto;
+	position:fixed;
 }
-
 .hero_area {
 	position: relative;
 	display: -webkit-box;
@@ -13,7 +13,7 @@
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	margin:0 auto 30px;
+	margin:0 auto;
 }
 
 .hero_area .hero_bg_box {
@@ -109,8 +109,8 @@
 }
 
 .custom_nav-container .nav_search-btn:hover,
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link,
-.custom_nav-container .navbar-nav .nav-item.active .nav-link {
+.custom_nav-container .navbar-nav .nav-item:hover>.nav-link,
+.custom_nav-container .navbar-nav .nav-item.active>.nav-link {
 	color: var(--font-color-active);
 	text-shadow: 0 1px 5px rgb(255, 73, 185);
 }
