@@ -1,0 +1,165 @@
+.header_section {
+	position:fixed;
+}
+
+.account-page .content-body{
+	background: linear-gradient(to bottom, var(--primary-color-5) 70%, var(--bg-dg4-color-1) 100%);
+    box-shadow: 0 16px 28px rgba(50, 25, 80, .3);
+}
+
+.account-page.wrapper{
+	z-index: 1;
+	padding-top: 120px;
+}
+
+.login-register-form .title{
+	background: var(--bg-dg3-color-1);
+    box-shadow: 0 5px 9px rgba(50,25,80,.3);
+    color: var(--font-color-default-light);
+	padding: 17px 30px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border-radius: var(--border-radius-m);
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+
+.login-register-form .content-body{
+	position: relative;
+    padding: 40px 30px;
+	margin-top: -10px;
+	border-radius: var(--border-radius-m);
+}
+
+.maps-default-background{
+	display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    background: url(src/assets/images/maps-default-bg.webp) repeat scroll;
+    filter: brightness(0.88);
+}
+
+.left-bg-elements, 
+.right-bg-elements {
+    position: absolute;
+    width: 100%;
+    max-width: 556px;
+    height: 100%;
+    transform: translateX(-768px);
+}
+
+body .left-bg-elements span, 
+body .right-bg-elements span{
+    display: block;
+	background-size: cover;
+	position: absolute;
+}
+
+.tea {
+    right: 50px;
+    width: 360px;
+    height: 300px;
+    background: url(src/assets//images/tea.webp) no-repeat;
+    background-position: right top;
+    animation: tea-anim 1500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.chamomile {
+    right: 195px;
+    width: 86px;
+    height: 84px;
+    background: url(src/assets/images/chamomile.webp) no-repeat;
+    animation: chamomile-entry 1500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both, chamomile-anim 30s infinite linear;
+}
+
+.flower-wrapper {
+    position: absolute;
+    width: 570px;
+    height: 790px;
+    right: 0;
+    z-index: 50;
+    animation: flowers-left 1500ms 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.camera {
+    width: 400px;
+    height: 300px;
+    right: 40px;
+    background: url(src/assets/images/camera.webp) no-repeat;
+    z-index: 10;
+    animation: camera 1500ms 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.stems {
+    width: 100%;
+    height: 100%;
+    background: url(src/assets/images/flowers-bottom-left.webp) no-repeat;
+}
+
+.blossom {
+    width: 500px;
+    height: 500px;
+    left: 55px;
+    top: 25px;
+    background: url(src/assets/images/blossoms-90.webp) no-repeat;
+}
+
+.right-bg-elements {
+    transform: translateX(768px);
+}
+
+.flower-wrapper.right {
+    left: 140px;
+    transform: scaleX(-1) scaleY(-1);
+    animation: flowers-right 1500ms 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+.flower-wrapper.left{
+	bottom: 250px;
+}
+.stems {
+    width: 100%;
+    height: 100%;
+    background: url(src/assets/images/flowers-bottom-left.webp) no-repeat;
+}
+
+.blossom {
+    width: 500px;
+    height: 500px;
+    left: 55px;
+    top: 25px;
+    background: url(src/assets/images/blossoms-90.png) no-repeat;
+}
+
+.candle {
+    width: 190px;
+    height: 190px;
+    left: 40px;
+    background: url(src/assets/images/candle.webp) no-repeat;
+    animation: candle-entry 1500ms 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.flame {
+    width: 46px;
+    height: 69px;
+    top: 45px;
+    left: 127px;
+    background: url(src/assets/images/flame.png) no-repeat;
+    animation: candle-flame-entry 1500ms 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.notebook {
+    width: 460px;
+    height: 520px;
+    left: 0;
+    background: url(src/assets/images/notebook.webp) no-repeat;
+    z-index: 1;
+    animation: notebook-entry 1500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}

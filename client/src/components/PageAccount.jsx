@@ -1,6 +1,8 @@
 
 import Login from "./login/Login";
-import Register from "./register/Register"
+import Register from "./register/Register";
+
+import './PageAccountStyle.css';
 
 export default function Account (){
 	return(
@@ -30,6 +32,26 @@ export default function Account (){
 				</div>
 			</section>
 		</main>
+	</div>
+	<div className="maps-default-background">
+		<div className="left-bg-elements">
+			<span className="tea"></span>
+			<span className="chamomile"></span>
+			<span className="flower-wrapper left">
+				<span className="stems"></span>
+				<span className="blossom"></span>
+			</span>
+			<span className="camera"></span>
+		</div>
+		<div className="right-bg-elements">
+			<span className="flower-wrapper right">
+				<span className="stems"></span>
+				<span className="blossom"></span>
+			</span>
+			<span className="candle"></span>
+			<span className="flame"></span>
+			<span className="notebook"></span>
+		</div>
 	</div>
 	</>
 	);
