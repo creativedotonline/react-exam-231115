@@ -8,7 +8,7 @@ export default function PagePostCreate(){
 		<div className="wrapper">
 			<main className="main">
 				<section>
-					<div className="container">
+					<div className="container width-half">
 					<div className="content-title">
 					<h1>Create Post</h1>
 					</div>
