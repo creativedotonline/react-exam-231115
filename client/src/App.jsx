@@ -25,6 +25,7 @@ import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
 import Account from './components/PageAccount'
 import Login from './components/login/Login'
+import Register from './components/register/Register'
 import PagePostCreate from "./components/post/PagePostCreate"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
@@ -43,7 +44,6 @@ function App() {
 
 	const registerSubmitHandler = async (values) => {
 		const result = await authService.register(values.email, values.password);
-		
 		setAuth(result);
 		navigate(Path.Home);
 	}
@@ -68,8 +68,9 @@ function App() {
 					<Route path="/character-list" element={<PageCharacterList />} />
 					<Route path="/character-List/:id" element={<CharacterDetails />} />
 					<Route path="*" element={<NotFound />} />
-					<Route path='/account' element={<Account />} />
-					<Route path='/login' element={<Login />} />
+					<Route path={Path.Account} element={<Account />} />
+					<Route path={Path.Login} element={<Login />} />
+					<Route path={Path.Register} element={<Register />} />
 					<Route path={Path.PostsList} element={<PagePostList />} />
 					<Route path='post-list/:postId' element={<PostDetails />} />
 				</Routes>

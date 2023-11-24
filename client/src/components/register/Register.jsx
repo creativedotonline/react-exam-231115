@@ -6,7 +6,7 @@ const RegisterFormKeys = {
 	Email:'email',
 	Password: 'password',
 	ConfirmPassword:'comfirm-password',
-}
+};
 
 export default function Register(){
 	const {registerSubmitHandler} = useContext(AuthContext);
