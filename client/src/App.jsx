@@ -34,11 +34,6 @@ function App() {
 	const navigate = useNavigate();
 	const [auth, setAuth] = useState({});
 	
-	// accessToken
-	// email
-	// username
-	// _id
-
 	const loginSubmitHandler = async (values) => {
 		const result = await authService.login(values.email, values.password);
 
@@ -54,7 +49,7 @@ function App() {
 	return (
 		
 		<>
-		<AuthContext.Provider value={values}>
+		<AuthContext.Provider value={loginSubmitHandler}>
 			<Header />
 			<Routes>
 				<Route className="home-page" path={Path.Home} element={<PageHome />} />
