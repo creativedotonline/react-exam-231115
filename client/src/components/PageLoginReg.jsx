@@ -3,7 +3,7 @@ import Login from "./login/Login";
 import Register from "./register/Register";
 import AminBg from "./AnimBg";
 
-export default function Account (){
+export default function PageLoginReg (){
 	return(
 	<>
 	<div className="wrapper account-page">

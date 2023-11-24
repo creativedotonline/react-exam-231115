@@ -28,7 +28,7 @@ const Header = () => {
 	};
 
 	const {
-		isAutenticated,
+		isAuthenticated,
 		username,
 	} = useContext(AuthContext);
 	return (
@@ -82,7 +82,7 @@ const Header = () => {
 								</Link>
 							</li> */}
 
-							{isAutenticated && (
+							{isAuthenticated && (
 								<li id="user" className="nav-item">
 									<ul>
 										<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
@@ -100,7 +100,7 @@ const Header = () => {
 									</ul>
 								</li>
 							)}
-							{!isAutenticated && (
+							{!isAuthenticated && (
 								<li id="guest" className={(url === "/account" ? " active nav-item" : "nav-item")}>
 									<Link className="nav-link" to="/account">
 										<i className="fa fa-user-plus" aria-hidden="true"></i>

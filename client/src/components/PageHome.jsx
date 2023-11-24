@@ -1,6 +1,5 @@
 import HeroSection from "./header/HeroSection";
 import About from "./About";
-import Footer from "./footer/Footer";
 import UserList from "./users/UserList";
 import Whyus from "./Whyus"
 import ClientSection from "./ClientSection"
@@ -21,7 +20,6 @@ export default function PageHome() {
 			<ClientSection />      
 		</main>
 		</div>
-		<Footer />
     </>
     );
 }
