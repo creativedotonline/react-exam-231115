@@ -1,19 +1,34 @@
+import { useContext } from "react";
+import AuthContext from "../../contexts/authContext";
+import useForm from "../hooks/useForm";
+
+const RegisterFormKeys = {
+	Email:'email',
+	Password: 'password',
+	ConfirmPassword:'comfirm-password',
+}
+
 export default function Register(){
+	const {registerSubmitHandler} = useContext(AuthContext);
+	const {values, onChange, onSubmit} = useForm(registerSubmitHandler,{
+		[RegisterFormKeys.Email]:'',
+		[RegisterFormKeys.Password]:'',
+		[RegisterFormKeys.ConfirmPassword]:'',
+	})
+
 	return(
 		<div className="content-body">
-		<form>
+		<form id="register" onSubmit={onSubmit}>
 			<div>
                 <label htmlFor="firstName">First name</label>
                 <div className="input-wrapper">
                     <span><i className="fa-solid fa-user"></i></span>
 					<input
-						
 						type="text"
-						id="username"
-						name="username"
-						value=''
-						onChange=''
-						// onBlur={() => console.log('onBlur')}
+						id="email-register"
+						name="email"
+						value={values[RegisterFormKeys.Email]}
+						onChange={onChange}
 					/>
 				</div>
             </div>
@@ -25,27 +40,26 @@ export default function Register(){
 						type="password"
 						id="register-password"
 						name="password"
-						value=''
-						//onChange={changeHandler}
+						value={values[RegisterFormKeys.Password]}
+						onChange={onChange}
 					/>
 				</div>
             </div>
 			<div>
-                <label htmlFor="con-pass">Confirm Password</label>
+                <label htmlFor="confirm-pass">Confirm Password</label>
                 <div className="input-wrapper">
                     <span><i className="fa-solid fa-user"></i></span>
 					<input
 						type="password"
-						id="confirm-password"
-						name="confirm-password"
-						value=''
-						//onChange={changeHandler}
+						id="comfirm-password"
+						name="comfirm-password"
+						value={values[RegisterFormKeys.ConfirmPassword]}
+						onChange={onChange}
 					/>
 				</div>
             </div>
             <div>
-                <button className="btn btn-green-gradient" type="submit" >Register</button>
-                <button className="btn btn-PINK-gradient" type="button" >Reset</button>
+                <input className="btn submit btn-green-gradient" type="submit" value="Register" />
             </div>
             </form>
 		</div>

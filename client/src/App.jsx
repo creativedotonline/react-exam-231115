@@ -33,39 +33,47 @@ import PostDetails from "./components/post/post-details/PostDetails"
 function App() {
 	const navigate = useNavigate();
 	const [auth, setAuth] = useState({});
-	
+
 	const loginSubmitHandler = async (values) => {
 		const result = await authService.login(values.email, values.password);
 
 		setAuth(result);
 		navigate(Path.Home);
 	};
+
+	const registerSubmitHandler = async (values) => {
+		const result = await authService.register(values.email, values.password);
+		
+		setAuth(result);
+		navigate(Path.Home);
+	}
 	const values = {
 		loginSubmitHandler,
+		registerSubmitHandler,
 		username: auth.username,
 		email: auth.email,
 		isAuthenticated: !!auth.username,
 	};
 	return (
-		
+
 		<>
-		<AuthContext.Provider value={loginSubmitHandler}>
-			<Header />
-			<Routes>
-				<Route className="home-page" path={Path.Home} element={<PageHome />} />
-				<Route path="/user-list" element={<PageUserList />} />
-				<Route path="/post" element={<PagePost />} />
-				<Route path="/post/:id" element={<PostSingle />} />
-				<Route path='/post-create' element={<PagePostCreate />} />
-				<Route path="/character-list" element={<PageCharacterList />} />
-				<Route path="/character-List/:id" element={<CharacterDetails />} />
-				<Route path="*" element={<NotFound />} />
-				<Route path='/account' element={<Account />} />
-				<Route path='/login' element={<Login />} />
-				<Route path={Path.PostsList} element={<PagePostList />} />
-				<Route path='post-list/:postId' element={<PostDetails />} />
-			</Routes>
-			<Footer />
+			<AuthContext.Provider value={values}>
+				<Header />
+				<Routes>
+					<Route className="home-page" path={Path.Home} element={<PageHome />} />
+					<Route path="/user-list" element={<PageUserList />} />
+					<Route path="/post" element={<PagePost />} />
+					<Route path="/post/:id" element={<PostSingle />} />
+					<Route path='/post-create' element={<PagePostCreate />} />
+					<Route path="/character-list" element={<PageCharacterList />} />
+					<Route path="/character-List/:id" element={<CharacterDetails />} />
+					<Route path="*" element={<NotFound />} />
+					<Route path='/account' element={<Account />} />
+					<Route path='/login' element={<Login />} />
+					<Route path={Path.PostsList} element={<PagePostList />} />
+					<Route path='post-list/:postId' element={<PostDetails />} />
+				</Routes>
+				<Footer />
 			</AuthContext.Provider>
 		</>
 	)

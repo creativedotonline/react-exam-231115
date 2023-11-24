@@ -40,6 +40,9 @@
 	height: 50px;
 }
 
+input:-internal-autofill-selected {
+	background-color: transparent !important;
+}
 .input-wrapper input{
 	background: transparent;
 }

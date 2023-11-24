@@ -30,7 +30,7 @@ const Header = () => {
 	const {
 		isAutenticated,
 		username,
-	}= useContext(AuthContext);
+	} = useContext(AuthContext);
 	return (
 		<header className="header_section d-none d-xl-block header">
 			<div className="container-fluid">
@@ -61,7 +61,7 @@ const Header = () => {
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							
+
 							<li className={(url === "/character-list" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/character-list">
 									Character List
@@ -70,37 +70,37 @@ const Header = () => {
 							</li>
 							<li className={(url === "/post-list" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/post-list">
-								PostList
+									PostList
 									<span className="sr-only">(current)</span>
 								</Link>
-							</li>							
-							
+							</li>
+
 							{/* <li className={(url === "/login" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/login">
 									<i className="fa fa-user" aria-hidden="true"></i>
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li> */}
-							
-							{!isAutenticated && (
+
+							{isAutenticated && (
 								<li id="user" className="nav-item">
 									<ul>
 										<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
 											<Link className="nav-link" to="/post-create">
-													Create Posts
+												Create Posts
 												<span className="sr-only">(current)</span>
 											</Link>
 										</li>
 										<li id="user-logout" className={(url === "/logout" ? " active nav-item" : "nav-item")}>
-										<Link className="nav-link" to="/logout">
-											<i className="fa fa-user" aria-hidden="true"></i> Logout
-											<span className="sr-only">(current)</span><span className="border-right">{username}</span>
-										</Link>
-									</li>
-								</ul>
-							</li>
+											<Link className="nav-link" to="/logout">
+												<i className="fa fa-user" aria-hidden="true"></i> Logout
+												<span className="sr-only">(current)</span><span className="border-right">{username}</span>
+											</Link>
+										</li>
+									</ul>
+								</li>
 							)}
-							{isAutenticated &&(
+							{!isAutenticated && (
 								<li id="guest" className={(url === "/account" ? " active nav-item" : "nav-item")}>
 									<Link className="nav-link" to="/account">
 										<i className="fa fa-user-plus" aria-hidden="true"></i>
