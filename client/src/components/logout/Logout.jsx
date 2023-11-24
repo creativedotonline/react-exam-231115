@@ -1,25 +1,20 @@
-import HeadingSection from "../header/HeadingSection";
+import { useContext, useEffect } from "react";
+import * as authService from "../../services/authService"
+import { useNavigate } from "react-router-dom";
+import Path from "../../paths";
+import AuthContext from "../../contexts/authContext";
 
 export default function Logout(){
-	return(
-		<>
-		<HeadingSection />
-		<div className="wrapper register-page">
-			<main className="main">
-				<section>
-					<div className="container">
-						<div className="row">
-							<div className="col-md-6 col-right-border">
-								<h3>Logout</h3>
-							</div>
-							<div className="col-md-6 ">
-								
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-		</div>
-		</>
-	);
+	const navigate = useNavigate();
+	const {logoutHandler} = useContext(AuthContext);
+	useEffect(()=>{
+		authService.logout()
+			.then(() => {
+				logoutHandler();
+				navigate(Path.Home);
+			})
+			.then(() => navigate(Path.Home));
+	},[]);
+
+	return null;
 }

@@ -4,6 +4,7 @@ import useForm from "../hooks/useForm";
 
 const RegisterFormKeys = {
 	Email:'email',
+	Username:'username',
 	Password: 'password',
 	ConfirmPassword:'comfirm-password',
 };
@@ -12,6 +13,7 @@ export default function Register(){
 	const {registerSubmitHandler} = useContext(AuthContext);
 	const {values, onChange, onSubmit} = useForm(registerSubmitHandler,{
 		[RegisterFormKeys.Email]:'',
+		[RegisterFormKeys.Username]:'',
 		[RegisterFormKeys.Password]:'',
 		[RegisterFormKeys.ConfirmPassword]:'',
 	})
@@ -28,6 +30,19 @@ export default function Register(){
 						id="email-register"
 						name="email"
 						value={values[RegisterFormKeys.Email]}
+						onChange={onChange}
+					/>
+				</div>
+            </div>
+			<div>
+                <label htmlFor="firstName">Username</label>
+                <div className="input-wrapper">
+                    <span><i className="fa-solid fa-user"></i></span>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						value={values[RegisterFormKeys.Username]}
 						onChange={onChange}
 					/>
 				</div>

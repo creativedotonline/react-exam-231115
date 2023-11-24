@@ -26,6 +26,7 @@ import NotFound from "./components/notfound/NotFound"
 import Account from './components/PageAccount'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
+import Logout from "./components/logout/Logout"
 import PagePostCreate from "./components/post/PagePostCreate"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
@@ -46,18 +47,24 @@ function App() {
 		const result = await authService.register(values.email, values.password);
 		setAuth(result);
 		navigate(Path.Home);
-	}
+	};
+
+	const logoutHandler = ()=>{
+		setAuth({});
+	};
+
 	const values = {
 		loginSubmitHandler,
 		registerSubmitHandler,
-		username: auth.username,
+		logoutHandler,
+		username: auth.username || auth.email,
 		email: auth.email,
-		isAuthenticated: !!auth.username,
+		isAuthenticated: !!auth.accessToken,
 	};
 	return (
 
 		<>
-			<AuthContext.Provider value={values}>
+			<AuthContext.Provider value={{loginSubmitHandler}}>
 				<Header />
 				<Routes>
 					<Route className="home-page" path={Path.Home} element={<PageHome />} />
@@ -71,6 +78,7 @@ function App() {
 					<Route path={Path.Account} element={<Account />} />
 					<Route path={Path.Login} element={<Login />} />
 					<Route path={Path.Register} element={<Register />} />
+					<Route path={Path.Logout} element={<Logout />} />
 					<Route path={Path.PostsList} element={<PagePostList />} />
 					<Route path='post-list/:postId' element={<PostDetails />} />
 				</Routes>

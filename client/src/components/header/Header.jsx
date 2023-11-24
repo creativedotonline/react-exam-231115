@@ -21,7 +21,7 @@ const Header = () => {
 	});
 
 	/* Method that will fix header after a specific scrollable */
-	const isSticky = (e) => {
+	const isSticky = () => {
 		const header = document.querySelector('.header_section');
 		const scrollTop = window.scrollY;
 		scrollTop >= 150 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
@@ -92,9 +92,9 @@ const Header = () => {
 											</Link>
 										</li>
 										<li id="user-logout" className={(url === "/logout" ? " active nav-item" : "nav-item")}>
-											<Link className="nav-link" to="/logout">
-												<i className="fa fa-user" aria-hidden="true"></i> Logout
-												<span className="sr-only">(current)</span><span className="border-right"> {username}</span>
+											<Link className="nav-link" to="/logout"><span  className="border-right">Logout </span>
+												<i className="fa fa-user" aria-hidden="true"></i> 
+												<span className="sr-only">(current)</span><span> {username}</span>
 											</Link>
 										</li>
 									</ul>
