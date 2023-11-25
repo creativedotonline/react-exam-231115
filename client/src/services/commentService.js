@@ -1,16 +1,14 @@
 import * as request from "../components/lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore/comments'
+const baseUrl = 'http://localhost:3030/data/comments'
 
 export const getAllPerPost = async (postId) => {
 	const query = new URLSearchParams({
 		where: `postId="${postId}"`
 	})
-	const result = await request.get(`${baseUrl}`);
-	//const result = await request.get(`${baseUrl}?${query}`);
-	// return Object.values(result);
-	return Object.values(result).filter(comment => comment.postId === postId);
-	// TO DO: temp solution until migration to collection services
+	const result = await request.get(`${baseUrl}?${query}`);
+	
+	return result;
 }
 
 export const create = async (postId, username, text, userImg) => {

@@ -30,7 +30,7 @@ export default function PostDetails() {
 		);
 		setComments(state => [...state, newComment])
 		console.log(newComment);
-	}
+	};
 	return (
 		<>
 			<div className="wrapper">
