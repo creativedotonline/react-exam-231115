@@ -93,7 +93,8 @@ input:-internal-autofill-selected {
 input,
 .input-wrapper input,
 .filter select,
-textarea {
+textarea,
+select {
 	width: 100%;
 	font-weight: 400;
 	line-height: 1.5;
