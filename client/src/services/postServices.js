@@ -4,8 +4,7 @@ const baseUrl = 'http://localhost:3030/data/post-list'
 
 export const getAll = async ()=>{
 	const result = await request.get(baseUrl);
-	console.log(result);
-	return Object.values(result);
+	return result;
 }
 
 export const getOne = async (postId) =>{

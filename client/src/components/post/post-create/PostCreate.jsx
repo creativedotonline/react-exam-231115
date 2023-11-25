@@ -39,7 +39,14 @@ export default function PostCreate() {
 							</div>
 							<div className="form-group">
 								<label htmlFor="category">Category:</label>
-								<input type="text" id="category" name="category" placeholder="Enter game category..." />
+								{/* <input type="text" id="category" name="category" placeholder="Enter game category..." /> */}
+								<select id="category"  name="category" >
+									<option value="appartment">Appartment</option>
+									<option value="boyfrined">Boyfrined</option>
+									<option value="collections">Collections</option>
+									<option value="events">Events</option>
+									<option value="fashion Arena">Fashion Arena</option>
+								</select>
 							</div>
 						</div>
 						<div className="form-row">
