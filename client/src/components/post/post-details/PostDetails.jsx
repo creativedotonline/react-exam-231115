@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import * as postServices from "../../../services/postServices"
-import * as commentService from "../../../services/commentService"
+import * as postServices from "../../../services/postServices";
+import * as commentService from "../../../services/commentService";
+import AuthContext from "../../../contexts/authContext";
 
 export default function PostDetails() {
+	const {email} = useContext(AuthContext)
 	const [post, setPost] = useState({});
 	const [comments, setComments] = useState([]);
 	const { postId } = useParams();
@@ -24,11 +26,9 @@ export default function PostDetails() {
 
 		const newComment = await commentService.create(
 			postId,
-			formData.get("username"),
-			formData.get("comment"),
-			formData.get("userimage"),
+			formData.get("comment")
 		);
-		setComments(state => [...state, newComment])
+		setComments(state => [...state, {...newComment, author:{email}}])
 		console.log(newComment);
 	};
 	return (
@@ -55,15 +55,13 @@ export default function PostDetails() {
 								<div className="details-comments col-md-6">
 								<h3>Comments:</h3>
 									<ul>
-										{comments.map(({ _id, username, text,userImg }) => (
+									{comments.map(({ _id, text, owner:{email} }) => (
 											<li key={_id} className="comment">
 												<div className="user-bio">
 													<span className="user-img">
-														
-														<img className="single-post-grid-img-top" src={userImg} alt={post.title} />
+														<img className="single-post-grid-img-top" src=" " alt={post.title} />
 													</span>
-												<span className="username">{username}</span>
-													
+												<span className="username">{email}</span>
 													</div>
 												<p>{text}</p>
 											</li>
@@ -82,8 +80,7 @@ export default function PostDetails() {
 								<div className="create-comment col-md-6">
 									<h3>Add new comment:</h3>
 									<form className="form" onSubmit={addCommentHandler}>
-										<input type="text" name="username" placeholder="username" />
-										<input type="text" name="userimage" placeholder="userimage" />
+										{/* <input type="text" name="userimage" placeholder="userimage" /> */}
 										<textarea name="comment" placeholder="Comment......"></textarea>
 										<button className="btn close-btn btn-green-gradient"><i className="fa-solid fa-xmark"></i>Submit</button>
 									</form>
