@@ -1507,32 +1507,6 @@
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
     		}
     	},
-    	posts: {
-    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Lady Popular Appartment",
-    			description: "The apartment is the place to display and use your inventory items, aranged in a different rooms.",
-    			img: "https://static-ladypopular.com/ladypopular/gate/img/ladypopular3/pink/lady/l4/l4.png",
-    			_createdOn: 1614935055353,
-    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    		},
-    		"143e5265-333e-4150-80e4-16b61de31aa0": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Boyfriend",
-    			description: "You can have a boyfriend who can become a fiance at the time. To have successful relationship you have to give him a regular kisses, phone calls, bring him to a beauty salon, and get him clothes in the wardrobe.",
-    			img: "https://static-ladypopular.com/ladypopular/v4/img/model/boyfriend/presetimage/boyfriend-1.png",
-    			_createdOn: 1614935181470,
-    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    		},
-    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Events type and description",
-    			description: "In all events there are sertain amount of rewards to be win and each level presents different type of item. All items are collected and can be used in other parts of the game - such as wordrobe, appartment and etc.",
-    			img: "http://localhost/img/layout/gift-box.png",
-    			_createdOn: 1614935268135,
-    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
-    	},
     	likes: {
     	},
     	ideas: {
