@@ -7,7 +7,7 @@ import AuthContext from "../../../contexts/authContext.jsx";
 import useForm from "../../../hooks/useForm.js"
 
 export default function PostDetails() {
-	const {email} = useContext(AuthContext)
+	const {email, userId} = useContext(AuthContext)
 	const [post, setPost] = useState({});
 	const [comments, setComments] = useState([]);
 	const { postId } = useParams();
@@ -33,6 +33,7 @@ export default function PostDetails() {
 		comment:'',
 	});
 
+	// const isOwner = userId === post._ownerId;
 	return (
 		<>
 			<div className="wrapper">
@@ -72,13 +73,15 @@ export default function PostDetails() {
 									{comments.length === 0 && (
 										<p className="no-comment">No comments.</p>
 									)}
-
+									{userId === post._ownerId && (
+									<div className="buttons">
+										<a href="#" className="button btn btn-green-gradient">Edit</a>
+										<a href="#" className="button btn btn-pink-gradient">Delete</a>
+									</div>
+									)}
 								</div>
-
-								{/* <div className="buttons">
-								<a href="#" className="button btn btn-green-gradient">Edit</a>
-								<a href="#" className="button btn btn-pink-gradient">Delete</a>
-							</div> */}
+								
+								
 								<div className="create-comment col-md-6">
 									<h3>Add new comment:</h3>
 									<form className="form" onSubmit={onSubmit}>
