@@ -10,7 +10,7 @@ export default function PostList() {
 			.then(result => setPost(result))
 			.catch(err=>{
 				console.log(err);
-			})
+			});
 	}, []);
 	return (
 		<>
