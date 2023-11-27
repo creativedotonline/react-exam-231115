@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import * as postServices from "../../../services/postServices";
 import * as commentService from "../../../services/commentService";
-import AuthContext from "../../../contexts/authContext";
+import AuthContext from "../../../contexts/authContext.jsx";
 
 export default function PostDetails() {
 	const {email} = useContext(AuthContext)

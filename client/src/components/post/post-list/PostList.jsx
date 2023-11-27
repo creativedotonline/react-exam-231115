@@ -7,7 +7,10 @@ export default function PostList() {
 	const [post, setPost] = useState([]);
 	useEffect(() => {
 		postServices.getAll()
-			.then(result => setPost(result));
+			.then(result => setPost(result))
+			.catch(err=>{
+				console.log(err);
+			})
 	}, []);
 	return (
 		<>

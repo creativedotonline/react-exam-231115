@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "./HeaderStyle.css"
-import AuthContext from "../../contexts/authContext";
+import AuthContext from "../../contexts/authContext.jsx";
 // import "./units/dataUnits.js"
 
 

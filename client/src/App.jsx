@@ -6,11 +6,9 @@ import './assets/css/font-awesome.min.css'
 import './assets/css/responsive.css'
 import './assets/css/style.css'
 
-import { useState } from 'react'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import * as authService from "./services/authService"
-import AuthContext from './contexts/authContext'
+import {AuthPovider} from './contexts/authContext.jsx'
 import Path from './paths'
 
 
@@ -33,46 +31,11 @@ import PostDetails from "./components/post/post-details/PostDetails"
 
 
 function App() {
-	const navigate = useNavigate();
-	const [auth, setAuth] = useState(() => {
-		localStorage.removeItem("accessToken")
-
-		return {};
-	});
-
-	const loginSubmitHandler = async (values) => {
-		const result = await authService.login(values.email, values.password);
-
-		setAuth(result);
-		localStorage.setItem('accessToken', result.accessToken);
-		navigate(Path.Home);
-	};
-
-	const registerSubmitHandler = async (values) => {
-		const result = await authService.register(values.email, values.password);
-
-		setAuth(result);
-		localStorage.setItem('accessToken', result.accessToken);
-		navigate(Path.Home);
-	};
-
-	const logoutHandler = () => {
-		setAuth({});
-		localStorage.removeItem('accessToken');
-	};
-
-	const values = {
-		loginSubmitHandler,
-		registerSubmitHandler,
-		logoutHandler,
-		username: auth.username || auth.email,
-		email: auth.email,
-		isAuthenticated: !!auth.accessToken,
-	};
+	
 	return (
 
 		<>
-			<AuthContext.Provider value={values}>
+			<AuthPovider >
 				<Header />
 				<Routes>
 					<Route className="home-page" path={Path.Home} element={<PageHome />} />
@@ -91,7 +54,7 @@ function App() {
 					<Route path='post-list/:postId' element={<PostDetails />} />
 				</Routes>
 				<Footer />
-			</AuthContext.Provider>
+			</AuthPovider>
 		</>
 	)
 }
