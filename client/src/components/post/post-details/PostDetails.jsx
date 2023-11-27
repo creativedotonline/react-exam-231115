@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import * as postServices from "../../../services/postServices";
 import * as commentService from "../../../services/commentService";
 import AuthContext from "../../../contexts/authContext.jsx";
+import useForm from "../../../hooks/useForm.js"
 
 export default function PostDetails() {
 	const {email} = useContext(AuthContext)
@@ -19,19 +20,19 @@ export default function PostDetails() {
 			.then(setComments);
 	}, [postId]);
 
-	const addCommentHandler = async (e) => {
-		e.preventDefault();
-
-		const formData = new FormData(e.currentTarget);
-
+	const addCommentHandler = async (values) => {
 		const newComment = await commentService.create(
 			postId,
-			formData.get("comment")
+			values.comment,
 		);
 		
 		setComments(state => [...state, {...newComment, owner:{email}}])
 		console.log(newComment);
 	};
+	const {values, onChange, onSubmit} = useForm(addCommentHandler, {
+		comment:'',
+	});
+
 	return (
 		<>
 			<div className="wrapper">
@@ -80,11 +81,13 @@ export default function PostDetails() {
 							</div> */}
 								<div className="create-comment col-md-6">
 									<h3>Add new comment:</h3>
-									<form className="form" onSubmit={addCommentHandler}>
+									<form className="form" onSubmit={onSubmit}>
 										{/* <input type="text" name="userimage" placeholder="userimage" /> */}
 										<textarea 
-											name="comment" 
+											name="comment"
+											value={values.comment}
 											placeholder="Comment......"
+											onChange={onChange}
 										></textarea>
 										<button className="btn close-btn btn-green-gradient"><i className="fa-solid fa-xmark"></i>Submit</button>
 									</form>
