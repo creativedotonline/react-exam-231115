@@ -26,6 +26,7 @@ import Login from './components/login/Login'
 import Register from './components/register/Register'
 import Logout from "./components/logout/Logout"
 import PagePostCreate from "./components/post/PagePostCreate"
+import PostEdit from "./components/post/post-edit/PostEdit.jsx"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
 
@@ -51,7 +52,8 @@ function App() {
 					<Route path={Path.Register} element={<Register />} />
 					<Route path={Path.Logout} element={<Logout />} />
 					<Route path={Path.PostsList} element={<PagePostList />} />
-					<Route path='post-list/:postId' element={<PostDetails />} />
+					<Route path={Path.SinglePostId} element={<PostDetails />} />
+					<Route path={Path.SinglePostIdEdit} element={<PostEdit />} />
 				</Routes>
 				<Footer />
 			</AuthPovider>

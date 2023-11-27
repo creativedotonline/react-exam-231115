@@ -4,7 +4,10 @@ const Path = {
 	Register:"/register",
 	Login:"/login",
 	Logout:"/logout",
-	Account:"/account"
+	Account:"/account",
+	SinglePostId:"/post-list/:postId",
+	SinglePostIdEdit:"/post-list/:postId/edit",
+	SinglePostIdDelete:"/post-list/:postId/delete",
 }
 
 export default Path;

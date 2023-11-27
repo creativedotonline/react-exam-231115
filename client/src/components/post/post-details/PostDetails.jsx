@@ -5,6 +5,8 @@ import * as postServices from "../../../services/postServices";
 import * as commentService from "../../../services/commentService";
 import AuthContext from "../../../contexts/authContext.jsx";
 import useForm from "../../../hooks/useForm.js"
+import Path from "../../../paths.js";
+import {pathToUrl} from "../../../utils/dataUtils.js"
 
 export default function PostDetails() {
 	const {email, userId} = useContext(AuthContext)
@@ -45,10 +47,17 @@ export default function PostDetails() {
 							</div>
 							<div className="single-post-heading">
 								<h1>{post.title}</h1>
-								<span className="post-category col-md-6">{post.category}</span>
-								<span className="post-user-evel col-md-6">Level: {post.userLevel}</span>
+								<span className="post-category col-md-6 border-right"><span>Category: </span>{post.category}</span>
+								<span className="post-user-creator col-md-6">{email}</span>
+								<span className="post-user-level col-md-6">Level: {post.userLevel}</span>
 							</div>
 							<p>{post.summary}</p>
+							{userId === post._ownerId && (
+							<div className="buttons">
+								<Link href={pathToUrl(Path.SinglePostIdEdit, {postId})} className="button btn btn-green-gradient">Edit</Link>
+								<Link href={Path.SinglePostIdEdit} className="button btn btn-pink-gradient">Delete</Link>
+							</div>
+							)}
 						</div>
 					</section>
 					<section className="single-post-comments">
@@ -73,12 +82,7 @@ export default function PostDetails() {
 									{comments.length === 0 && (
 										<p className="no-comment">No comments.</p>
 									)}
-									{userId === post._ownerId && (
-									<div className="buttons">
-										<a href="#" className="button btn btn-green-gradient">Edit</a>
-										<a href="#" className="button btn btn-pink-gradient">Delete</a>
-									</div>
-									)}
+									
 								</div>
 								
 								
