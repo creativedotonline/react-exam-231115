@@ -8,11 +8,11 @@ import Path from "../paths"
 
 const AuthContext = createContext();
 
-export const AuthPovider=({
+export const AuthPovider = ({
 	children,
-})=>{
+}) => {
 	const navigate = useNavigate();
-	const [auth, setAuth] = usePersistedState("auth",{});
+	const [auth, setAuth] = usePersistedState('auth', {});
 
 	const loginSubmitHandler = async (values) => {
 		const result = await authService.login(values.email, values.password);
@@ -43,13 +43,13 @@ export const AuthPovider=({
 		email: auth.email,
 		isAuthenticated: !!auth.accessToken,
 	};
-	return(
+	return (
 		<AuthContext.Provider value={values}>
 			{children}
 		</AuthContext.Provider>
 	);
 }
 
-AuthContext.displayName="AuthContext";
+AuthContext.displayName = "AuthContext";
 
 export default AuthContext;

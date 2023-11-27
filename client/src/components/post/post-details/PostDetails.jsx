@@ -28,7 +28,8 @@ export default function PostDetails() {
 			postId,
 			formData.get("comment")
 		);
-		setComments(state => [...state, {...newComment, author:{email}}])
+		
+		setComments(state => [...state, {...newComment, owner:{email}}])
 		console.log(newComment);
 	};
 	return (
@@ -81,7 +82,10 @@ export default function PostDetails() {
 									<h3>Add new comment:</h3>
 									<form className="form" onSubmit={addCommentHandler}>
 										{/* <input type="text" name="userimage" placeholder="userimage" /> */}
-										<textarea name="comment" placeholder="Comment......"></textarea>
+										<textarea 
+											name="comment" 
+											placeholder="Comment......"
+										></textarea>
 										<button className="btn close-btn btn-green-gradient"><i className="fa-solid fa-xmark"></i>Submit</button>
 									</form>
 								</div>
