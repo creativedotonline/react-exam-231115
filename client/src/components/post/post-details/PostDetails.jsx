@@ -39,6 +39,9 @@ export default function PostDetails() {
 
 	const {values, onChange, onSubmit} = useForm(addCommentHandler, initialValues);
 
+	// if(Math.random()<.5){
+	// 	throw new Error('post details error');
+	// }
 	// const isOwner = userId === post._ownerId;
 	return (
 		<>

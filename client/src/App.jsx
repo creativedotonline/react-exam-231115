@@ -29,13 +29,14 @@ import PagePostCreate from "./components/post/PagePostCreate"
 import PostEdit from "./components/post/post-edit/PostEdit.jsx"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
-
+import ErrorBoundary from './error-boundary/ErrorBoundary.jsx'
 
 function App() {
 	
 	return (
 
 		<>
+		<ErrorBoundary >
 			<AuthPovider >
 				<Header />
 				<Routes>
@@ -57,6 +58,7 @@ function App() {
 				</Routes>
 				<Footer />
 			</AuthPovider>
+			</ErrorBoundary>
 		</>
 	)
 }
