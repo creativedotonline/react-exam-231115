@@ -7,7 +7,13 @@ import { useEffect, useState } from "react";
 export default function PostEdit() {
 	const navigate = useNavigate();
 	const {postId}=useParams();
-	const [post, setPost] = useState({});
+	const [post, setPost] = useState({
+		title:'',
+		category:'',
+		userLevel:'',
+		imageUrl:'',
+		summery:'',
+	});
 
 	useEffect(()=>{
 		postServices.getOne(postId)
@@ -16,9 +22,9 @@ export default function PostEdit() {
 			})
 	},[postId]);
 
-	const createPostSubmitHandler = async (values) => {
+	const editPostSubmitHandler = async (values) => {
 		try {
-			await postServices.create(values);
+			await postServices.edit(postId,values);
 
 			navigate('/post-list');
 		} catch (err) {
@@ -27,7 +33,7 @@ export default function PostEdit() {
 		}
 	}
 
-	const {value, onChange, onSubmit}= useForm(createPostSubmitHandler, post);
+	const {value, onChange, onSubmit}= useForm(editPostSubmitHandler, post);
 
 	return (
 		<>
@@ -100,7 +106,7 @@ export default function PostEdit() {
 
 						</div>
 						<div className="form-row">
-							<input className="btn submit btn-pink-gradient" type="submit" value="Create Game" />
+							<input className="btn submit btn-pink-gradient" type="submit" value="Edit Game" />
 						</div>
 					</div>
 				</form>

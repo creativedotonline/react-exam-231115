@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import * as postServices from "../../../services/postServices";
@@ -31,9 +31,13 @@ export default function PostDetails() {
 		setComments(state => [...state, {...newComment, owner:{email}}])
 		console.log(newComment);
 	};
-	const {values, onChange, onSubmit} = useForm(addCommentHandler, {
+
+	// temporary solution
+	const initialValues = useMemo(()=>({
 		comment:'',
-	});
+	}),[]);
+
+	const {values, onChange, onSubmit} = useForm(addCommentHandler, initialValues);
 
 	// const isOwner = userId === post._ownerId;
 	return (
