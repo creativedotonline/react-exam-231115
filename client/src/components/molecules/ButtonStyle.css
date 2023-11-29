@@ -4,7 +4,7 @@ body .btn-primary,
 body .btn-primary:not(:disabled):not(.disabled).active, 
 body .show > .btn-primary.dropdown-toggle,
 .btn {
-    padding: 16px 25px;
+    padding: 12px 25px;
     border: none;
     /* background: #ff2294;
     background: linear-gradient(45deg,#ff2294 0,#df47d2 100%);
@@ -27,6 +27,7 @@ body .btn:hover,
   align-items: center;
   justify-content: center;
   font: inherit;
+  vertical-align: middle;
 }
 
 body .btn:focus, 
@@ -118,14 +119,15 @@ body .btn.close svg {
   opacity: 1;
 }
 
-body .delete-btn,
-body .edit-btn,
-body .info-btn,
-body .close{
-  width: 36px;
-  height: 36px;
+body .delete-btn svg,
+body .edit-btn svg,
+body .info-btn svg,
+body .close svg{
+  width: 22px;
+  height: 22px;
   line-height: 30px;
   padding: 0;
+  margin:0;
 }
 
 body .info-btn,
