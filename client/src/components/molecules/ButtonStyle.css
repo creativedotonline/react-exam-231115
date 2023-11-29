@@ -28,11 +28,18 @@ body .btn:hover,
   justify-content: center;
   font: inherit;
   vertical-align: middle;
+  margin: 0 1%;
 }
 
+body .btn-check:checked+.btn, 
+body .btn.active, .btn.show, 
+body .btn:first-child:active, 
+body :not(.btn-check)+.btn:active,
 body .btn:focus, 
-body .btn:focus-visible {
+body .btn:focus-visible,
+body .btn:active {
   outline: none;
+  color:#fff;
 }
 
 body .btn-round {
