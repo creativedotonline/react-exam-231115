@@ -26,7 +26,7 @@ import Login from './components/login/Login'
 import Register from './components/register/Register'
 import Logout from "./components/logout/Logout"
 import PagePostCreate from "./components/post/PagePostCreate"
-import PostEdit from "./components/post/post-edit/PostEdit.jsx"
+import PagePostEdit from "./components/post/PagePostEdit.jsx"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
 import ErrorBoundary from './error-boundary/ErrorBoundary.jsx'
@@ -58,7 +58,7 @@ function App() {
 					<Route element={<AuthGuard />}>
 						<Route path={Path.PagePostCreate} element={<PagePostCreate />} />
 					<Route path={Path.Logout} element={<Logout />} />
-					<Route path={Path.SinglePostIdEdit} element={<PostEdit />} />
+					<Route path={Path.PagePostEdit} element={<PagePostEdit />} />
 					</Route>
 				</Routes>
 				<Footer />

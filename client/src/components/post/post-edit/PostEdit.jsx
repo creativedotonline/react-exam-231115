@@ -22,24 +22,28 @@ export default function PostEdit() {
 			})
 	},[postId]);
 
-	const editPostSubmitHandler = async (values) => {
-		try {
-			await postServices.edit(postId,values);
+	const editPostSubmitHandler = async (e) => {
+		e.preventDefault();
 
-			navigate('/post-list');
-		} catch (err) {
-			// some err notification
-			console.log(err);
-		}
+		const FormData = new FormData(e.currentTarget);
+		const values = Object.fromEntries(FormData);
+		console.log(values);
+
+		// try {
+		// 	await postServices.edit(postId,values);
+
+		// 	navigate('/post-list');
+		// } catch (err) {
+		// 	// some err notification
+		// 	console.log(err);
+		// }
 	}
-
-	const {value, onChange, onSubmit}= useForm(editPostSubmitHandler, post);
 
 	return (
 		<>
 			{/* <section id="create-page" className="auth"> */}
 			<div className="content-body">
-				<form id="create" onSubmit={onSubmit}>
+				<form id="edit-post" onSubmit={editPostSubmitHandler}>
 					<div className="">
 						<div className="form-row">
 							<div className="form-group">
@@ -49,8 +53,8 @@ export default function PostEdit() {
 									id="title" 
 									name="title" 
 									placeholder="Enter game title..." 
-									value={value.title}
-									onChange={onChange}
+									//value={value.title}
+									
 								/>
 							</div>
 							<div className="form-group">
@@ -59,8 +63,7 @@ export default function PostEdit() {
 								<select 
 									id="category"  
 									name="category"
-									value={value.category}
-									onChange={onChange}
+									//value={value.category}
 								>
 									<option value="appartment">Appartment</option>
 									<option value="boyfrined">Boyfrined</option>
@@ -79,8 +82,7 @@ export default function PostEdit() {
 									name="userLevel" 
 									min="1" 
 									placeholder="1"
-									value={value.userLevel}
-									onChange={onChange}
+									//value={value.userLevel}
 								/>
 							</div>
 							<div className="form-group">
@@ -90,8 +92,7 @@ export default function PostEdit() {
 									id="imageUrl" 
 									name="imageUrl" 
 									placeholder="Upload a photo..."
-									value={value.imageUrl}
-									onChange={onChange} 
+									//value={value.imageUrl}
 								/>
 							</div>
 						</div>
@@ -100,8 +101,7 @@ export default function PostEdit() {
 							<textarea 
 								name="summary" 
 								id="summary"
-								value={value.summery}
-								onChange={onChange}
+								//value={value.summery}
 							></textarea>
 
 						</div>
