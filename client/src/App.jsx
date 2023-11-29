@@ -21,7 +21,7 @@ import CharacterDetails from "./components/CharacterDetails"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"
-import Account from './components/PageLoginReg'
+import PageLoginReg from './components/PageLoginReg'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
 import Logout from "./components/logout/Logout"
@@ -30,7 +30,7 @@ import PostEdit from "./components/post/post-edit/PostEdit.jsx"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
 import ErrorBoundary from './error-boundary/ErrorBoundary.jsx'
-import AuthGuard from "./components/guards/AuthGuard.jsx"
+import AuthGuard from "./guards/AuthGuard.jsx"
 
 function App() {
 	
@@ -45,17 +45,21 @@ function App() {
 					<Route path="/user-list" element={<PageUserList />} />
 					<Route path="/post" element={<PagePost />} />
 					<Route path="/post/:id" element={<PostSingle />} />
-					<Route path={Path.PagePostCreate} element={<AuthGuard><PagePostCreate /></AuthGuard>} />
+					
 					<Route path="/character-list" element={<PageCharacterList />} />
 					<Route path="/character-List/:id" element={<CharacterDetails />} />
 					<Route path="*" element={<NotFound />} />
-					<Route path={Path.Account} element={<Account />} />
+					<Route path={Path.PageLoginReg} element={<PageLoginReg />} />
 					<Route path={Path.Login} element={<Login />} />
 					<Route path={Path.Register} element={<Register />} />
-					<Route path={Path.Logout} element={<Logout />} />
 					<Route path={Path.PostsList} element={<PagePostList />} />
 					<Route path={Path.SinglePostId} element={<PostDetails />} />
+
+					<Route element={<AuthGuard />}>
+						<Route path={Path.PagePostCreate} element={<PagePostCreate />} />
+					<Route path={Path.Logout} element={<Logout />} />
 					<Route path={Path.SinglePostIdEdit} element={<PostEdit />} />
+					</Route>
 				</Routes>
 				<Footer />
 			</AuthPovider>

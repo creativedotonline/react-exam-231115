@@ -101,8 +101,8 @@ const Header = () => {
 								</li>
 							)}
 							{!isAuthenticated && (
-								<li id="guest" className={(url === "/account" ? " active nav-item" : "nav-item")}>
-									<Link className="nav-link" to="/account">
+								<li id="guest" className={(url === "/login-register" ? " active nav-item" : "nav-item")}>
+									<Link className="nav-link" to="/login-register">
 										<i className="fa fa-user-plus" aria-hidden="true"></i>
 										<span className="sr-only">(current)</span> Login
 									</Link>
