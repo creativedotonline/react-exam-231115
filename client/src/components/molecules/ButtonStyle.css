@@ -3,8 +3,7 @@ body .btn-primary,
 .body .btn-primary:not(:disabled):not(.disabled):active, 
 body .btn-primary:not(:disabled):not(.disabled).active, 
 body .show > .btn-primary.dropdown-toggle,
-button, 
-button.btn {
+.btn {
     padding: 16px 25px;
     border: none;
     /* background: #ff2294;
@@ -16,8 +15,8 @@ button.btn {
 }
 
 body .btn:hover,
-button:hover,
-button.btn:hover {
+.btn:hover,
+.btn.btn:hover {
     border: none;
     color: var(--font-color-lighter);
 }
@@ -30,12 +29,12 @@ button.btn:hover {
   font: inherit;
 }
 
-body button:focus, 
-body button:focus-visible {
+body .btn:focus, 
+body .btn:focus-visible {
   outline: none;
 }
 
-body button.btn-round {
+body .btn-round {
     border-radius: 50px;
     font-size: var(--font-size-14);
     font-family: var(--main-font-family);
@@ -52,58 +51,55 @@ body button.btn-round {
     box-sizing: border-box;
 }
 
-button.btn-s {
+body .btn-s {
     height: 26px;
 }
 
-button.btn-m {
+body .btn-m {
     height: 40px;
 }
 
-button.btn-l {
+body .btn-l {
     height: 50px;
 }
 
 /* Action buttons  */
 
-button.btn:disabled,
-button.btn.save:disabled {
+body .btn:disabled,
+body .btn.save:disabled {
   cursor: not-allowed;
   background: rgba(0, 0, 0, 0.5);
 }
 
-button.btn:disabled svg,
-button.btn.save:disabled svg {
+body .btn:disabled svg,
+body .btn.save:disabled svg {
   color: #ccc;
 }
 
 
-button.btn svg {
+body .btn svg {
   color: inherit;
   font-size: 1.25rem;
-}
-
-tr button.btn svg {
   margin: 10px;
 }
 
-button.btn.save, 
-button#action-save{
+body .btn.save, 
+#action-save{
   background-color: var(--additional-color-1);
 }
 
-button.btn.cancel, 
-button#action-cancel {
+body .btn.cancel, 
+#action-cancel {
   background-color:  var(--font-color-active);
 }
 
-button.btn.close {
+body .btn.close {
   background-color: transparent;
   padding: 5px 10px;
   height: auto;
 }
 
-button.btn.close svg {
+body .btn.close svg {
   color: black;
 }
 
@@ -114,39 +110,39 @@ button.btn.close svg {
   margin-left: 10px;
 }
 
-button.btn svg {
+.btn svg {
   margin: 0;
 }
 
-button.btn:hover {
+.btn:hover {
   opacity: 1;
 }
 
-button.delete-btn,
-button.edit-btn,
-button.info-btn,
-button.close{
+body .delete-btn,
+body .edit-btn,
+body .info-btn,
+body .close{
   width: 36px;
   height: 36px;
   line-height: 30px;
   padding: 0;
 }
 
-button.info-btn,
-.btn-white  {
+body .info-btn,
+body .btn-white  {
   	background: var(--font-color-lighter);
     color: #5b0063;
     transition: background-color .2s linear,color .1s linear;
 	box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
 }
 
-button.info-btn:hover{
+body .info-btn:hover{
 	background: var(--font-color-lighter);
 	color: #ff51a8;
 	box-shadow: 0 5px 20px 0 rgba(0,0,0,.3);
 }
 
-.btn-white:hover {
+body .btn-white:hover {
 	background-color: #ffebfb;
 	color: #ff51a8;
 	box-shadow: 0 5px 20px 0 rgba(0,0,0,.3);
@@ -157,7 +153,7 @@ body .btn-primary,
 body .btn-primary:not(:disabled):not(.disabled):active,  
 body .btn-primary:not(:disabled):not(.disabled).active,  
 body .show > .btn-primary.dropdown-toggle,
-button.delete-btn,
+body .delete-btn,
 .btn-pink-gradient  {
   	background: #ff2294;
     background: linear-gradient(45deg,#ff2294 0,#df47d2 100%);
@@ -167,22 +163,22 @@ button.delete-btn,
 body .btn-primary:not(:disabled):not(.disabled):active:focus, 
 body .btn-primary:not(:disabled):not(.disabled).active:focus, 
 body .show > .btn-primary.dropdown-toggle:focus,
-button.delete-btn:hover,
+body .delete-btn:hover,
 .btn-pink-gradient:hover  {
   box-shadow: 0 5px 20px 0 rgba(220,90,165,.6);
 }
 
 /* green */
-button.edit-btn,
-button.btn-add,
+body .edit-btn,
+body .btn-add,
 .btn-green-gradient  {
     background: #06ce52;
     background: linear-gradient(45deg,#06ce52 0,#00d0a6 100%);
     box-shadow: 0 5px 20px 0 rgba(0,255,90,.3);
 }
 
-button.edit-btn:hover,
-button.btn-add:hover,
+body .edit-btn:hover,
+body .btn-add:hover,
 .btn-green-gradient:hover  {
   box-shadow: 0 5px 20px 0 rgba(0,255,90,.6);
 }
