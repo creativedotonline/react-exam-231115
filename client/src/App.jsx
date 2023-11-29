@@ -30,6 +30,7 @@ import PostEdit from "./components/post/post-edit/PostEdit.jsx"
 import PagePostList from "./components/post/PagePostList"
 import PostDetails from "./components/post/post-details/PostDetails"
 import ErrorBoundary from './error-boundary/ErrorBoundary.jsx'
+import AuthGuard from "./components/guards/AuthGuard.jsx"
 
 function App() {
 	
@@ -44,7 +45,7 @@ function App() {
 					<Route path="/user-list" element={<PageUserList />} />
 					<Route path="/post" element={<PagePost />} />
 					<Route path="/post/:id" element={<PostSingle />} />
-					<Route path='/post-create' element={<PagePostCreate />} />
+					<Route path={Path.PagePostCreate} element={<AuthGuard><PagePostCreate /></AuthGuard>} />
 					<Route path="/character-list" element={<PageCharacterList />} />
 					<Route path="/character-List/:id" element={<CharacterDetails />} />
 					<Route path="*" element={<NotFound />} />

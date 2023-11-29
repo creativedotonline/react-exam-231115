@@ -8,6 +8,7 @@ const Path = {
 	SinglePostId:"/post-list/:postId",
 	SinglePostIdEdit:"/post-list/:postId/edit",
 	SinglePostIdDelete:"/post-list/:postId/delete",
+	PagePostCreate:'/post-create',
 }
 
 export default Path;
