@@ -19,8 +19,18 @@ export const create = async (postData) => {
 }
 
 export const edit = async (postId, postData) => {
-	const result = await request.put(`${baseUrl}/&{postId}`,postData);
+	const result = await request.put(`${baseUrl}/${postId}`, postData);
 	
+	return result;
+}
+
+export const getLatest = async () =>{
+	const query = new URLSearchParams({
+		sortBy:`_createdOn desc`,
+		offset:0,
+		pageSize:3,
+	});
+	const result = await request.get(`${baseUrl}?${query}`);
 	return result;
 }
 
