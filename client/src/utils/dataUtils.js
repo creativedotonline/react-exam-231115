@@ -9,7 +9,7 @@ export const normalizeName = (name) => name.replace(/ /g, '-').toLowerCase();
 export const pathToUrl = (path, params)=>{
 	const url = Object.keys(params).reduce((result, param) =>{
 		return result.replace(`${param}`, params[param]);
-	},path);
+	},[path]);
 
 	return url;
 };

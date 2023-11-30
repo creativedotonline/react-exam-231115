@@ -5,8 +5,8 @@ import * as postServices from "../../../services/postServices";
 import * as commentService from "../../../services/commentService";
 import AuthContext from "../../../contexts/authContext.jsx";
 import useForm from "../../../hooks/useForm.js"
-import Path from "../../../paths.js";
-import {pathToUrl} from "../../../utils/dataUtils.js"
+import Path from "/src/paths.js";
+import {pathToUrl} from "/src/utils/dataUtils.js"
 
 export default function PostDetails() {
 	const navigate = useNavigate();
@@ -37,8 +37,7 @@ export default function PostDetails() {
 		const hasConfirmed = confirm(`Are you sure you would like to delete the ${post.title}?`);
 
 		if(hasConfirmed){
-			await postServices.remove(postId);
-			
+			await postServices.remove(postId);			
 			navigate (`/post-list`);
 		}
 	}
@@ -69,7 +68,7 @@ export default function PostDetails() {
 							<p>{post.summary}</p>
 							{userId === post._ownerId && (
 							<div className="buttons text-align-center width-half row-underline-light">
-								<Link to={`./edit`} className="button btn btn-green-gradient edit-btn" >
+								<Link to={pathToUrl(Path.PostEdit)} className="button btn btn-green-gradient edit-btn" >
 									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square"
 										className="svg-inline--fa fa-pen-to-square" role="img" xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 532 512">
