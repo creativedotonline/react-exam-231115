@@ -501,33 +501,10 @@ section.full-width .container {
 	align-items: center;
 }
 
-.about_section .img-box img {
-	max-width: 100%;
-}
-
-.about_section .detail-box h3 {
-	font-weight: bold;
-}
-
 .about_section .detail-box p {
 	margin-top: 15px;
 }
 
-.about_section .detail-box a {
-	display: inline-block;
-	padding: 10px 45px;
-	background-color: #00bbf0;
-	color: #ffffff;
-	border-radius: 0px;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	border: none;
-	margin-top: 15px;
-}
-
-.about_section .detail-box a:hover {
-	background-color: #007fa4;
-}
 
 .why_section .box {
 	margin-top: 45px;
@@ -705,15 +682,15 @@ section.full-width .container {
 /* client section end */
 
 .pink-gradient-bg {
+	background: linear-gradient(to right,#a07 0,#ca0076 15%,#e2389b 50%,#ca0076 85%,#a07 100%);
+	position: relative;
+}
+.decor {
 	background: url(./src/assets/images/decor-r1.png) no-repeat scroll right 0,
-		url(./src/assets/images/decor-l1.png) no-repeat scroll left 1207px,
+		url(./src/assets/images/decor-l1.png) no-repeat scroll left -70px,
 		url(./src/assets/images/decor-r1.png) no-repeat scroll right 2414px,
 		url(./src/assets/images/decor-l1.png) no-repeat scroll left 3620px;
-	background-color: var(--primary-color-2);
-	position: relative;
-	padding-top: 160px;
 }
-
 body .text-align-center {
 	text-align: center;
 	justify-content: space-evenly;

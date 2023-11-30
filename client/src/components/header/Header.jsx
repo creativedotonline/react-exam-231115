@@ -46,12 +46,9 @@ const Header = () => {
 
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav  ">
-							<li className={(url === "/" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
-							</li>
 							<li className={(url === "/user-list" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/user-list">
-									User List
+									Users
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>

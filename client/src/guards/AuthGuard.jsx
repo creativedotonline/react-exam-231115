@@ -3,17 +3,15 @@ import Path from '../paths'
 import { useContext } from "react";
 import AuthContext from "../contexts/authContext";
 
-export default function AuthGuard(props){
-	const {isAuthenticated}=useContext(AuthContext)
-	
-	if(!isAuthenticated){
-		return <Navigate to={Path.PageLoginReg}/>;
-		
-		
+export default function AuthGuard(props) {
+	const { isAuthenticated } = useContext(AuthContext);
+
+	if (!isAuthenticated) {
+		return <Navigate to={Path.PageLoginReg} />;
 	}
-	return(
+	return (
 		<>
-		<Outlet />
+			<Outlet />
 		</>
 	);
 }

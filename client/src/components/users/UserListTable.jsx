@@ -6,6 +6,7 @@ import "./TableStyle.css";
 import UserInfoModal from "./UserInfoModal"
 import UserDeleteModal from "./UserDeleteModal"
 import Spinner from "../Spinner";
+import { Link } from "react-router-dom";
 
 const UserListTable = () => {
     const [users, setUsers] = useState([]);
@@ -172,7 +173,7 @@ const UserListTable = () => {
             </table>
         </div>
         
-        <button className="btn btn-add btn-green-gradient" onClick={createUserClickHendler}><i className="fa-solid fa-user-plus"></i></button>        
+        <Link className="btn btn-add btn-green-gradient" onClick={createUserClickHendler}><i className="fa-solid fa-user-plus"></i></Link>        
         </>
     );
 };

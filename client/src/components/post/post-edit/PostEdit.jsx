@@ -26,7 +26,6 @@ export default function PostEdit() {
 		e.preventDefault();
 
 		const values = Object.fromEntries(new FormData(e.currentTarget));
-
 		try {
 			await postServices.edit(postId,values);
 
