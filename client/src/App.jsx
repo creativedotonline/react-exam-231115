@@ -26,11 +26,13 @@ import Login from './components/login/Login'
 import Register from './components/register/Register'
 import Logout from "./components/logout/Logout"
 import PagePostCreate from "./components/post/PagePostCreate"
-import PostEdit from "./components/post/post-edit/PostEdit"
 import PagePostList from "./components/post/PagePostList"
-import PageSinglePost from "./components/post/PageSinglePost"
+import PagePostDetails from "./components/post/PagePostDetails.jsx"
 import ErrorBoundary from './error-boundary/ErrorBoundary.jsx'
 import AuthGuard from "./guards/AuthGuard.jsx"
+import PagePostEdit from "./components/post/PagePostEdit"
+import LatestPost from "./components/post/latest-post/LatestPost"
+import PageTestimonials from "./components/PageTestimonials"
 
 function App() {
 	
@@ -53,12 +55,14 @@ function App() {
 					<Route path={Path.Login} element={<Login />} />
 					<Route path={Path.Register} element={<Register />} />
 					<Route path={Path.PostsList} element={<PagePostList />} />
-					<Route path={Path.PageSinglePost} element={<PageSinglePost />} />
+					<Route path={Path.PagePostDetails} element={<PagePostDetails />} />
+					<Route path={Path.LatestPost} element={<LatestPost />} />
+					<Route path='/testimonials' element={<PageTestimonials />} />
 
 					<Route element={<AuthGuard />}>
 						<Route path={Path.PagePostCreate} element={<PagePostCreate />} />
 						<Route path={Path.Logout} element={<Logout />} />
-						<Route path={Path.PostEdit} element={<PostEdit />} />
+						<Route path={Path.PagePostEdit} element={<PagePostEdit />} />
 					</Route>
 				</Routes>
 				<Footer />

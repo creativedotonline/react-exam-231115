@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 
 import HeroSection from "./header/HeroSection";
 import About from "./About";
-import UserList from "./users/UserList";
-import Whyus from "./Whyus"
 import ClientSection from "./ClientSection"
 import LatestPost from "./post/latest-post/LatestPost";
 import * as postServices from "../services/postServices"
+import PageTestimonial from "./PageTestimonials";
 
 export default function PageHome(
 	_id,
@@ -28,14 +27,14 @@ export default function PageHome(
 				<section className="post-list">
 					<h2>Latest posts</h2>
 					<div className="container">
-					{/* {latestPost.map(post =>  <LatestPost key={_id} {...post} /> )}
+					{latestPost.map(post =>  <LatestPost key={_id} {...post} /> )}
 					
-					{!latestPost.length && <p className="no-articles">No posts yet.</p>} */}
+					{!latestPost.length && <p className="no-articles">No posts yet.</p>}
 					</div>
 				</section>
 			<About />
-			<Whyus />
-			<ClientSection />      
+			<ClientSection />
+			<PageTestimonial />
 		</main>
 		</div>
     </>

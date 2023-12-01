@@ -1,7 +1,6 @@
 import PostDetails from "./post-details/PostDetails"
-import AminBg from "../AnimBg";
 
-export default function PageSinglePost(){
+export default function PagePostDetails(){
 	
 	return(
 		<>
@@ -10,7 +9,6 @@ export default function PageSinglePost(){
 				<PostDetails />
 			</main>
 		</div>
-		<AminBg />
 		</>
 	);
 }

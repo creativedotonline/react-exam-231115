@@ -66,7 +66,8 @@ export default function PostDetails() {
 				<p>{post.summary}</p>
 				{userId === post._ownerId && (
 				<div className="buttons text-align-center width-half row-underline-light">
-					<Link to={pathToUrl(Path.SinglePostIdEdit, {postId})} className="button btn btn-green-gradient edit-btn" >
+					{/* <Link to={pathToUrl(Path.PagePostEdit, {postId})} className="button btn btn-green-gradient edit-btn" > */}
+					<Link to="./edit" className="button btn btn-green-gradient edit-btn" >
 						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square"
 							className="svg-inline--fa fa-pen-to-square" role="img" xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 532 512">

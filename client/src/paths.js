@@ -5,10 +5,11 @@ const Path = {
 	Login:"/login",
 	Logout:"/logout",
 	PageLoginReg:"/login-register",
-	PageSinglePost:"/:postId",	
-	PostEdit:'/post-list/:postId/edit',	
+	PagePostDetails:"/post-list/:postId",	
+	PagePostEdit:'/post-list/:postId/edit',	
 	SinglePostIdDelete:"/post-list/:postId/delete",
 	PagePostCreate:'/post-create',
+	PageTestimonials:'testimonials',
 }
 
 export default Path;

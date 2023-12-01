@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "./HeaderStyle.css"
 import AuthContext from "../../contexts/authContext.jsx";
+
 // import "./units/dataUnits.js"
 
 
@@ -71,7 +72,12 @@ const Header = () => {
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-
+							<li className={(url === "/testimonials" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/testimonials">
+									Testimonials
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
 							{/* <li className={(url === "/login" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/login">
 									<i className="fa fa-user" aria-hidden="true"></i>
