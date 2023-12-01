@@ -28,8 +28,8 @@ export default function PageHome(
 				<section className="post-list">
 					<h2>Latest posts</h2>
 					<div className="container">
+					{/* {latestPost.map(post =>  <LatestPost key={_id} {...post} /> )}
 					
-					{/* {latestPost.map(latestPost =>  <LatestPost key={_id} /> )}
 					{!latestPost.length && <p className="no-articles">No posts yet.</p>} */}
 					</div>
 				</section>

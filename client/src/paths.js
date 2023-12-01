@@ -5,7 +5,7 @@ const Path = {
 	Login:"/login",
 	Logout:"/logout",
 	PageLoginReg:"/login-register",
-	SinglePostId:"/post-list/:postId",	
+	PageSinglePost:"/:postId",	
 	PostEdit:'/post-list/:postId/edit',	
 	SinglePostIdDelete:"/post-list/:postId/delete",
 	PagePostCreate:'/post-create',
