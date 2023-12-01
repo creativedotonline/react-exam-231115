@@ -107,7 +107,7 @@ export default function PostEdit() {
 											/>
 										</div>
 									</div>
-									<div className="form-row">
+									<div className="form-row block">
 										<label htmlFor="summary" name="summary">Summary:</label>
 										<textarea 
 											name="summary" 
@@ -117,7 +117,7 @@ export default function PostEdit() {
 										></textarea>
 
 									</div>
-									<div className="form-row">
+									<div className="form-row block text-align-center">
 										<input className="btn submit btn-pink-gradient" type="submit" value="Edit Game" />
 									</div>
 								</div>

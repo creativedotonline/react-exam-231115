@@ -29,6 +29,7 @@ body .btn:hover,
   font: inherit;
   vertical-align: middle;
   margin: 0 1%;
+  width: auto;
 }
 
 body .btn-check:checked+.btn, 

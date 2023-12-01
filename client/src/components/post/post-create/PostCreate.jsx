@@ -59,12 +59,12 @@ export default function PostCreate() {
 								<input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
 							</div>
 						</div>
-						<div className="form-row">
+						<div className="form-row block">
 							<label htmlFor="summary" name="summary">Summary:</label>
 							<textarea name="summary" id="summary"></textarea>
 
 						</div>
-						<div className="form-row">
+						<div className="form-row block text-align-center">
 							<input className="btn submit btn-pink-gradient" type="submit" value="Create Game" />
 						</div>
 					</div>

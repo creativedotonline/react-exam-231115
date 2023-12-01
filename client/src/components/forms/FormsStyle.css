@@ -90,11 +90,11 @@ input:-internal-autofill-selected {
 	color: #745a7c;
 }
 
-input,
-.input-wrapper input,
-.filter select,
-textarea,
-select {
+body input,
+body .input-wrapper input,
+body .filter select,
+body textarea,
+body select {
 	width: 100%;
 	font-weight: 400;
 	line-height: 1.5;
@@ -104,6 +104,10 @@ select {
 	padding: 6px 20px;
 	background-color: #f7f7f7;
 	border-radius: 25px;
+}
+
+labels{
+	display: block;
 }
 
 .search-form input,

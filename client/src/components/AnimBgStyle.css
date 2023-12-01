@@ -102,7 +102,7 @@ body .right-bg-elements span{
     height: 80px;
     top: 433px;
     left: 120px;
-    background: url(src/assets/images/flame.png) no-repeat;
+    background: url(src/assets/images/flame.webp) no-repeat;
     animation: candle-flame-entry 1500ms 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
