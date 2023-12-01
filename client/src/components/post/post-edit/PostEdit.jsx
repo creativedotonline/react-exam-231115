@@ -12,7 +12,7 @@ export default function PostEdit() {
 		category:'',
 		userLevel:'',
 		imageUrl:'',
-		summery:'',
+		summary:'',
 	});
 
 	useEffect(()=>{

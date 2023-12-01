@@ -35,18 +35,17 @@ export default function HeroSlider(){
                     <div className="col-md-6 ">
                       <div className="detail-box">
                         <h1>
-                          Crypto
-                          Currency
+                          Appartment
                         </h1>
                         <p>
-                          Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+						This is your place, where you can display and use your new items, arranged them in the rooms and open even more secret zones and rewards.
                         </p>
                         <Button>Ok</Button>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="img-box">
-                        <img src="src/assets/images/slider-img.png" alt="" />
+                        <img src="src/assets/images/apartment-bg.jpg" alt="" />
                       </div>
                     </div>
                   </div>
