@@ -19,6 +19,10 @@ body .footer p {
   color: #745a7c;
 }
 
+body .footer .footer-copy{
+	color: var(--additional-color-6);
+}
+
 @media (max-width: 768px) {
 
   /* Footer  */
@@ -30,18 +34,6 @@ body .footer p {
 .info_section .info_contact .contact_link_box a i {
   margin-right: 5px;
 }
-
-
-/* .info_section form input {
-  background-color: transparent;
-  width: 100%;
-  height: 45px;
-  color: #ffffff;
-  outline: none;
-  border: 1px solid #745a7c;
-  color: #745a7c;
-  border-radius: 30px;
-} */
 
 .info_section form input {
   color:#fff;
@@ -64,7 +56,6 @@ body .footer p {
 }
 
 .footer_section p {
-  color: #00204a;
   padding: 25px 0;
   margin: 0;
 }

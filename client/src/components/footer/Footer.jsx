@@ -47,10 +47,10 @@ const Footer = () => {
 						<a href="https://www.xs-software.com/" target="_blank" rel="noreferrer" className="xs-logo"></a>
 					</div>
 				</div>	
-				<div className="footer-copy text-align-center row">
+				<div className=" text-align-center row">
                     <p>For the best gaming experience, we recommend using the latest available versions of the browsers Firefox & Chrome
                     © 2023 XS Software. All rights reserved.</p>
-                    <p><strong>This project is a matter of educational purposes.</strong></p>
+                    <p className="footer-copy"><strong>This project is a matter of educational purposes.</strong></p>
                 </div>
                 
                 </div>

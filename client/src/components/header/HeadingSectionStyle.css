@@ -48,7 +48,8 @@
 }
 
 .page-heading .img-box img.p-absolute:last-child {
-	top: 0;
+	top: 116px;
+	display: block;
 }
 
 @-webkit-keyframes upDown {

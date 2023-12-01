@@ -29,8 +29,8 @@ export default function PageHome(
 					<h2>Latest posts</h2>
 					<div className="container">
 					
-					{latestPost.map(latestPost =>  <LatestPost key={_id} /> )}
-					{!latestPost.length && <p className="no-articles">No posts yet.</p>}
+					{/* {latestPost.map(latestPost =>  <LatestPost key={_id} /> )}
+					{!latestPost.length && <p className="no-articles">No posts yet.</p>} */}
 					</div>
 				</section>
 			<About />

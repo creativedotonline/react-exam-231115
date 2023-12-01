@@ -12,7 +12,7 @@ export default function HeroSection(){
           </div>
         </div>		
         <section className="slider_section ">
-          <div id="customCarousel1" className="carousel slide" data-ride="carousel">
+          <div id="customCarousel1" className="carousel slide client_owl-carousel" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <div className="container ">

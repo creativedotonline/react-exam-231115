@@ -15,9 +15,11 @@ export default function PostList() {
 	return (
 		<>
 			<div className="wrapper">
+			
 				<main className="main">
 					<section className="post-list">
 						<div className="container">
+						
 							{post.map(post => (
 								<PostListItem key={post._id} {...post} />
 							))}

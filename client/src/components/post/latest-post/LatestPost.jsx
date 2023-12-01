@@ -14,7 +14,7 @@ export default function LatestPost({
 		<>
 		<div className="single-post-grid" id={_id} >
 			<div className="single-post-grid-image">
-				<Link to={pathToUrl(Path.SinglePostId, {postId:_id})} >
+				<Link to={pathToUrl(Path.PostDetails, {postId:_id})} >
 					<img className="single-post-grid-img-top" src={imageUrl} />
 				</Link>
 			</div>

@@ -1,10 +1,12 @@
+import {custom} from "src/assets/js/custom.js" 
+
 import  Button from '../molecules/Button'
 import "./HeroSliderStyle.css"
 
 
 export default function HeroSlider(){
     return(
-        <section className="slider_section ">
+        <section className="slider_section client_owl-carousel">
           <div id="customCarousel1" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
