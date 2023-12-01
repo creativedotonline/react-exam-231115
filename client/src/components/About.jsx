@@ -21,8 +21,7 @@ export default function About(){
 									Welcome to the world of <span><img src="/src/assets/images/logo.png" alt="" /></span>
 									</h2>
 									<p>
-									Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus
-									</p>
+									Customize your own supermodel and guide her through the glamorous world of fashion! Completely free and easy to play, in the Lady Popular world is full of mini-games, malls, pets, boyfriends, and duels!</p>
 								</div>
 							</div>
 							<div className="row">
