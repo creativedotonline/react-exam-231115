@@ -1,5 +1,6 @@
 import "./HeroSectionStyle.css"
 import Button from "../molecules/Button"
+import { Link } from "react-router-dom";
 
 export default function HeroSection(){
     return(
@@ -19,13 +20,9 @@ export default function HeroSection(){
                   <div className="row">
                     <div className="col-md-6">
                       <div className="detail-box">
-                        <h1 className='heading'>
-                          Text heading
-                        </h1>
-                        <p>
-                          Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                        </p>
-                        <Button />
+                        <h1 className='heading'>FASHION GAME</h1>
+                        <p>Play for Free. Join Millions of Players. Create a Lady as unique as yourself!. Explore hundreds of outfits and accessories. Change your look at any time!</p>
+                        {/* <Link to="" className="button btn btn-green-gradient edit-btn" >Raed More</Link> */}
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -86,11 +83,11 @@ export default function HeroSection(){
                 </div>
               </div>
             </div>
-            <ol className="carousel-indicators">
+            {/* <ol className="carousel-indicators">
               <li data-target="#customCarousel1" data-slide-to="0" className="active"></li>
               <li data-target="#customCarousel1" data-slide-to="1"></li>
               <li data-target="#customCarousel1" data-slide-to="2"></li>
-            </ol>
+            </ol> */}
           </div>
   
         </section>

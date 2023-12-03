@@ -17,9 +17,9 @@ export default function HeroSlider(){
                         <h1 className='heading'>
                           Text heading
                         </h1>
-                        <p>
-                          Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                        </p>
+                        <p>Discover your favorite hair and makeup</p>
+<p>Explore hundreds of outfits and accessories</p>
+<p>Change your look at any time!</p
                         <Button />
                       </div>
                     </div>

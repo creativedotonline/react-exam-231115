@@ -158,14 +158,6 @@
     color: var(--font-color-default-dark);
   }
 
-  .slider_section .detail-box .heading {
-    /* filter: drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 1px #fff) drop-shadow(-1px 0 0 #fff) drop-shadow(1px 0 1px #fff) drop-shadow(0 1px 1px rgba(60, 14, 115, .3)); */
-    background: linear-gradient(to right,#531072 0,#bb00b9 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-
-  }
 
 .carousel.slide {
   max-height: 550px;

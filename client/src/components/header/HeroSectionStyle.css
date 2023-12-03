@@ -36,16 +36,15 @@
 }
 
 .slider_section .detail-box h1 {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 4rem;
     text-transform: uppercase;
     margin-bottom: 15px;
     color: #ffffff;
 }
 
 .slider_section .detail-box p {
-    color: #fefefe;
-    font-size: 14px;
+    color: var(--primary-color-1);
+	font-size: var(--font-size-18);
 }
 
 .slider_section .detail-box .btn-box {
@@ -162,9 +161,9 @@
 }
 
 .slider_section .detail-box {
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 20px;
-    background: linear-gradient(to bottom, var(--bg-g5-color-1) 70%, var(--bg-g5-color-2) 100%);
+    background: var(--bg-ls1);
     box-shadow: 0 16px 28px rgba(50, 25, 80, .3);
     color: var(--font-color-default-dark);
 }
@@ -175,7 +174,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
+	
 }
 
 .carousel.slide {
