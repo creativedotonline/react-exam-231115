@@ -5,7 +5,7 @@ export default function PagePostCreate(){
 	
 	return(
 		<>
-		<div className="wrapper">
+
 			<main className="main">
 				<section>
 					<div className="container width-half">
@@ -16,7 +16,7 @@ export default function PagePostCreate(){
 					</div>
 				</section>
 			</main>
-		</div>
+
 		<AminBg />
 		</>
 	);

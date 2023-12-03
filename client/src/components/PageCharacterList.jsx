@@ -19,7 +19,7 @@ const CharacterList = () => {
 	return(
 		<>
 		<HeadingSection />
-		<div className="wrapper">	
+	
 			<main className="main">								
 				<section className="post-list">
 				<div className="container">
@@ -29,7 +29,7 @@ const CharacterList = () => {
 					</div>
 				</section>
 			</main>
-		</div>
+
         <Footer />
 		</>
 	);

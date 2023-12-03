@@ -16,7 +16,6 @@ const postDetails = () => {
 	return(
 		<>
 		<HeadingSection></HeadingSection>
-			<div className="wrapper">
 				<main className="main">
 					<section className="single-post">
 						<h1>{post.name}</h1>
@@ -24,7 +23,6 @@ const postDetails = () => {
 						
 					</section>
 				</main>
-			</div>
 		</>
 	);
 } 

@@ -30,16 +30,13 @@ export default function PageHome(
     return(
         <>
 		<HeroSection />
-        <div className="wrapper">	
 			<main className="main">
-				<section className="post-list layout_padding">
+				<section className="post-list">
 					<div className="container block">
 					<h2>Latest posts</h2>
 					</div>
 					<div className="container">
-					
-					{/* {latestpost.map(post =>  <LatestPost key={post._id} {...post} /> )} */}
-					
+									
 					{latestpost.map(latestpost => (
 						<LatestPost key={latestpost._id} {...latestpost} />
 					))}
@@ -48,10 +45,9 @@ export default function PageHome(
 					</div>
 				</section>
 			<About />
-			<ClientSection />
 			<PageTestimonial />
 		</main>
-		</div>
+
     </>
     );
 }

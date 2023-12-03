@@ -2,33 +2,41 @@
 //import SingleTestimonial from "./testimonials/SingleTestimonial";
 import { useState, useEffect } from "react";
 import PostGridItem from "./post/PostGridItem"
+import * as postServices from "../services/postServices"
+import SingleTestimonial from "./testimonials/SingleTestimonial";
+import "./testimonials/TestimonialsStyle.css"
+import HeadingSection from "./header/HeadingSection" 
 
-const base_url='https://swapi.dev/api';
+// const base_url='http://localhost:3030/data/movies';
 
 const PageTestimonial = () => {
-	const [post, setPosts] = useState([]);	
-
-	useEffect(()=>{
-		fetch(`${base_url}/people`)
-		.then(res => res.json())
-		.then(data => {
-			setPosts(data.results);
-		})
+	
+	const [testimonials, setTestimonials] = useState([]);
+	useEffect(() => {
+		postServices.getTestimonials()
+			.then(result => setTestimonials(result))
+			.catch(err=>{
+				console.log(err);
+			});
 	}, []);
-
 	return (
 		<>
-		<div className="wrapper">
-				<main className="main">
-					<section className="post-list">
+		<HeadingSection>{<h1>Testimonials</h1>}</HeadingSection>
+		
+		
+				<main className="main">					
+					<section className="testimonials-list">
+					<div className="container block">
+					
+					</div>
 						<div className="container">
-							{post.map((post,index) =>
-								<PostGridItem key={post.name} id={index+1} {...post}/>
+							{testimonials.map((testimonials,index) =>
+								<SingleTestimonial key={testimonials.title} id={index+1} {...testimonials}/>
 							)}
 						</div>
 					</section>
 				</main>
-		</div>
+
 		</>
 	);
 }

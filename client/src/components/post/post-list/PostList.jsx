@@ -14,8 +14,6 @@ export default function PostList() {
 	}, []);
 	return (
 		<>
-			<div className="wrapper">
-			
 				<main className="main">
 					<section className="post-list">
 						<div className="container">
@@ -27,7 +25,7 @@ export default function PostList() {
 						</div>
 					</section>
 				</main>
-			</div>
+
 		</>
 	);
 }

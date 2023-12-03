@@ -39,6 +39,7 @@ function App() {
 	return (
 
 		<>
+		<div className="wrapper">
 		<ErrorBoundary >
 			<AuthPovider >
 				<Header />
@@ -68,6 +69,7 @@ function App() {
 				<Footer />
 			</AuthPovider>
 			</ErrorBoundary>
+			</div>
 		</>
 	)
 }

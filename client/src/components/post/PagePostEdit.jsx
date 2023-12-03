@@ -4,7 +4,7 @@ import AminBg from "../AnimBg";
 export default function PagePostEdit(){	
 	return(
 		<>
-		<div className="wrapper">
+
 			<main className="main">
 				<section>
 					<div className="container width-half">
@@ -15,7 +15,7 @@ export default function PagePostEdit(){
 					</div>
 				</section>
 			</main>
-		</div>
+
 		<AminBg />
 		</>
 	);
