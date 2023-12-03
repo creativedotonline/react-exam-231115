@@ -32,9 +32,12 @@ export default function PageHome(
 		<HeroSection />
         <div className="wrapper">	
 			<main className="main">
-				<section className="post-list">
+				<section className="post-list layout_padding">
+					<div className="container block">
 					<h2>Latest posts</h2>
+					</div>
 					<div className="container">
+					
 					{/* {latestpost.map(post =>  <LatestPost key={post._id} {...post} /> )} */}
 					
 					{latestpost.map(latestpost => (

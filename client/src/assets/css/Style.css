@@ -224,7 +224,6 @@ body {
 	position: relative;
 	display: block;
 	margin: 0 auto;
-	padding: 4% 0;
 	z-index: 1;
 }
 
@@ -373,16 +372,18 @@ body .modal {
 section .container {
 	width: 1080px;
 	margin: auto auto;
+	
 }
 
 .post-list .container {
-	display: flex;
 	justify-content: flex-start;
 	gap: 10px;
 	gap: 10px 20px;
 	row-gap: 20px;
 	column-gap: 20px;
 	flex-wrap: wrap;
+	padding-bottom: 3%;
+	display: flex;
 }
 
 section.full-width .container {
