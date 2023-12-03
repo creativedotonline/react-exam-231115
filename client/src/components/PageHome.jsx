@@ -12,12 +12,20 @@ export default function PageHome(
 	accessToken,
 	email,
 ) {
-	const [latestPost, setLatestPost] = useState([]);
+	// const [latestPost, setLatestPost] = useState([]);
 
-	useEffect(() =>{
+	// useEffect(() =>{
+	// 	postServices.getLatest()
+	// 		.then(result => setLatestPost(result));
+	// },[]);
+	const [latestpost, setLatestpost] = useState([]);
+	useEffect(() => {
 		postServices.getLatest()
-			.then(result => setLatestPost(result));
-	},[])
+			.then(result => setLatestpost(result))
+			.catch(err=>{
+				console.log(err);
+			});
+	}, []);
 
     return(
         <>
@@ -27,9 +35,13 @@ export default function PageHome(
 				<section className="post-list">
 					<h2>Latest posts</h2>
 					<div className="container">
-					{latestPost.map(post =>  <LatestPost key={_id} {...post} /> )}
+					{/* {latestpost.map(post =>  <LatestPost key={post._id} {...post} /> )} */}
 					
-					{!latestPost.length && <p className="no-articles">No posts yet.</p>}
+					{latestpost.map(latestpost => (
+						<LatestPost key={latestpost._id} {...latestpost} />
+					))}
+
+					{!latestpost.length && <p className="no-articles">No posts yet.</p>}
 					</div>
 				</section>
 			<About />

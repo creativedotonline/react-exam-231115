@@ -26,12 +26,14 @@ export const edit = async (postId, postData) => {
 
 export const getLatest = async () =>{
 	const query = new URLSearchParams({
-		sortBy:`_createdOn desc`,
+		// sortBy:`_createdOn desc`,
 		offset:0,
 		pageSize:3,
 	});
 	const result = await request.get(`${baseUrl}?${query}`);
 	return result;
 }
+
+
 
 export const remove = async (postId)=> request.remove(`${baseUrl}/${postId}`);
