@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 
 import HeroSection from "./header/HeroSection";
 import About from "./About";
-import ClientSection from "./ClientSection"
 import LatestPost from "./post/latest-post/LatestPost";
 import * as postServices from "../services/postServices"
-import PageTestimonial from "./PageTestimonials";
+import SingleTestimonial from "./testimonials/SingleTestimonial";
 
 export default function PageHome(
 	_id,
@@ -45,7 +44,7 @@ export default function PageHome(
 					</div>
 				</section>
 			<About />
-			<PageTestimonial />
+			<SingleTestimonial />
 		</main>
 
     </>

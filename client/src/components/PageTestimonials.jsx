@@ -1,19 +1,20 @@
 
 //import SingleTestimonial from "./testimonials/SingleTestimonial";
 import { useState, useEffect } from "react";
-import PostGridItem from "./post/PostGridItem"
-import * as postServices from "../services/postServices"
+//import PostGridItem from "./post/PostGridItem"
+//import * as postServices from "../services/postServices"
+import * as testimonialService from "../services/testimonialService"
 import SingleTestimonial from "./testimonials/SingleTestimonial";
 import "./testimonials/TestimonialsStyle.css"
 import HeadingSection from "./header/HeadingSection" 
 
-// const base_url='http://localhost:3030/data/movies';
+// const base_url='http://localhost:3030/data/testimonials';
 
 const PageTestimonial = () => {
 	
 	const [testimonials, setTestimonials] = useState([]);
 	useEffect(() => {
-		postServices.getTestimonials()
+		testimonialService.getTestimonials()
 			.then(result => setTestimonials(result))
 			.catch(err=>{
 				console.log(err);
@@ -21,7 +22,6 @@ const PageTestimonial = () => {
 	}, []);
 	return (
 		<>
-		<HeadingSection>{<h1>Testimonials</h1>}</HeadingSection>
 		
 		
 				<main className="main">					

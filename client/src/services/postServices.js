@@ -1,14 +1,14 @@
 import * as request from "../components/lib/request"
 
-const baseUrl = 'http://localhost:3030/data'
+const baseUrl = 'http://localhost:3030/data/post-list'
 
 export const getAll = async ()=>{
-	const result = await request.get(`${baseUrl}/post-list`);
+	const result = await request.get(`${baseUrl}`);
 	return result;
 }
 
 export const getOne = async (postId) =>{
-	const result = await request.get(`${baseUrl}/post-list/${postId}`);
+	const result = await request.get(`${baseUrl}${postId}`);
 	return result;
 }
 
@@ -19,7 +19,7 @@ export const create = async (postData) => {
 }
 
 export const edit = async (postId, postData) => {
-	const result = await request.put(`${baseUrl}/post-list/${postId}`, postData);
+	const result = await request.put(`${baseUrl}${postId}`, postData);
 	
 	return result;
 }
@@ -30,12 +30,7 @@ export const getLatest = async () =>{
 		offset:0,
 		pageSize:4,
 	});
-	const result = await request.get(`${baseUrl}/post-list/?${query}`);
-	return result;
-}
-
-export const getTestimonials = async () =>{
-	const result = await request.get(`${baseUrl}/movies`);
+	const result = await request.get(`${baseUrl}?${query}`);
 	return result;
 }
 
