@@ -1518,7 +1518,7 @@
 			},
 			"143e5265-333e-4150-80e4-16b61de31af4": {
 				_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-				ownername: "Ani Ivanowa",
+				ownername: "Ani Ivanova",
 				testimonial: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
 				ownerimg: "https://img.freepik.com/premium-vector/female-user-profile-avatar-is-woman-character-screen-saver-with-emotions_505620-617.jpg",
 				_createdOn: 1614935181470,
@@ -1628,11 +1628,11 @@
 		posts: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
 				_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-				title: "Appartment",
+				title: "Apartment decoration Special Edition",
 				category: "appartment",
 				userLevel: "",
-				imageUrl: "https://static-ladypopular.com/ladypopular/gate/img/ladypopular3/pink/lady/l4/l4.png",
-				summary: "The apartment is the place to display and use your inventory items, arranged in a different rooms.\n",
+				imageUrl: "https://photos.ladypopular.com/ldp3/photos/int/40/94/369440/photos/369440_2018_03_28_02_30_48.jpg",
+				summary: "The apartment is the place to display and use your inventory items, arranged in a different rooms. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
 				_createdOn: 1701675229686,
 				_id: "fce5b573-9d95-4a54-aacc-a7c2775bef34"
 			}

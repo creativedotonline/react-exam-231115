@@ -25,7 +25,12 @@
 }
 
 .single-post-grid img {
-	width: 100%;
+	
+	height: 100%;
+}
+
+.post-list .single-post-grid-text{
+	margin-bottom: 20px;
 }
 
 .post-list .single-post-grid {
@@ -51,9 +56,8 @@
 
 section.single-post .single-post-grid-image{
 	max-height: 333px;
-    width: 400px;
-	overflow: hidden;
-    
+    overflow: hidden;
+    margin:0 auto 20px;
 }
 /* end post grid */
 /* post list */

@@ -8,7 +8,7 @@ export const getAll = async ()=>{
 }
 
 export const getOne = async (postId) =>{
-	const result = await request.get(`${baseUrl}${postId}`);
+	const result = await request.get(`${baseUrl}/${postId}`);
 	return result;
 }
 
@@ -19,7 +19,7 @@ export const create = async (postData) => {
 }
 
 export const edit = async (postId, postData) => {
-	const result = await request.put(`${baseUrl}${postId}`, postData);
+	const result = await request.put(`${baseUrl}/${postId}`, postData);
 	
 	return result;
 }
