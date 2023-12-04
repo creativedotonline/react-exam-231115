@@ -97,7 +97,7 @@
 }
 
 .custom_nav-container .nav_search-btn,
-.custom_nav-container .navbar-nav .nav-item .nav-link {
+.custom_nav-container .navbar-nav .nav-item .nav-link{
 	padding: 20px;
 	color: var(--primary-color-5);
 	text-align: center;
@@ -108,6 +108,9 @@
 	font-weight: 400;
 }
 
+.custom_nav-container .navbar-nav .nav-item svg{
+	fill: var(--primary-color-5);
+}
 .custom_nav-container .nav_search-btn:hover,
 .custom_nav-container .navbar-nav .nav-item:hover>.nav-link,
 .custom_nav-container .navbar-nav .nav-item.active>.nav-link {
