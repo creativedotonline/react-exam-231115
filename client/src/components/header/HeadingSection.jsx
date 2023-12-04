@@ -1,7 +1,7 @@
 import "./HeadingSectionStyle.css"
 import "./HeroSectionStyle.css"
 
-const HeadingSection = () => {
+const HeadingSection = (heading) => {
     return(
     <div className="hero_area">
         <div className="hero_bg_box">

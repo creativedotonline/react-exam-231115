@@ -4,6 +4,7 @@ import PostListItem from "../post-list-item/PostListItem";
 import "../PostStyle.css"
 
 export default function PostList() {
+	
 	const [post, setPost] = useState([]);
 	useEffect(() => {
 		postServices.getAll()
