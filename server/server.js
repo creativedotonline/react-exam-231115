@@ -1512,7 +1512,7 @@
 				_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
 				ownername: "Black Widow-Marvel",
 				testimonial: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-				ownerownerimg: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
+				ownerimg: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
 				_createdOn: 1614935055353,
 				_id: "1240549d-f0e0-497e-ab99-eb8f703713c4"
 			},

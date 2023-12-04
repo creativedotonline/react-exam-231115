@@ -5,9 +5,9 @@ import { formatDate } from "../../utils/dataUtils";
 
 
 const SingleTestimonial  = ({
-	title,
-	img,
-	description,
+	ownername,
+	ownerimg,
+	testimonial,
 	_id,
 	_createdOn,
 }) => {
@@ -16,15 +16,15 @@ const SingleTestimonial  = ({
 		<div className="single-post-list" id={_id} >
 			<div className="single-post-list-feature">
 			<div className="single-post-list-image">
-				<img className="single-post-list-img-top" src={img} />
+				<img className="single-post-list-img-top" src={ownerimg} />
 			</div>
 			<span>{formatDate(_createdOn)}</span></div>
 			<div className="single-post-list-body">
 
 				<div className="single-post-list-title">
-					<h3>{title}</h3>
+					<h3>{ownername}</h3>
 				</div>
-				<div className="single-post-list-text">{description}</div>
+				<div className="single-post-list-text">{testimonial}</div>
 			</div>
 		</div>
 		</>

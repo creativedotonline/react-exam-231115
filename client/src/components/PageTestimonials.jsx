@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import * as testimonialService from "../services/testimonialService"
 import SingleTestimonial from "./testimonials/SingleTestimonial";
 import "./testimonials/TestimonialsStyle.css"
-import HeadingSection from "./header/HeadingSection" 
+//import HeadingSection from "./header/HeadingSection" 
 
 // const base_url='http://localhost:3030/data/testimonials';
 
@@ -28,7 +28,7 @@ const PageTestimonial = () => {
 			</div>
 				<div className="container">
 					{testimonials.map((testimonials,index) =>
-						<SingleTestimonial key={testimonials.title} id={index+1} {...testimonials}/>
+						<SingleTestimonial key={testimonials._id} id={index+1} {...testimonials}/>
 					)}
 				</div>
 			</section>
