@@ -1,6 +1,6 @@
 import * as request from "../components/lib/request"
 
-const baseUrl = 'http://localhost:3030/data/post-list'
+const baseUrl = 'http://localhost:3030/data/posts'
 
 export const getAll = async ()=>{
 	const result = await request.get(`${baseUrl}`);

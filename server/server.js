@@ -1625,6 +1625,18 @@
     			_id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
     		}
     	},
+		posts: {
+    		"35c62d76-8152-4626-8712-eeb96381bea8": {
+				_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+				title: "Appartment",
+				category: "appartment",
+				userLevel: "",
+				imageUrl: "https://static-ladypopular.com/ladypopular/gate/img/ladypopular3/pink/lady/l4/l4.png",
+				summary: "The apartment is the place to display and use your inventory items, arranged in a different rooms.\n",
+				_createdOn: 1701675229686,
+				_id: "fce5b573-9d95-4a54-aacc-a7c2775bef34"
+			}
+    	},
     	members: {
     		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

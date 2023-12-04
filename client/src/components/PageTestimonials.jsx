@@ -22,21 +22,16 @@ const PageTestimonial = () => {
 	}, []);
 	return (
 		<>
-		
-		
-				<main className="main">					
-					<section className="testimonials-list">
-					<div className="container block">
-					
-					</div>
-						<div className="container">
-							{testimonials.map((testimonials,index) =>
-								<SingleTestimonial key={testimonials.title} id={index+1} {...testimonials}/>
-							)}
-						</div>
-					</section>
-				</main>
-
+			<section className="testimonials-list">
+			<div className="container block">
+			
+			</div>
+				<div className="container">
+					{testimonials.map((testimonials,index) =>
+						<SingleTestimonial key={testimonials.title} id={index+1} {...testimonials}/>
+					)}
+				</div>
+			</section>
 		</>
 	);
 }

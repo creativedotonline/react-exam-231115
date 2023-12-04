@@ -4,6 +4,7 @@ import HeroSection from "./header/HeroSection";
 import About from "./About";
 import LatestPost from "./post/latest-post/LatestPost";
 import * as postServices from "../services/postServices"
+import PageTestimonials from "./PageTestimonials";
 import SingleTestimonial from "./testimonials/SingleTestimonial";
 
 export default function PageHome(
@@ -11,12 +12,7 @@ export default function PageHome(
 	accessToken,
 	email,
 ) {
-	// const [latestPost, setLatestPost] = useState([]);
-
-	// useEffect(() =>{
-	// 	postServices.getLatest()
-	// 		.then(result => setLatestPost(result));
-	// },[]);
+	
 	const [latestpost, setLatestpost] = useState([]);
 	useEffect(() => {
 		postServices.getLatest()
@@ -44,7 +40,7 @@ export default function PageHome(
 					</div>
 				</section>
 			<About />
-			<SingleTestimonial />
+			<PageTestimonials />
 		</main>
 
     </>
