@@ -1602,7 +1602,7 @@
     	teams: {
     		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Storm Troopers",
+    			name: "Storm Troopers test",
     			logoUrl: "/assets/atat.png",
     			description: "These ARE the droids we're looking for",
     			_createdOn: 1615737591748,
