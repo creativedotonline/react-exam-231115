@@ -236,7 +236,7 @@ body .table>:not(caption)>*>*,
 .actions svg {
   font-size: 1rem;
 }
-.actions .btn {
+table .actions .btn {
 	padding: 0;
     width: 46px;
     height: 46px;

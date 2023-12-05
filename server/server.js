@@ -1541,6 +1541,29 @@
 				_id: "a9bae6d8-793e-46c4-a9db-deb9e348496y"
 			}
 		},
+		users:{
+			"07f260f4-466c-4607-9a33-f7273b24f1b4": {
+				_id: "07f260f4-466c-4607-9a33-f7273b24f1b4",
+				firstName: "Asen",
+				lastName: "Asenov",
+				email: "asen@gmail.com",
+				phoneNumber: "0899999999",
+				createdAt: "2023-11-01T07:22:00.358Z",
+				updatedAt: "2023-11-01T07:22:00.358Z",
+				imageUrl: "https://cdn3.vectorstock.com/i/1000x1000/54/17/person-gray-photo-placeholder-man-vector-24005417.jpg"
+				
+			},
+			"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+				_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
+				firstName: "Another",
+				lastName: "User",
+				email: "anotheruser@example.com",
+				phoneNumber: "1234567890",
+				createdAt: "2023-11-01T07:22:00.358Z",
+				updatedAt: "2023-11-01T07:22:00.358Z",
+				imageUrl: "https://cdn3.vectorstock.com/i/1000x1000/54/17/person-gray-photo-placeholder-man-vector-24005417.jpg"
+			}
+		},
     	likes: {
     	},
     	ideas: {
