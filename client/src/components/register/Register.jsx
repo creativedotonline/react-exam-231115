@@ -67,7 +67,7 @@ export default function Register(){
             <div>
                 <label htmlFor="firstName">Phone</label>
                 <div className="input-wrapper">
-                    <span><i className="fa-solid fa-mobile"></i></span>
+                    <span><i className="fa-solid fa-phone"></i></span>
 					<input
 						type="number"
 						id="phone"
@@ -103,7 +103,7 @@ export default function Register(){
 					/>
 				</div>
             </div>
-            <div>
+            <div id="form-actions">
                 <input className="btn submit btn-green-gradient" type="submit" value="Register" />
             </div>
             </form>
