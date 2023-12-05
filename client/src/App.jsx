@@ -33,6 +33,7 @@ import AuthGuard from "./guards/AuthGuard.jsx"
 import PagePostEdit from "./components/post/PagePostEdit"
 import LatestPost from "./components/post/latest-post/LatestPost"
 import PageTestimonials from "./components/PageTestimonials"
+import PageAccount from "./components/PageAccount"
 
 function App() {
 	
@@ -64,6 +65,7 @@ function App() {
 						<Route path={Path.PagePostCreate} element={<PagePostCreate />} />
 						<Route path={Path.Logout} element={<Logout />} />
 						<Route path={Path.PagePostEdit} element={<PagePostEdit />} />
+						<Route path={Path.PageAccount} element={<PageAccount />} />
 					</Route>
 				</Routes>
 				<Footer />

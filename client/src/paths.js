@@ -10,6 +10,7 @@ const Path = {
 	SinglePostIdDelete:"/post-list/:postId/delete",
 	PagePostCreate:'/post-create',
 	PageTestimonials:'testimonials',
+    PageAccount:'/account',
 }
 
 export default Path;

@@ -5,6 +5,8 @@ import useForm from "../../hooks/useForm";
 const RegisterFormKeys = {
 	Email:'email',
 	Username:'username',
+	UserImg:'userimg',
+	UserPhone:'userphone',
 	Password: 'password',
 	ConfirmPassword:'comfirm-password',
 };
@@ -16,6 +18,8 @@ export default function Register(){
 		[RegisterFormKeys.Username]:'',
 		[RegisterFormKeys.Password]:'',
 		[RegisterFormKeys.ConfirmPassword]:'',
+		[RegisterFormKeys.UserImg]:'',
+		[RegisterFormKeys.UserPhone]:'',
 	})
 
 	return(
@@ -48,9 +52,35 @@ export default function Register(){
 				</div>
             </div>
             <div>
+                <label htmlFor="firstName">User Image</label>
+                <div className="input-wrapper">
+                    <span><i className="fa-solid fa-image"></i></span>
+					<input
+						type="text"
+						id="userimg"
+						name="userimg"
+						value={values[RegisterFormKeys.UserImg]}
+						onChange={onChange}
+					/>
+				</div>
+            </div>
+            <div>
+                <label htmlFor="firstName">Phone</label>
+                <div className="input-wrapper">
+                    <span><i className="fa-solid fa-mobile"></i></span>
+					<input
+						type="number"
+						id="phone"
+						name="userphone"
+						value={values[RegisterFormKeys.UserPhone]}
+						onChange={onChange}
+					/>
+				</div>
+            </div>
+            <div>
                 <label htmlFor="pass">Password</label>
                 <div className="input-wrapper">
-                    <span><i className="fa-solid fa-user"></i></span>
+                    <span><i className="fa-solid fa-lock"></i></span>
 					<input
 						type="password"
 						id="register-password"
@@ -63,7 +93,7 @@ export default function Register(){
 			<div>
                 <label htmlFor="confirm-pass">Confirm Password</label>
                 <div className="input-wrapper">
-                    <span><i className="fa-solid fa-user"></i></span>
+                    <span><i className="fa-solid fa-lock"></i></span>
 					<input
 						type="password"
 						id="comfirm-password"

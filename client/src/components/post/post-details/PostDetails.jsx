@@ -32,7 +32,8 @@ export default function PostDetails() {
 		setComments(state => [...state, {...newComment, owner:{email}}])
 		console.log(newComment);
 	};
-
+    
+    
 	const deleteButtonClickHandler = async () =>{
 		const hasConfirmed = confirm(`Are you sure you would like to delete the ${post.title}?`);
 
@@ -45,6 +46,7 @@ export default function PostDetails() {
 	const {values, onChange, onSubmit} = useForm(addCommentHandler,{
 		comment:'',
 	});
+
 
 	// if(Math.random()<.5){
 	// 	throw new Error('post details error');
@@ -60,8 +62,7 @@ export default function PostDetails() {
 				<div className="single-post-heading">
 					<h1>{post.title}</h1>
 					<span className="post-category col-md-6 border-right"><span>Category: </span>{post.category}</span>
-					<span className="post-user-creator col-md-6">{email}</span>
-					<span className="post-user-level col-md-6">Level: {post.userLevel}</span>
+					<span className="post-user-creator col-md-6">{post._ownerId}</span>
 				</div>
 				<p>{post.summary}</p>
 				{userId === post._ownerId && (
