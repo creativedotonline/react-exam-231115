@@ -4,25 +4,29 @@ import { useState, useEffect } from "react";
 //import PostGridItem from "./post/PostGridItem"
 //import * as postServices from "../services/postServices"
 import * as testimonialService from "../services/testimonialService"
-import SingleTestimonial from "./testimonials/SingleTestimonial";
+
 import "./testimonials/TestimonialsStyle.css"
+import TestimonialsList from "./testimonials/TestimonialsList";
 //import HeadingSection from "./header/HeadingSection" 
 
 // const base_url='http://localhost:3030/data/testimonials';
 
 const PageTestimonial = () => {
 	
-	const [testimonials, setTestimonials] = useState([]);
-	useEffect(() => {
-		testimonialService.getTestimonials()
-			.then(result => setTestimonials(result))
-			.catch(err=>{
-				console.log(err);
-			});
-	}, []);
+	// const [testimonials, setTestimonials] = useState([]);
+	// useEffect(() => {
+	// 	testimonialService.getTestimonials()
+	// 		.then(result => setTestimonials(result))
+	// 		.catch(err=>{
+	// 			console.log(err);
+	// 		});
+	// }, []);
 	return (
 		<>
-			<section className="testimonials-list">
+		{/* <section className="testimonials-list">
+			<div className="container block">
+				<h2>What Our Laydies thinks</h2>
+			</div>
 			<div className="container block">
 			
 			</div>
@@ -31,7 +35,8 @@ const PageTestimonial = () => {
 						<SingleTestimonial key={testimonials._id} id={index+1} {...testimonials}/>
 					)}
 				</div>
-			</section>
+		</section> */}
+		<TestimonialsList />
 		</>
 	);
 }

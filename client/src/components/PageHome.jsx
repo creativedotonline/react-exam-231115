@@ -4,8 +4,7 @@ import HeroSection from "./header/HeroSection";
 import About from "./About";
 import LatestPost from "./post/latest-post/LatestPost";
 import * as postServices from "../services/postServices"
-import PageTestimonials from "./PageTestimonials";
-import SingleTestimonial from "./testimonials/SingleTestimonial";
+import ListTestimonials from "./testimonials/TestimonialsList";
 
 export default function PageHome(
 	_id,
@@ -40,7 +39,7 @@ export default function PageHome(
 					</div>
 				</section>
 			<About />
-			<PageTestimonials />
+			<ListTestimonials />
 		</main>
 
     </>

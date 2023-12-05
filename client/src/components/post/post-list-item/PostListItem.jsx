@@ -28,7 +28,6 @@ export default function PostListItem ({
 					<div className="single-post-grid-title">
 						<h3>{title}</h3>
 						<span>{category}</span>
-						<span>{userLevel}</span>
 					</div>
 					<div className="single-post-grid-text">
 						{summary}

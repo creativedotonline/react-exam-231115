@@ -4,7 +4,7 @@ import "./TestimonialsStyle.css"
 import { formatDate } from "../../utils/dataUtils";
 
 
-const SingleTestimonial  = ({
+const TestimonialDetails  = ({
 	ownername,
 	ownerimg,
 	testimonial,
@@ -31,4 +31,4 @@ const SingleTestimonial  = ({
 	);
 }
 
-export default SingleTestimonial;
+export default TestimonialDetails;

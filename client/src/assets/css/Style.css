@@ -876,6 +876,16 @@ body .p-absolute {
 .color-white{
 	color:#fff;
 }
+
+.section-heading {
+	font-size: 3rem;
+	color:var(--additional-color-1);
+    background: linear-gradient(to right, #531072 0, #bb00b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
   /* media */
   @media (max-width: 768px) {
 	.main {

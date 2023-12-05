@@ -236,7 +236,12 @@ body .table>:not(caption)>*>*,
 .actions svg {
   font-size: 1rem;
 }
-
+.actions .btn {
+	padding: 0;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+}
 /* Paggination  */
 .pagination {
   text-align: center;
@@ -330,7 +335,7 @@ body .table>:not(caption)>*>*,
 .users-container .btn-add {
   font-family: 'FontAwesome';
   font-size: 20px;
-  line-height: 20px;
+  line-height: 70px;
   text-align: center;
   border-radius: 50%;
   width: 70px;
@@ -339,4 +344,5 @@ body .table>:not(caption)>*>*,
   position: absolute;
   margin: -15px 0 0 -35px;
   bottom: -35px;
+  padding: 0;
 }
