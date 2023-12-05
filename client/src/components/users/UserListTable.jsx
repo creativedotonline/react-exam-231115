@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import * as userService from "../../services/userService";
 import UserListItem from "./UserListItem";
 import CreateUserModal from "./CreateUserModal"
+import EditUserModal from "./EditUserModal"
 import "./TableStyle.css";
 import UserInfoModal from "./UserInfoModal"
 import UserDeleteModal from "./UserDeleteModal"
@@ -14,6 +15,8 @@ const UserListTable = () => {
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
     const [showDelete, setShowDelete] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
+
     const [selectedUser, setSelectedUser] = useState(null);
 
     useEffect(()=>{
@@ -50,8 +53,36 @@ const UserListTable = () => {
 
         // Close the modal
         setShowCreateModal(false);
-    }
+    }    
+/* edit */
+	const editUserClickHendler = () => {
+        setShowEditModal(true);
+    };
 
+    const hideEditUserModal = () => {
+        setShowEditModal(false);
+    };
+	const onUserEditHandler = async (e) => {
+        // stop page from reload
+        e.preventDefault();
+        
+        setShowEditModal(false);
+
+        // Get data from data
+        const data = Object.fromEntries(new FormData(e.currentTarget));
+
+        // Create new user to the server
+        const newUser = await userService.create(data);
+
+        // Add newly create user at the local state
+        setUsers(state => [...state, newUser]);
+
+        // Close the modal
+        setShowEditModal(false);
+    } 
+
+
+/* end edit */	
     const userInfoClickHandler = async (userId) => {
         setSelectedUser(userId);
         setShowInfo(true);
@@ -80,6 +111,12 @@ const UserListTable = () => {
             <CreateUserModal 
                 onClose={hideCreateUserModal}
                 onCreate={onUserCreateHandler}
+            />
+        )}
+		{showEditModal && (
+            <EditUserModal 
+                onClose={hideEditUserModal}
+                onEdit={onUserEditHandler}
             />
         )}
 
@@ -165,6 +202,7 @@ const UserListTable = () => {
                         lastName={user.lastName}
                         phoneNumber={user.phoneNumber}  
                         imageUrl={user.imageUrl} 
+                        onEditClick = {editUserClickHendler}  
                         onInfoClick = {userInfoClickHandler}  
                         onDeleteClick={deleteUserClickHandler}                
                         />
@@ -173,7 +211,9 @@ const UserListTable = () => {
             </table>
         </div>
         
-        <Link className="btn btn-add btn-green-gradient" onClick={createUserClickHendler}><i className="fa-solid fa-user-plus"></i></Link>        
+        <Link className="btn btn-add btn-green-gradient" onClick={createUserClickHendler}>
+			<i className="fa-solid fa-user-plus"></i>
+		</Link>        
         </>
     );
 };
