@@ -86,7 +86,7 @@ const Header = () => {
 							</li> */}
 
 							{isAuthenticated && (
-								<li id="user" className="nav-item">
+								<li id="user" className="nav-item"> 
 									<ul>
 										<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
 											<Link className="nav-link" to="/post-create">
@@ -102,7 +102,7 @@ const Header = () => {
 										</li> */}
                                         <li className={(url === "/account" ? " active nav-item" : "nav-item")}>
 											<Link className="nav-link" to="/account"><span  className="border-right"> </span>
-												<img src={userImg} />
+												<img src={userImg} /><i className="fa fa-user" aria-hidden="true"></i>
 												<span className="sr-only">(current)</span><span> {username}</span>
 											</Link>
                                             <ul className="submenu">
