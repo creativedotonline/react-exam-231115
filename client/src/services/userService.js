@@ -25,13 +25,7 @@ export const create = async (data) => {
         imageUrl: data.imageUrl,
         phoneNumber: data.phoneNumber,
         createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-        address: {
-            country: data.country,
-            city: data.city,
-            street: data. street,
-            streetNumbe: data.streetNumbe,
-        }
+        updatedAt: new Date().toISOString()
     };
 	
     const response = await fetch(baseUrl, {

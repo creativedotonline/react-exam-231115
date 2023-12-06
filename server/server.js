@@ -1333,7 +1333,24 @@
     			email: "admin@abv.bg",
     			username: "Admin",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
-    		}
+    		},"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+				_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
+				firstName: "Lady",
+				lastName: "Black Cat",
+				userName: "Black Cat",
+				email: "ladyblackcat@gmail.com",
+				phoneNumber: "1234567890",
+				createdAt: "2023-11-01T07:22:00.358Z",
+				updatedAt: "2023-11-01T07:22:00.358Z",
+				imageUrl: "https://img.freepik.com/free-vector/cute-cat-gaming-cartoon_138676-2969.jpg?w=826&t=st=1701766734~exp=1701767334~hmac=bdb8deabc1cafab87087a3a984202d9ca468a34e2566dd9f712d682bfaf73d45",
+				address: {
+				  country: "USA",
+				  city: "New York",
+				  street: "123 Main St",
+				  streetNumber: "5"
+				},
+                password:'123456'
+			  }
     	},
     	sessions: {
     	}
@@ -1546,6 +1563,7 @@
 				_id: "07f260f4-466c-4607-9a33-f7273b24f1b4",
 				firstName: "Sasha",
 				lastName: "Cho",
+                userName: "Sasha",
 				email: "sashaa94@abv.bg",
 				phoneNumber: "0899999999",
 				createdAt: "2023-11-01T07:22:00.358Z",
@@ -1556,12 +1574,14 @@
 				  city: "Перник",
 				  street: "Кракра 2",
 				  streetNumber: "26"
-				}
+				},
+                password:'123456'
 			  },
 			  "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
 				_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
 				firstName: "Lady",
 				lastName: "Black Cat",
+				userName: "Black Cat",
 				email: "ladyblackcat@gmail.com",
 				phoneNumber: "1234567890",
 				createdAt: "2023-11-01T07:22:00.358Z",
@@ -1572,12 +1592,14 @@
 				  city: "New York",
 				  street: "123 Main St",
 				  streetNumber: "5"
-				}
+				},
+                password:'123456'
 			  },
 			  "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f": {
 				_id: "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f",
 				firstName: "Jo",
 				lastName: "Doran",
+                userName: "Jo",
 				email: "doranjo@hotmail.co",
 				phoneNumber: "9876543210",
 				createdAt: "2023-11-01T07:22:00.358Z",
@@ -1588,7 +1610,8 @@
 				  city: "Toronto",
 				  street: "456 Elm St",
 				  streetNumber: "7"
-				}
+				},
+                password:'123456'
 			  }
 		},
     	likes: {

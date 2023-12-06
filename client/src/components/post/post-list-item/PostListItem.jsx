@@ -7,15 +7,7 @@ export default function PostListItem ({
 	imageUrl,
 	summary,
 	_id,
-}) {
-	let letters ='';
-	let exerpt = '';
-	for(let i=0; i<30;i++){
-		letters = summary[i];
-		exerpt = letters +'';
-	} 
-	console.log(exerpt)
-	
+}) {		
 	return (
 		<>
 			<div className="single-post-grid" id={_id} >

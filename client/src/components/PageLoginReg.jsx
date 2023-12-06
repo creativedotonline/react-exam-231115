@@ -6,7 +6,7 @@ import AminBg from "./AnimBg";
 export default function PageLoginReg (){
 	return(
 	<>
-	<div className="account-page">
+	<div className="login-page">
 		<main className="main">
 			<section>
 				<div className="container login-register-form">
