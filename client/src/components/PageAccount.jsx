@@ -11,7 +11,16 @@ import { Link } from "react-router-dom";
 import Account from "./account/Account";
 import AminBg from "./AnimBg";
 
-const PageAccount = () => {
+const PageAccount = ({
+    userId,
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    createdAt,
+    imageUrl,
+    updatedAt,
+}) => {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
