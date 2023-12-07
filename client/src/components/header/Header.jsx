@@ -72,6 +72,12 @@ const Header = () => {
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
+                            <li className={(url === "/allusers" ? " active nav-item" : "nav-item")}>
+								<Link className="nav-link" to="/allusers">
+                                allusers
+									<span className="sr-only">(current)</span>
+								</Link>
+							</li>
 							<li className={(url === "/testimonials" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/testimonials">
 									Testimonials

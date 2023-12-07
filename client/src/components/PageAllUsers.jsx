@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Account from "./account/Account";
 import AminBg from "./AnimBg";
 
-const PageAccount = ({
+const PageAllUsers = ({
     userId,
     firstName,
     lastName,
@@ -38,7 +38,7 @@ const PageAccount = ({
             .catch(err => console.log(err))
             .finally(() => setIsLoading(false));
     }, []);
-
+    
     // const createUserClickHendler = () => {
     //     setShowCreateModal(true);
     // };
@@ -156,7 +156,8 @@ const PageAccount = ({
                         email={user.email}
                         firstName={user.firstName}
                         lastName={user.lastName}
-                        phoneNumber={user.phoneNumber}  
+                        phoneNumber={user.phoneNumber}
+                        address={user.address}
                         imageUrl={user.imageUrl} 
                         onEditClick = {editUserClickHendler}  
                         onInfoClick = {userInfoClickHandler}  
@@ -176,4 +177,4 @@ const PageAccount = ({
     );
 };
 
-export default PageAccount;
+export default PageAllUsers;

@@ -24,21 +24,21 @@ const Account = ({
 
     return (
         <>
-        <section>
-				<div className="container login-register-form">
+        <section className="single-profile">
+				<div className="container">
 					<div className="row">
-						<div className="col-md-6 col-right-border">
-                        <img src={imageUrl} alt={`${firstName}'s profile`} className="image" />
+						<div className="col-md-4 col-right-border">
+                        <img src={imageUrl} alt={`${firstName}'s profile`} className="profile-image " />
 						</div>
-						<div className="col-md-6 ">
+						<div className="col-md-8 ">
 						<div className="content-title">
-                            <h3>Welcome {firstName} {lastName}</h3>
-                            <span>Personal info</span>
+                            <h3>{firstName} {lastName}</h3>
+                            <span>Personal Account Info</span>
 						</div>
                         <div className="content-body">
-                            <p>{email}</p>
-                            <p>{phoneNumber}</p>
-                            <p>{formatDate(createdAt)}</p>
+                                <p><span>Email:</span> {email}</p>
+                                <p><span>Phone:</span> {phoneNumber}</p>
+                                <p><span>Created At:</span> {formatDate(createdAt)}</p> 
                             <div className="actions">
                                 <Link className="btn edit-btn" title="Edit">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square"
