@@ -65,16 +65,16 @@ const Header = () => {
 									Character List
 									<span className="sr-only">(current)</span>
 								</Link>
-							</li> */}
+							</li> 
 							<li className={(url === "/post-list" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/post-list">
 									PostList
 									<span className="sr-only">(current)</span>
 								</Link>
-							</li>
+							</li>*/}
                             <li className={(url === "/allusers" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/allusers">
-                                allusers
+                                Users2
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
@@ -96,7 +96,7 @@ const Header = () => {
 									<ul>
 										<li id="post-create" className={(url === "/post-create" ? " active nav-item" : "nav-item")}>
 											<Link className="nav-link" to="/post-create">
-												Create Posts
+												Add Post
 												<span className="sr-only">(current)</span>
 											</Link>
 										</li>
