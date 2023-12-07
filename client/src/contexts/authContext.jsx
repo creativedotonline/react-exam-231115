@@ -16,9 +16,10 @@ export const AuthPovider = ({
 
 	const loginSubmitHandler = async (values) => {
 		const result = await authService.login(values.email, values.password);
-
 		setAuth(result);
+        
 		localStorage.setItem('accessToken', result.accessToken);
+        localStorage.setItem('userId', result._id);
 		navigate(Path.Home);
 	};
 
@@ -27,7 +28,8 @@ export const AuthPovider = ({
 
 		setAuth(result);
 		localStorage.setItem('accessToken', result.accessToken);
-		navigate(Path.Home);
+		
+		navigate(Path.Account);
 	};
 
 	const logoutHandler = () => {

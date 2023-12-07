@@ -11,8 +11,7 @@ import { Link } from "react-router-dom";
 import Account from "./account/Account";
 import AminBg from "./AnimBg";
 
-const PageAccount = (
-    {
+const PageAccount = ({
     userId,
     firstName,
     lastName,
@@ -28,23 +27,18 @@ const PageAccount = (
     const [showInfo, setShowInfo] = useState(false);
     const [showDelete, setShowDelete] = useState(false);
     const [showEditModal, setShowEditModal] = useState(false);
-    const [user, setUser] = useState([]);
+
     const [selectedUser, setSelectedUser] = useState(null);
 
     useEffect(()=>{
         setIsLoading(true);
-        //const data = localStorage.getItem("auth");
-        
-        
-       // const currentUser = JSON.parse(data);
-        //userService.getOne(currentUser._id)
-        userService.getOne("847ec027-f659-4086-8032-5173e2f9c93a")
-            .then(result => setUser(result))
-            
+
+        userService.getAll()
+            .then(result => setUsers(result))
             .catch(err => console.log(err))
             .finally(() => setIsLoading(false));
-
     }, []);
+
     // const createUserClickHendler = () => {
     //     setShowCreateModal(true);
     // };
@@ -154,7 +148,8 @@ const PageAccount = (
             <main className="main">
 				<section className="account-page">
 					<div className="container width-half">
-                    <Account
+                    {users.map(user => (
+                        <Account
                         key={user._id}
                         userId={user._id}
                         createdAt={user.createdAt}
@@ -167,6 +162,7 @@ const PageAccount = (
                         onInfoClick = {userInfoClickHandler}  
                         onDeleteClick={deleteUserClickHandler}                
                         />
+                    ))}
 					</div>
 				</section>
 			</main>
