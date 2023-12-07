@@ -29,7 +29,7 @@ export const AuthPovider = ({
 		setAuth(result);
 		localStorage.setItem('accessToken', result.accessToken);
 		
-		navigate(Path.Account);
+		navigate(Path.PageAccount);
 	};
 
 	const logoutHandler = () => {

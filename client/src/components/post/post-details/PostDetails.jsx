@@ -62,7 +62,7 @@ export default function PostDetails() {
 				<div className="single-post-heading">
 					<h1>{post.title}</h1>
 					<span className="post-category col-md-6 border-right"><span>Category: </span>{post.category}</span>
-					<span className="post-user-creator col-md-6">{post._ownerId}</span>
+					<span className="post-user-creator col-md-6">{post._ownerId} {post.username}</span>
 				</div>
 				<p>{post.summary}</p>
 				{userId === post._ownerId && (
