@@ -11,8 +11,7 @@ import { Link } from "react-router-dom";
 import Account from "./account/Account";
 import AminBg from "./AnimBg";
 
-const PageAccount = (
-    {
+export default function PageAccount (
     userId,
     firstName,
     lastName,
@@ -20,8 +19,7 @@ const PageAccount = (
     phoneNumber,
     createdAt,
     imageUrl,
-    updatedAt,
-}) => {
+   ){
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
@@ -155,17 +153,7 @@ const PageAccount = (
 				<section className="account-page">
 					<div className="container width-half">
                     <Account
-                        key={user._id}
-                        userId={user._id}
-                        createdAt={user.createdAt}
-                        email={user.email}
-                        firstName={user.firstName}
-                        lastName={user.lastName}
-                        phoneNumber={user.phoneNumber}  
-                        imageUrl={user.imageUrl} 
-                        onEditClick = {editUserClickHendler}  
-                        onInfoClick = {userInfoClickHandler}  
-                        onDeleteClick={deleteUserClickHandler}                
+                        key={user._id}               
                         />
 					</div>
 				</section>
@@ -180,4 +168,3 @@ const PageAccount = (
     );
 };
 
-export default PageAccount;

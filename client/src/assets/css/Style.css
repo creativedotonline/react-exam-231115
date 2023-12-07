@@ -245,10 +245,6 @@ body {
     position: relative;
     z-index: 3;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    flex-direction: column;
     border-radius: var(--border-radius-m);
     -webkit-box-align: start;
     align-items: flex-start;

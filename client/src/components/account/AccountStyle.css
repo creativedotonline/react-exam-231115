@@ -7,3 +7,31 @@
     margin: 0 auto;
     border-radius: 250px;
 }
+
+.user-id{
+    background: var(--bg-ds2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.single-profile .actions {
+    margin-top: 20px;
+}
+
+.single-profile .content-body {
+    padding: 20px;
+}
+
+.single-profile .content-body span{
+    background: var(--bg-dg4-color-2);
+    padding: 1px 4px;
+    border-radius: 4px;
+    line-height: .8em;
+}
+
+.single-profile .content-title.row .btn {
+    padding: 0;
+    width: 46px;
+    height: 46px;
+    line-height: 40px;
+}
