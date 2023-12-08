@@ -15,7 +15,7 @@ export const AuthPovider = ({
 	const [auth, setAuth] = usePersistedState('auth', {});
 
 	const loginSubmitHandler = async (values) => {
-		const result = await authService.login(values.email, values.password);
+		const result = await authService.login(values.email, values.password, values.phone);
 		setAuth(result);
         
 		localStorage.setItem('accessToken', result.accessToken);
@@ -24,12 +24,12 @@ export const AuthPovider = ({
 	};
 
 	const registerSubmitHandler = async (values) => {
-		const result = await authService.register(values.email, values.password);
+		const result = await authService.register(values.email, values.username, values.password, values.userimg, values.userphone);
 
 		setAuth(result);
 		localStorage.setItem('accessToken', result.accessToken);
 		
-		navigate(Path.PageAccount);
+		navigate(Path.PageAccount);console.log(result)
 	};
 
 	const logoutHandler = () => {

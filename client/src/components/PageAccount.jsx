@@ -4,6 +4,9 @@ import * as userService from "/src/services/userService"
 //import * as usersServices from "/src/services/usersServices"
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { formatDate } from "../utils/dataUtils";
+import CreateUserModal from "./users/CreateUserModal"
+import EditUserModal from "./users/EditUserModal"
+import UserDeleteModal from "./users/UserDeleteModal"
 
 import AuthContext from "../contexts/authContext.jsx";
 
@@ -11,21 +14,96 @@ import Account from "./account/Account";
 import AminBg from "./AnimBg";
 
 
-export default function PageAccount(){
-    //const [user, setuser] = useState([]);
+export default function PageAccount({
+    onEditClick,
+    onDeleteClick,
+}){
+    const [user, setUser] = useState([]);
+    const [showDelete, setShowDelete] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [showCreateModal, setShowCreateModal] = useState(false);
+
+    const [selectedUser, setSelectedUser] = useState(null);
+    
 	
     useEffect(() => {
 		userService.getOne()
-			.then(result => setuser(result))
+			.then(result => setUser(result))
 			.catch(err=>{
 				console.log(err);
 			});
 	}, []);
-    const {email, userId, userphone,userimg,createdAt,username} = useContext(AuthContext)
+
+    const {email, userId,username, userphone,userimg,createdAt} = useContext(AuthContext);
+    const hideCreateUserModal = () => {
+        setShowCreateModal(false);
+    };
+
+/* edit */
+const editUserClickHendler = () => {
+    setShowEditModal(true);
+};
+const hideEditUserModal = () => {
+    setShowEditModal(false);
+};
+const onUserEditHandler = async (e) => {
+    // stop page from reload
+    e.preventDefault();
+    
+    setShowEditModal(false);
+    // Get data from data
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    // Create new user to the server
+    const newUser = await userService.create(data);
+    // Add newly create user at the local state
+    setUser(state => [...state, newUser]);
+    // Close the modal
+    setShowEditModal(false);
+} 
+/* end edit */
+/* delete */
+const deleteUserClickHandler = (userId) => {
+    setSelectedUser(userId);
+    setShowDelete(true);
+}
+
+const deleteUserHandler = async () =>{
+    // remove user from severv
+    await userService.remove(selectedUser);
+
+    // remove user form state
+    setUser(state => state.filter(user => user._id !== selectedUser));
+
+
+    //Close the delete modal
+    setShowDelete(false);
+    console.log(`delete {userId}`)
+}
+/* end delete */
+
     return(
         <>
+        {showCreateModal && (
+            <CreateUserModal 
+                onClose={hideCreateUserModal}
+                onCreate={onUserCreateHandler}
+            />
+        )}
+		{showEditModal && (
+            <EditUserModal 
+                onClose={hideEditUserModal}
+                onEdit={onUserEditHandler}
+            />
+        )}
+
+        {showDelete && (
+            <UserDeleteModal 
+                onClose = {()=> setShowDelete(false)}
+                onDelete={deleteUserHandler}
+            />
+        )}
         <main className="main">
-                <section className="single-profile">
+            <section className="single-profile">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-4 col-right-border">
@@ -39,7 +117,7 @@ export default function PageAccount(){
                                 </div>
                                 <div className="col-md-4 text-align-right">
                                     <div>
-                                        <Link className="btn edit-btn" title="Edit" >
+                                        <Link className="btn edit-btn" title="Edit" onClick={editUserClickHendler}>
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square"
                                                 className="svg-inline--fa fa-pen-to-square" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 532 512">
@@ -48,7 +126,7 @@ export default function PageAccount(){
                                                 </path>
                                             </svg>
                                         </Link>
-                                        <Link className="btn delete-btn" title="Delete" >
+                                        <Link className="btn delete-btn" title="Delete" onClick={deleteUserClickHandler} >
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash"
                                                 className="svg-inline--fa fa-trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 498 512">
                                                 <path fill="currentColor"
