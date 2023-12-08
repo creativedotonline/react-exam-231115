@@ -2,26 +2,51 @@ import "../forms/FormsStyle.css"
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import * as userService from '/src/services/userService'
 
-const EditUserModal = ({
+export default function EditUserModal ({
     hideModal,
     onEdit,
     onClose,
-}) => {
+}) {
     const {userId}=useParams();
+    
 	const [user, setUser] = useState({
 		email:'',
 		userName:'',
 		imageUrl:'',
 		phoneNumber:'',
 	});
+
+    useEffect(()=>{
+		userService.getOne(userId)
+			.then(result =>{
+				setUser(result);
+			})
+	},[userId]);
+
+    const editUserSubmitHandler = async (e) => {
+		e.preventDefault();
+
+		const values = Object.fromEntries(new FormData(e.currentTarget));
+		try {
+			await userService.edit(userId,values);
+
+			// navigate('/post-list');
+		} catch (err) {
+			// some err notification
+			console.log(err);
+		}
+	}
     const onChange = (e) => {
 		setUser(state => ({
 			...state,
 			[e.target.name]: e.target.value
 		}));
 	};
+
     return (
+        
         <div className="overlay">
             <div className="backdrop" onClick={onClose}></div>
             <div className="modal">
@@ -37,7 +62,7 @@ const EditUserModal = ({
                             </svg>
                         </button>
                     </header>
-                    <form id="register" onSubmit={onEdit}>
+                    <form id="register" onSubmit={editUserSubmitHandler}>
                         <div>
                             <label htmlFor="firstName">Email</label>
                             <div className="input-wrapper">
@@ -117,7 +142,7 @@ const EditUserModal = ({
                             </div>
                         </div>
                         <div id="form-actions">
-                            <input className="btn submit btn-green-gradient" type="submit" value="Register" />
+                            <input className="btn submit btn-green-gradient" type="submit" value="Edit User" />
                         </div>
                         </form>
                     {/* <form onSubmit={onCreate}>
@@ -176,6 +201,5 @@ const EditUserModal = ({
             </div>
         </div>
     );
-};
+}
 
-export default EditUserModal;
