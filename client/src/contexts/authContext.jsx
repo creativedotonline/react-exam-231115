@@ -15,7 +15,7 @@ export const AuthPovider = ({
 	const [auth, setAuth] = usePersistedState('auth', {});
 
 	const loginSubmitHandler = async (values) => {
-		const result = await authService.login(values.email, values.password, values.phone);
+		const result = await authService.login(values.email, values.password);
 		setAuth(result);
         
 		localStorage.setItem('accessToken', result.accessToken);
