@@ -8,7 +8,7 @@ import UserDeleteModal from "/src/components/users/UserDeleteModal"
 import Spinner from "/src/components/Spinner";
 import { Link } from "react-router-dom";
 
-import Account from "./account/Account";
+import UserList from "./user-list/UserList";
 import AminBg from "./AnimBg";
 
 const PageAllUsers = ({
@@ -149,7 +149,7 @@ const PageAllUsers = ({
 				<section className="account-page">
 					<div className="container width-half">
                     {users.map(user => (
-                        <Account
+                        <UserList
                         key={user._id}
                         userId={user._id}
                         createdAt={user.createdAt}

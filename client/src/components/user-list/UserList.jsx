@@ -2,10 +2,10 @@ import { useContext} from "react";
 
 import { formatDate } from "../../utils/dataUtils";
 import { Link } from "react-router-dom";
-import "./AccountStyle.css"
+import "../account/AccountStyle.css"
 import AuthContext from "../../contexts/authContext.jsx";
 
-const Account = ({
+const UserList = ({
     userId,
     firstName,
     lastName,
@@ -86,4 +86,4 @@ const Account = ({
     );
 };
 
-export default Account;
+export default UserList;

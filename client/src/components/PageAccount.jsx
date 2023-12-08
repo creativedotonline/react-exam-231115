@@ -23,7 +23,7 @@ export default function PageAccount(){
 				<section className="account-page">
 					<div className="container width-half">
                         {user.map(user => (
-							<Account key={user._id} {...user} />
+							<Account key={user.email} {...user} />
 						))}
                         {/* {comments.map(({ _id, text, owner:{email} }) => (
 								<li key={_id} className="comment">

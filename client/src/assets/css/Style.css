@@ -244,7 +244,6 @@ body {
     padding: 17px 30px;
     position: relative;
     z-index: 3;
-    display: flex;
     border-radius: var(--border-radius-m);
     -webkit-box-align: start;
     align-items: flex-start;
