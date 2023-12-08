@@ -10,6 +10,10 @@ const EditUserModal = ({
     onInfoClikc,
     onClose,
 }) => {
+// <<<<<<< HEAD
+    
+
+// =======
     const {userId}=useParams();
 	const [user, setUser] = useState({
 		email:'',
@@ -23,6 +27,7 @@ const EditUserModal = ({
 			[e.target.name]: e.target.value
 		}));
 	};
+>>>>>>> parent of 73a83fd (edit user modal edit)
     return (
         <div className="overlay">
             <div className="backdrop" onClick={onClose}></div>
@@ -39,6 +44,26 @@ const EditUserModal = ({
                             </svg>
                         </button>
                     </header>
+<<<<<<< HEAD
+                    <form onSubmit={onCreate}>
+                        <div className="form-row">
+                            <div className="form-group">
+                                <label htmlFor="firstName">First name</label>
+                                <div className="input-wrapper">
+                                    <span><i className="fa-solid fa-user"></i></span>
+                                    <input id="firstName" name="firstName" type="text" />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="lastName">Last name</label>
+                                <div className="input-wrapper">
+                                    <span><i className="fa-solid fa-user"></i></span>
+                                    <input id="lastName" name="lastName" type="text" />
+                                </div>
+                            </div>
+                        </div>
+
+=======
                     <form id="register" onSubmit={onEdit}>
                         <div>
                             <label htmlFor="firstName">Email</label>
@@ -123,6 +148,7 @@ const EditUserModal = ({
                         </div>
                         </form>
                     {/* <form onSubmit={onCreate}>
+>>>>>>> parent of 73a83fd (edit user modal edit)
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>
@@ -187,7 +213,7 @@ const EditUserModal = ({
                                 Cancel
                             </button>
                         </div>
-	</form>*/} 
+                    </form>
                 </div>
             </div>
         </div>
