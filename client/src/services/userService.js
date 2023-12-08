@@ -1,6 +1,3 @@
-import * as request from "../components/lib/request"
-
-
 //const baseUrl = 'http://localhost:3030/jsonstore/users';
 const baseUrl = 'http://localhost:3030/data/userlist';
 
@@ -45,10 +42,11 @@ export const create = async (data) => {
     return result;
 };
 export const edit = async (userId, userData) => {
-	const result = await request.put(userId, userData);
+	const result = await request.put(`${baseUrl}/${userId}`, userData);
 	
 	return result;
 }
+
 
 export const remove = async (userId)=> request.remove(`${baseUrl}/${userId}`);
 // export const remove = async (userId) => {
