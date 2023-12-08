@@ -1,13 +1,33 @@
 import "../forms/FormsStyle.css"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 73a83fd (edit user modal edit)
 const EditUserModal = ({
     hideModal,
     onCreate,
     onInfoClikc,
     onClose,
 }) => {
+<<<<<<< HEAD
     
 
+=======
+    const {userId}=useParams();
+	const [user, setUser] = useState({
+		email:'',
+		userName:'',
+		imageUrl:'',
+		phoneNumber:'',
+	});
+    const onChange = (e) => {
+		setUser(state => ({
+			...state,
+			[e.target.name]: e.target.value
+		}));
+	};
+>>>>>>> parent of 73a83fd (edit user modal edit)
     return (
         <div className="overlay">
             <div className="backdrop" onClick={onClose}></div>
@@ -24,6 +44,7 @@ const EditUserModal = ({
                             </svg>
                         </button>
                     </header>
+<<<<<<< HEAD
                     <form onSubmit={onCreate}>
                         <div className="form-row">
                             <div className="form-group">
@@ -42,6 +63,92 @@ const EditUserModal = ({
                             </div>
                         </div>
 
+=======
+                    <form id="register" onSubmit={onEdit}>
+                        <div>
+                            <label htmlFor="firstName">Email</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-user"></i></span>
+                                <input
+                                    type="text"
+                                    id="email-register"
+                                    name="email"
+                                    value={user.email}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="firstName">Username</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-user"></i></span>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    value={user.userName}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="firstName">User Image</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-image"></i></span>
+                                <input
+                                    type="text"
+                                    id="userimg"
+                                    name="userimg"
+                                    value={user.userImg}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="firstName">Phone</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-phone"></i></span>
+                                <input
+                                    type="number"
+                                    id="phone"
+                                    name="userphone"
+                                    value={user.userPhone}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="pass">Password</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-lock"></i></span>
+                                <input
+                                    type="password"
+                                    id="register-password"
+                                    name="password"
+                                    value={user.password}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="confirm-pass">Confirm Password</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-lock"></i></span>
+                                <input
+                                    type="password"
+                                    id="comfirm-password"
+                                    name="comfirm-password"
+                                    value={user.password}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div id="form-actions">
+                            <input className="btn submit btn-green-gradient" type="submit" value="Register" />
+                        </div>
+                        </form>
+                    {/* <form onSubmit={onCreate}>
+>>>>>>> parent of 73a83fd (edit user modal edit)
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>

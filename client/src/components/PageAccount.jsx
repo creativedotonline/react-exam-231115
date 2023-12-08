@@ -35,9 +35,9 @@ export default function PageAccount({
 	}, []);
 
     const {email, userId,username, userphone,userimg,createdAt} = useContext(AuthContext);
-    const hideCreateUserModal = () => {
-        setShowCreateModal(false);
-    };
+    // const hideCreateUserModal = () => {
+    //     setShowCreateModal(false);
+    // };
 
 /* edit */
 const editUserClickHendler = () => {
@@ -83,12 +83,12 @@ const deleteUserHandler = async () =>{
 
     return(
         <>
-        {showCreateModal && (
+        {/* {showCreateModal && (
             <CreateUserModal 
                 onClose={hideCreateUserModal}
                 onCreate={onUserCreateHandler}
             />
-        )}
+        )} */}
 		{showEditModal && (
             <EditUserModal 
                 onClose={hideEditUserModal}
