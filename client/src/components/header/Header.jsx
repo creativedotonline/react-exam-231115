@@ -74,7 +74,7 @@ const Header = () => {
 							</li>
                             <li className={(url === "/allusers" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/allusers">
-                                Users2
+                                All Users
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>

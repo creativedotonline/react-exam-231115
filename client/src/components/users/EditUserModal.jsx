@@ -1,13 +1,9 @@
 import "../forms/FormsStyle.css"
 
-// <<<<<<< HEAD
-// =======
-
-// >>>>>>> parent of 73a83fd (edit user modal edit)
 const EditUserModal = ({
     hideModal,
     onCreate,
-    onInfoClikc,
+    onEdit,
     onClose,
 }) => {
     const {userId}=useParams();
@@ -39,14 +35,14 @@ const EditUserModal = ({
                             </svg>
                         </button>
                     </header>
-                    <form id="register" onSubmit={onEdit}>
+                    <form id="edt" onSubmit={onEdit}>
                         <div>
                             <label htmlFor="firstName">Email</label>
                             <div className="input-wrapper">
                                 <span><i className="fa-solid fa-user"></i></span>
                                 <input
                                     type="text"
-                                    id="email-register"
+                                    id="email-edit"
                                     name="email"
                                     value={user.email}
                                     onChange={onChange}
@@ -59,7 +55,7 @@ const EditUserModal = ({
                                 <span><i className="fa-solid fa-user"></i></span>
                                 <input
                                     type="text"
-                                    id="username"
+                                    id="username-edit"
                                     name="username"
                                     value={user.userName}
                                     onChange={onChange}
