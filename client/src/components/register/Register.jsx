@@ -26,7 +26,7 @@ export default function Register(){
 		<div className="content-body">
 		<form id="register" onSubmit={onSubmit}>
 			<div>
-                <label htmlFor="firstName">First name</label>
+                <label htmlFor="firstName">Email</label>
                 <div className="input-wrapper">
                     <span><i className="fa-solid fa-user"></i></span>
 					<input

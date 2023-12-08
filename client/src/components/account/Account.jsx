@@ -1,4 +1,5 @@
-import { useContext} from "react";
+import { useEffect, useContext,useState} from "react";
+import * as usersServices from "/src/services/usersServices"
 
 import { formatDate } from "../../utils/dataUtils";
 import { Link } from "react-router-dom";
@@ -14,17 +15,25 @@ const Account = ({
     createdAt,
     imageUrl,
     updatedAt,
-    onInfoClick,
+    onEditClick,
     onDeleteClick,
+    _id,
 }) =>{
-    
+    const [user, setUser] = useState({});
 
-    const infoClickHandler = () => {
-        onInfoClick(userId);
-    };
+    useEffect(() => {
+		usersServices.getOne(userId)
+			.then(setUser);
+		// then navigate to 404 if not page
+		
+	}, [userId]);
 
     const deleteClicHandler = () =>{
         onDeleteClick(userId);
+    }
+
+    const editClickHandler = () =>{
+        onEditClick(userId);
     }
     const {
 		isAuthenticated,
@@ -47,8 +56,8 @@ const Account = ({
                                     <span>Personal Account Info</span>
                                 </div>
                                 <div className="col-md-6 text-align-right">
-                                {isAuthenticated && (<div>
-                                        <Link className="btn edit-btn" title="Edit">
+                                    <div>
+                                        <Link className="btn edit-btn" title="Edit" onClick={editClickHandler}>
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square"
                                                 className="svg-inline--fa fa-pen-to-square" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 532 512">
@@ -65,7 +74,7 @@ const Account = ({
                                                 </path>
                                             </svg>
                                         </Link>
-                                    </div>)}
+                                    </div>
                                 </div>
                             </div>
                             <div className="content-body row">

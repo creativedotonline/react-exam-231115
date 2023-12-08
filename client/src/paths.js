@@ -9,7 +9,7 @@ const Path = {
 	PagePostEdit:'/post-list/:postId/edit',	
 	SinglePostIdDelete:"/post-list/:postId/delete",
 	PagePostCreate:'/post-create',
-	PageTestimonials:'testimonials',
+	PageTestimonials:'/testimonials',
     PageAccount:'/account',
 }
 

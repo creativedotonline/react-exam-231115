@@ -14,13 +14,13 @@ const UserList = ({
     createdAt,
     imageUrl,
     updatedAt,
-    onInfoClick,
+    onEditClick,
     onDeleteClick,
 }) =>{
     
 
-    const infoClickHandler = () => {
-        onInfoClick(userId);
+    const editClickHandler = () => {
+        onEditClick(userId);
     };
 
     const deleteClicHandler = () =>{
@@ -48,7 +48,7 @@ const UserList = ({
                                 </div>
                                 <div className="col-md-6 text-align-right">
                                 {isAuthenticated && (<div>
-                                        <Link className="btn edit-btn" title="Edit">
+                                        <Link className="btn edit-btn" title="Edit" onClick={editClickHandler}>
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square"
                                                 className="svg-inline--fa fa-pen-to-square" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 532 512">
