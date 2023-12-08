@@ -1,13 +1,26 @@
 import "../forms/FormsStyle.css"
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 
 const EditUserModal = ({
     hideModal,
-    onCreate,
-    onInfoClikc,
+    onEdit,
     onClose,
 }) => {
-    
-
+    const {userId}=useParams();
+	const [user, setUser] = useState({
+		email:'',
+		userName:'',
+		imageUrl:'',
+		phoneNumber:'',
+	});
+    const onChange = (e) => {
+		setUser(state => ({
+			...state,
+			[e.target.name]: e.target.value
+		}));
+	};
     return (
         <div className="overlay">
             <div className="backdrop" onClick={onClose}></div>
@@ -24,30 +37,124 @@ const EditUserModal = ({
                             </svg>
                         </button>
                     </header>
-                    <form onSubmit={onCreate}>
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label htmlFor="firstName">First name</label>
-                                <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-user"></i></span>
-                                    <input id="firstName" name="firstName" type="text" />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="lastName">Last name</label>
-                                <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-user"></i></span>
-                                    <input id="lastName" name="lastName" type="text" />
-                                </div>
+                    <form id="register" onSubmit={onEdit}>
+                        <div>
+                            <label htmlFor="firstName">Email</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-user"></i></span>
+                                <input
+                                    type="text"
+                                    id="email-register"
+                                    name="email"
+                                    value={user.email}
+                                    onChange={onChange}
+                                />
                             </div>
                         </div>
-
+                        <div>
+                            <label htmlFor="firstName">Username</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-user"></i></span>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    value={user.userName}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="firstName">User Image</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-image"></i></span>
+                                <input
+                                    type="text"
+                                    id="userimg"
+                                    name="userimg"
+                                    value={user.userImg}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="firstName">Phone</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-phone"></i></span>
+                                <input
+                                    type="number"
+                                    id="phone"
+                                    name="userphone"
+                                    value={user.userPhone}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="pass">Password</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-lock"></i></span>
+                                <input
+                                    type="password"
+                                    id="register-password"
+                                    name="password"
+                                    value={user.password}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="confirm-pass">Confirm Password</label>
+                            <div className="input-wrapper">
+                                <span><i className="fa-solid fa-lock"></i></span>
+                                <input
+                                    type="password"
+                                    id="comfirm-password"
+                                    name="comfirm-password"
+                                    value={user.password}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        </div>
+                        <div id="form-actions">
+                            <input className="btn submit btn-green-gradient" type="submit" value="Register" />
+                        </div>
+                        </form>
+                    {/* <form onSubmit={onCreate}>
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>
                                 <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-envelope"></i></span>
-                                    <input id="email" name="email" type="text" />
+                                    <span><i className="fa-solid fa-user"></i></span>
+                                    <input 
+                                        id="email" 
+                                        name="email" 
+                                        type="text" 
+                                    />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="userName">Username</label>
+                                <div className="input-wrapper">
+                                    <span><i className="fa-solid fa-user"></i></span>
+                                    <input 
+                                        id="userName" 
+                                        name="userName" 
+                                        type="text" 
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="form-row">
+                            <div className="form-group">
+                                <label htmlFor="imageUrl">User Avatar</label>
+                                <div className="input-wrapper">
+                                    <span><i className="fa-solid fa-image"></i></span>
+                                    <input 
+                                        id="imageUrl" 
+                                        name="imageUrl" 
+                                        type="text"
+                                     />
                                 </div>
                             </div>
                             <div className="form-group">
@@ -58,55 +165,13 @@ const EditUserModal = ({
                                 </div>
                             </div>
                         </div>
-
-                        <div className="form-group long-line">
-                            <label htmlFor="imageUrl">Image Url</label>
-                            <div className="input-wrapper">
-                                <span><i className="fa-solid fa-image"></i></span>
-                                <input id="imageUrl" name="imageUrl" type="text" />
-                            </div>
-                        </div>
-
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label htmlFor="country">Country</label>
-                                <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-map"></i></span>
-                                    <input id="country" name="country" type="text" />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="city">City</label>
-                                <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-city"></i></span>
-                                    <input id="city" name="city" type="text" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label htmlFor="street">Street</label>
-                                <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-map"></i></span>
-                                    <input id="street" name="street" type="text" />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="streetNumber">Street number</label>
-                                <div className="input-wrapper">
-                                    <span><i className="fa-solid fa-house-chimney"></i></span>
-                                    <input id="streetNumber" name="streetNumber" type="text" />
-                                </div>
-                            </div>
-                        </div>
                         <div id="form-actions">
                             <button id="action-save" className="btn" type="submit">Save</button>
                             <button id="action-cancel" className="btn" type="button" onClick={onClose}>
                                 Cancel
                             </button>
                         </div>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </div>
