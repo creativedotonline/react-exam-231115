@@ -14,7 +14,7 @@ const HeadingSection = (heading) => {
                 <div className="col-md-6">
                     <div className="detail-box">
                         <h1 className='heading'>
-                            test
+                            {heading.heading}
                         </h1>
                     </div>
                 </div>

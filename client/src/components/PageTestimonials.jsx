@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 //import PostGridItem from "./post/PostGridItem"
 //import * as postServices from "../services/postServices"
 import * as testimonialService from "../services/testimonialService"
+import HeadingSection from "./header/HeadingSection"
 
 import "./testimonials/TestimonialsStyle.css"
 import TestimonialsList from "./testimonials/TestimonialsList";
@@ -36,6 +37,7 @@ const PageTestimonial = () => {
 					)}
 				</div>
 		</section> */}
+        <HeadingSection heading='Testimonials' />
 		<TestimonialsList />
 		</>
 	);

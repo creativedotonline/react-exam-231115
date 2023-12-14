@@ -4,7 +4,6 @@ export default function PagePostDetails(){
 	
 	return(
 		<>
-
 			<main className="main">
 				<PostDetails />
 			</main>

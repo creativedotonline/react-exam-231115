@@ -4,7 +4,7 @@ import HeadingSection from "../header/HeadingSection";
 export default function PagePostList(){
 	return(
 		<>
-		<HeadingSection />
+		<HeadingSection heading='All posts' />
 		<PostList />
 		</>
 	);
