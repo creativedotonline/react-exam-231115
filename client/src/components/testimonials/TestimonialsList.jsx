@@ -22,7 +22,6 @@ const ListTestimonial = () => {
 		<section className="testimonials-list layout_padding">
 			
 		<div className="container block">
-				<h2 className="section-heading">What Our Laydies thinks</h2>
 			</div>
 				<div className="container">
 					{testimonials.map((testimonials,index) =>

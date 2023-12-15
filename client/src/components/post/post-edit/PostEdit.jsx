@@ -2,7 +2,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import * as postServices from '/src/services/postServices'
 import { useEffect, useState } from "react";
-import AminBg from "/src/components/AnimBg";
+import AminBg from "/src/components/animbg/AnimBg";
 
 export default function PostEdit() {
 	const navigate = useNavigate();

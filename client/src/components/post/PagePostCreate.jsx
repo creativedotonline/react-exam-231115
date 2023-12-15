@@ -1,5 +1,5 @@
 import PostCreate from "./post-create/PostCreate"
-import AminBg from "../AnimBg";
+import AminBg from "../animbg/AnimBg";
 
 export default function PagePostCreate(){
 	

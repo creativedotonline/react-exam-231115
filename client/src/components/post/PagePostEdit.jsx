@@ -1,5 +1,5 @@
 import PostEdit from "./post-edit/PostEdit"
-import AminBg from "../AnimBg";
+import AminBg from "../animbg/AnimBg";
 
 export default function PagePostEdit(){	
 	return(

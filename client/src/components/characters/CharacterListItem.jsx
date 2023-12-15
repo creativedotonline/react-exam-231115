@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import "./post/PostStyle.css"
+import "../post/PostStyle.css"
 import { Link } from 'react-router-dom';
 
 const CharacterListItem = ({

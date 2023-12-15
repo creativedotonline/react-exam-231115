@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import HeroSection from "./header/HeroSection";
-import About from "./About";
+import About from "./about/About";
 import LatestPost from "./post/latest-post/LatestPost";
 import * as postServices from "../services/postServices"
 import ListTestimonials from "./testimonials/TestimonialsList";

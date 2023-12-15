@@ -11,7 +11,7 @@ import UserDeleteModal from "./users/UserDeleteModal"
 import AuthContext from "../contexts/authContext.jsx";
 
 import Account from "./account/Account";
-import AminBg from "./AnimBg";
+import AminBg from "./animbg/AnimBg";
 
 
 export default function PageAccount({

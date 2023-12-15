@@ -17,7 +17,7 @@ import PageUserList from './components/users/PageUserList'
 import PagePost from './components/post/PagePost'
 import PostSingle from './components/post/PostSingle'
 import PageCharacterList from './components/PageCharacterList'
-import CharacterDetails from "./components/CharacterDetails"
+import CharacterDetails from "./components//characters/CharacterDetails"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import NotFound from "./components/notfound/NotFound"

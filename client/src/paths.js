@@ -11,6 +11,7 @@ const Path = {
 	PagePostCreate:'/post-create',
 	PageTestimonials:'/testimonials',
     PageAccount:'/account',
+    PageCharacterList:'/character-list'
 }
 
 export default Path;

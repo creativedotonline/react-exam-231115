@@ -1,7 +1,7 @@
 
 import Login from "./login/Login";
 import Register from "./register/Register";
-import AminBg from "./AnimBg";
+import AminBg from "./animbg/AnimBg";
 
 export default function PageLoginReg (){
 	return(

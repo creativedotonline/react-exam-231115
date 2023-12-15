@@ -6,7 +6,7 @@ import UserListItem from './UserListItem';
 import CreateUserModal from "./CreateUserModal";
 import UserInfoModal from "./UserInfoModal";
 import UserDeleteModal from "./UserDeleteModal";
-import Spinner from "./Spinner";
+import Spinner from "./spinner/Spinner";
 
 const UserListTable = () => {
     const [users, setUsers] = useState([]);

@@ -5,11 +5,11 @@ import EditUserModal from "/src/components/users/EditUserModal"
 import "/src/components/users/TableStyle.css";
 import UserInfoModal from "/src/components/users/UserInfoModal"
 import UserDeleteModal from "/src/components/users/UserDeleteModal"
-import Spinner from "/src/components/Spinner";
+import Spinner from "/src/components/spinner/Spinner";
 import { Link } from "react-router-dom";
 
 import UserList from "./user-list/UserList";
-import AminBg from "./AnimBg";
+import AminBg from "./animbg/AnimBg";
 
 const PageAllUsers = ({
     userId,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import HeadingSection from "./header/HeadingSection"
+import HeadingSection from "../header/HeadingSection"
 const CharacterDetails = () => {
 	const {id} = useParams();
 	const location = useLocation();

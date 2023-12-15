@@ -37,7 +37,7 @@ const PageTestimonial = () => {
 					)}
 				</div>
 		</section> */}
-        <HeadingSection heading='Testimonials' />
+        <HeadingSection heading='What Our Laydies think' />
 		<TestimonialsList />
 		</>
 	);

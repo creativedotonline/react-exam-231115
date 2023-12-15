@@ -6,7 +6,7 @@ import EditUserModal from "./EditUserModal"
 import "./TableStyle.css";
 import UserInfoModal from "./UserInfoModal"
 import UserDeleteModal from "./UserDeleteModal"
-import Spinner from "../Spinner";
+import Spinner from "../spinner/Spinner";
 import { Link } from "react-router-dom";
 
 const UserListTable = () => {

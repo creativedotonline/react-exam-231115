@@ -1,17 +1,17 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import * as userService from "/src/services/userService";
 import CreateUserModal from "/src/components/users/CreateUserModal";
 import EditUserModal from "/src/components/users/EditUserModal"
 import "/src/components/users/TableStyle.css";
 import UserInfoModal from "/src/components/users/UserInfoModal"
 import UserDeleteModal from "/src/components/users/UserDeleteModal"
-import Spinner from "/src/components/Spinner";
+import Spinner from "/src/components/spiner/Spinner";
 import { Link } from "react-router-dom";
 
 import Account from "./account/Account";
-import AminBg from "./AnimBg";
+import AminBg from "./animbg/AnimBg";
 
-export default function PageAccount (
+export default function PageAccountOld(
     userId,
     firstName,
     lastName,
@@ -19,7 +19,7 @@ export default function PageAccount (
     phoneNumber,
     createdAt,
     imageUrl,
-   ){
+) {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
@@ -29,16 +29,16 @@ export default function PageAccount (
     const [user, setUser] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
 
-    useEffect(()=>{
+    useEffect(() => {
         setIsLoading(true);
         //const data = localStorage.getItem("auth");
-        
-        
-       // const currentUser = JSON.parse(data);
+
+
+        // const currentUser = JSON.parse(data);
         //userService.getOne(currentUser._id)
         userService.getOne("847ec027-f659-4086-8032-5173e2f9c93a")
             .then(result => setUser(result))
-            
+
             .catch(err => console.log(err))
             .finally(() => setIsLoading(false));
 
@@ -54,7 +54,7 @@ export default function PageAccount (
     const onUserCreateHandler = async (e) => {
         // stop page from reload
         e.preventDefault();
-        
+
         setShowCreateModal(false);
 
         // Get data from data
@@ -68,19 +68,19 @@ export default function PageAccount (
 
         // Close the modal
         setShowCreateModal(false);
-    }    
-/* edit */
-	const editUserClickHendler = () => {
+    }
+    /* edit */
+    const editUserClickHendler = () => {
         setShowEditModal(true);
     };
 
     const hideEditUserModal = () => {
         setShowEditModal(false);
     };
-	const onUserEditHandler = async (e) => {
+    const onUserEditHandler = async (e) => {
         // stop page from reload
         e.preventDefault();
-        
+
         setShowEditModal(false);
 
         // Get data from data
@@ -94,10 +94,10 @@ export default function PageAccount (
 
         // Close the modal
         setShowEditModal(false);
-    } 
+    }
 
 
-/* end edit */	
+    /* end edit */
     const userInfoClickHandler = async (userId) => {
         setSelectedUser(userId);
         setShowInfo(true);
@@ -108,7 +108,7 @@ export default function PageAccount (
         setShowDelete(true);
     }
 
-    const deleteUserHandler = async () =>{
+    const deleteUserHandler = async () => {
         // remove user from severv
         await userService.remove(selectedUser);
 
@@ -122,45 +122,45 @@ export default function PageAccount (
     }
     return (
         <>
-        {showCreateModal && (
-            <CreateUserModal 
-                onClose={hideCreateUserModal}
-                onCreate={onUserCreateHandler}
-            />
-        )}
-		{showEditModal && (
-            <EditUserModal 
-                onClose={hideEditUserModal}
-                onEdit={onUserEditHandler}
-            />
-        )}
+            {showCreateModal && (
+                <CreateUserModal
+                    onClose={hideCreateUserModal}
+                    onCreate={onUserCreateHandler}
+                />
+            )}
+            {showEditModal && (
+                <EditUserModal
+                    onClose={hideEditUserModal}
+                    onEdit={onUserEditHandler}
+                />
+            )}
 
-        {isLoading && (<Spinner />)}
-        {showInfo && (
-            <UserInfoModal 
-                onClose={() => setShowInfo(false)} 
-                userId={selectedUser}
-            />
-        )}
+            {isLoading && (<Spinner />)}
+            {showInfo && (
+                <UserInfoModal
+                    onClose={() => setShowInfo(false)}
+                    userId={selectedUser}
+                />
+            )}
 
-        {showDelete && (
-            <UserDeleteModal 
-                onClose = {()=> setShowDelete(false)}
-                onDelete={deleteUserHandler}
-            />
-        )}
+            {showDelete && (
+                <UserDeleteModal
+                    onClose={() => setShowDelete(false)}
+                    onDelete={deleteUserHandler}
+                />
+            )}
             <main className="main">
-				<section className="account-page">
-					<div className="container width-half">
-                    <Account
-                        key={user._id}               
+                <section className="account-page">
+                    <div className="container width-half">
+                        <Account
+                            key={user._id}
                         />
-					</div>
-				</section>
-			</main>
+                    </div>
+                </section>
+            </main>
 
-		<AminBg />
-{/*         
+            <AminBg />
+            {/*         
         <Link className="btn btn-add btn-green-gradient" onClick={createUserClickHendler}>
 			<i className="fa-solid fa-user-plus"></i>
 		</Link>         */}

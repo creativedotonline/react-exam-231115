@@ -1,7 +1,7 @@
 import Footer from "./footer/Footer"
 import { useState, useEffect } from "react";
 import HeadingSection from "./header/HeadingSection"
-import CharacterListItem from "./CharacterListItem"
+import CharacterListItem from "./characters/CharacterListItem"
 
 const base_url='https://swapi.dev/api';
 
@@ -18,17 +18,16 @@ const CharacterList = () => {
 
 	return(
 		<>
-		<HeadingSection />
-	
-			<main className="main">								
-				<section className="post-list">
-				<div className="container">
-					{characters.map((characters,index) =>
-						<CharacterListItem key={characters.name} id={index+1} {...characters}/>
-					)}
-					</div>
-				</section>
-			</main>
+		<HeadingSection heading="Characters from SWAPI"/>
+		<main className="main">								
+			<section className="post-list">
+			<div className="container">
+				{characters.map((characters,index) =>
+					<CharacterListItem key={characters.name} id={index+1} {...characters}/>
+				)}
+				</div>
+			</section>
+		</main>
 
         <Footer />
 		</>

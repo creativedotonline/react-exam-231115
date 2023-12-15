@@ -72,24 +72,33 @@ const Header = () => {
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-                            <li className={(url === "/allusers" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/allusers">
-                                All Users
-									<span className="sr-only">(current)</span>
-								</Link>
-							</li>
+                            <li id="all-users" className="nav-item"> 
+                                <Link className="nav-link" to="/allusers">
+                                        All Users
+                                            <span className="sr-only">(current)</span>
+                                        </Link>
+                                <ul className="submenu">
+                                    <li className={(url === "/allusers" ? " active nav-item" : "nav-item")}>
+                                        <Link className="nav-link" to="/allusers">
+                                        Users Data
+                                            <span className="sr-only">(current)</span>
+                                        </Link>
+                                    </li>
+                                    <li className={(url === "/character-list" ? " active nav-item" : "nav-item")}>
+                                        <Link className="nav-link" to="/character-list">
+                                            Characters swapi
+                                            <span className="sr-only">(current)</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            
 							<li className={(url === "/testimonials" ? " active nav-item" : "nav-item")}>
 								<Link className="nav-link" to="/testimonials">
 									Testimonials
 									<span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							{/* <li className={(url === "/login" ? " active nav-item" : "nav-item")}>
-								<Link className="nav-link" to="/login">
-									<i className="fa fa-user" aria-hidden="true"></i>
-									<span className="sr-only">(current)</span>
-								</Link>
-							</li> */}
 
 							{isAuthenticated && (
 								<li id="user" className="nav-item"> 
