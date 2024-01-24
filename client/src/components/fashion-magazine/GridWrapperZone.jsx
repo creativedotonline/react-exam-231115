@@ -1,0 +1,134 @@
+export default function GridWrapperZone(){
+    return(
+        <div className="zone-grid-wrapper">
+		<div className="zone-grid-price-area-wrapper">
+			<div className="price-wrapper"><span>Price per square: </span><span className="square-price-tag icon-currency-m icon-currency-emeralds ">2</span></div>		
+		</div>
+		<div className="zone-grid">
+			<div className="inside m1 grid-11">
+			<a href="#" rel="1" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="2" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="3" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="4" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="5" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="6" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="7" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="8" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="9" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="10" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="11" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="12" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="13" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="14" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="15" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="16" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="17" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="18" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="19" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="20" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="21" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="22" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="23" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="24" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="25" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="26" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="27" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="28" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="29" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="30" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="31" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="32" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="33" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="34" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="35" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="36" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="37" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="38" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="39" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="40" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="41" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="42" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="43" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="44" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="45" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="46" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="47" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="48" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="49" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="50" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="51" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="52" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="53" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="54" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="55" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="56" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="57" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="58" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="59" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="60" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="61" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="62" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="63" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="64" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="65" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="66" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="67" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="68" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="69" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="70" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="71" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="72" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="73" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="74" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="75" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="76" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="77" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="78" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="79" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="80" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="81" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="82" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="83" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="84" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="85" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="86" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="87" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="88" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="89" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="90" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="91" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="92" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="93" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="94" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="95" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="96" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="97" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="98" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="99" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="100" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="101" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="102" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="103" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="104" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="105" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="106" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="107" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="108" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="109" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="110" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="111" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="112" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="113" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="114" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="115" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="116" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="117" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="118" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="119" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="120" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			<a href="#" rel="121" className="square unopened"><span className="square-price-tag icon-currency-m icon-currency-emeralds undefined">2</span></a>
+			</div>
+		</div>
+	</div>
+    );
+}

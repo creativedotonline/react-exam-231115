@@ -35,6 +35,7 @@ import LatestPost from "./components/post/latest-post/LatestPost"
 import PageTestimonials from "./components/PageTestimonials"
 import PageAccount from "./components/PageAccount"
 import PageAllUsers from "./components/PageAllUsers.jsx"
+import PageFMMain from "./components/PageFMMain.jsx"
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
 					<Route path={Path.LatestPost} element={<LatestPost />} />
 					<Route path='/testimonials' element={<PageTestimonials />} />
 					<Route path='/allusers' element={<PageAllUsers />} />
+					<Route path='/fm' element={<PageFMMain />} />
 
 					<Route element={<AuthGuard />}>
 						<Route path={Path.PagePostCreate} element={<PagePostCreate />} />
